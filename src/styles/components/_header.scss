@@ -94,23 +94,17 @@
         font-size: 20px;
         font-weight: 700;
         a{
+            text-decoration: none;
+            color: #510017;
             transition: color .2s ease;
-        }
 
-        &:hover a:not(.fill){
-            text-decoration: underline;
-        }
-
-        &:hover a.fill{
-            color: #F58220
+            &:hover{
+                color: #F58220
+            }
         }
 
         &:last-child{
             margin-right: 0;
-        }
-        a{
-            text-decoration: none;
-            color: #510017;
         }
     }
 }
@@ -163,6 +157,12 @@
             font-size: 22px;
             font-weight: 700;
             color: #F58220;
+
+            transition: color .2s ease;
+
+            &:hover{
+                color: #510017;
+            }
         }
     }
 }
