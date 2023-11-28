@@ -34,7 +34,7 @@
         &:hover{
             opacity: 1;
 
-            .brands-main__text.line::after{
+            .brands-main__text::after{
                 opacity: 1;
                 visibility: visible;
             }
@@ -43,7 +43,7 @@
         &.is-active{
             opacity: 1;
 
-            .brands-main__text.line::after{
+            .brands-main__text::after{
                 opacity: 1;
                 visibility: visible;
             }
@@ -67,7 +67,7 @@
         font-size: 16px;
         position: relative;
 
-        &.line::after{
+        &::after{
             content: '';
             position: absolute;
             bottom: calc(100% + 6px);
