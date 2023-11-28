@@ -1,0 +1,115 @@
+.news{
+    height: 940px;
+    &__inner{
+        display: flex;
+        margin: 0 -10px;
+    }
+
+    &__wrap{
+        height: 100%;
+        max-height: 340px;
+    }
+
+    &__item{
+        flex: 1;
+        padding: 29px 25px 0;
+        margin: 0 10px;
+        border-radius: 19px;
+        border: 2px solid rgba(0, 0, 0, 0.27);
+        align-self: flex-start;
+        position: relative;
+
+        transition: flex .5s ease, border-color .5s ease;
+        transition-delay: 0.1s;
+
+        &:hover{
+            flex: 2;
+            border-color: #F58220;
+
+            &::after{
+                content: '';
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                height: 100px;
+                z-index: 10;
+            }
+
+            .news__preview{
+                opacity: 0;
+                visibility: hidden;
+                max-height: 0;
+                min-height: 0;
+                margin: 0;
+                max-width: 360px;
+                pointer-events: none;
+            }
+
+            .news__day{
+                color: #510017;
+            }
+
+            .news__description{
+                max-width: 350px;
+                opacity: 1;
+            }
+        }
+    }
+
+    &__img{
+        width: auto;
+        margin-left: -25px;
+        margin-right: -25px;
+    }
+
+    &__preview{
+        margin-top: 52px;
+        margin-bottom: 42px;
+        transform: translateY(0);
+        opacity: 1;
+        min-height: 73px;
+        max-height: 1000px;
+        transition: all .5s ease;
+    }
+
+    &__day{
+        color: #F6F2F3;
+        font-size: 96px;
+        font-weight: 700;
+        margin-bottom: 12px;
+        line-height: calc(115/96);
+        margin-bottom: 12px;
+
+        transition: color .2s ease;
+    }
+
+    &__data{
+        font-size: 21px;
+        font-weight: 600;
+        color: #000;
+        margin-bottom: 52px;
+    }
+
+    &__title{
+        color: #000;
+        font-size: 21px;
+        font-weight: 700;
+        margin-bottom: 88px;
+    }
+
+    &__description{
+        max-width: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: max-width .5s ease, opacity .5s ease .5s;
+    }
+
+    &__head{
+        display: flex;
+    }
+
+    // &__bottom{
+    //     margin-top: auto;
+    // }
+}

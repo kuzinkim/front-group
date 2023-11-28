@@ -1,0 +1,119 @@
+.footer{
+    margin-top: 186px;
+    &__grid{
+        display: flex;
+        padding-bottom: 47px;
+        border-bottom: 1px solid #F58220;
+    }
+
+    &__logo{
+        grid-area: logo;
+        width: 182px;
+        margin-right: 115px;
+
+        img{
+            width: auto;
+        }
+    }
+
+    &__wrap{
+        display: grid;
+        grid-template-columns: repeat(7, auto) 283px;
+    }
+
+    &__contact{
+        grid-column: 7/9;
+    }
+
+    &__reviews{
+        grid-row: 2/3;
+        grid-column: 1/4;
+        max-width: 284px;
+    }
+
+    &__callback{
+        grid-row: 2/3;
+        grid-column: 7/9;
+        align-self: center;
+        border: 0;
+        cursor: pointer;
+    }
+}
+
+.footerMenu{
+    column-count: 3;
+    grid-column: 1/4;
+    column-width:auto;
+
+    &__item{
+        color: #510017;
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 18px;
+
+        transition: color .2s ease;
+
+        &:hover{
+            color: #f58220;
+        }
+
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+}
+
+
+.footerCategory{
+    column-count: 3;
+    grid-column: 4/7;
+    column-width:auto;
+
+    &__item{
+        color: #510017;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 18px;
+
+        transition: color .2s ease;
+
+        &:hover{
+            color: #f58220;
+        }
+
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+}
+
+.footerBottom{
+    padding-top: 47px;
+    padding-bottom: 76px;
+    display: flex;
+    
+    &__doc{
+        display: flex;
+        margin: 0 -22px;
+        
+        li{
+            color: #510017;
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0 22px;
+            a{
+                text-decoration: none;
+                color: inherit;
+            }
+        } 
+    }
+
+    span{
+        margin-left: auto;
+        font-size: 16px;
+        color: #510017;
+        font-weight: 600;
+    }
+}

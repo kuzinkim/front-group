@@ -1,0 +1,40 @@
+.stat{
+    display: flex;
+
+    &__map{
+        width: 100%;
+        max-width: 1314px;
+    }
+
+    &__wrap{
+        align-self: flex-start;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 64px;
+    }
+
+    b{
+        font-size: 78px;
+        line-height: calc(94/78);
+        font-weight: 700;
+        color: #F58220;
+    }
+
+    &__title{
+        font-size: 32px;
+        color: #510017;
+        font-weight: 600;
+        margin-bottom: 6px;
+    }
+
+    &__text{
+        color: #000;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    &__item{
+        align-self: flex-start;
+    }
+}

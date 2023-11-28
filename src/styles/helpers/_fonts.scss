@@ -1,0 +1,46 @@
+@import "../mixins/font.scss";
+
+@include font(
+  "Mont",
+  "../fonts/Mont-Light.woff",
+  "../fonts/Mont-Light.woff2",
+  "normal",
+  "300"
+);
+
+@include font(
+  "Mont",
+  "../fonts/Mont-Regular.woff",
+  "../fonts/Mont-Regular.woff2",
+  "normal",
+  "400"
+);
+
+@include font(
+  "Mont",
+  "../fonts/Mont-SemiBold.woff",
+  "../fonts/Mont-SemiBold.woff2",
+  "normal",
+  "600"
+);
+
+@include font(
+  "Mont",
+  "../fonts/Mont-Bold.woff",
+  "../fonts/Mont-Bold.woff2",
+  "normal",
+  "700"
+);
+
+
+
+
+// 100 – Thin || Hairline
+// 200 – Extra Light || Ultra Light || Thin
+// 300 – Light
+// 400 – Normal || Regular
+// 500 – Medium
+// 600 – Semi Bold || Demi Bold
+// 700 – Bold
+// 800 – Extra Bold || Ultra Bold || Heavy
+// 900 – Black || Heavy
