@@ -41,9 +41,11 @@
 }
 
 .footerMenu{
-    column-count: 3;
     grid-column: 1/4;
-    column-width:auto;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    align-self: flex-start;
+    gap: 0 36px;
 
     &__item{
         color: #510017;
@@ -66,9 +68,12 @@
 
 
 .footerCategory{
-    column-count: 3;
     grid-column: 4/7;
-    column-width:auto;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    align-self: flex-start;
+    gap: 0 36px;
+    margin: 0 62px;
 
     &__item{
         color: #510017;
