@@ -1,0 +1,90 @@
+.pagination {
+
+  display: flex;
+  align-items: center;
+
+  &__button {
+    width: 36px;
+    height: 36px;
+    display: block;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border-radius: 4px;
+    border: 1px solid #E2E2E2;
+    font-size: 0;
+    cursor: pointer;
+    transition: border-color .3s;
+    background-size: 9px auto;
+
+    &:hover {
+      border-color: var(--color-accent);
+    }
+
+    &_prev {
+      margin-right: 22px;
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTEiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxMSAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTkuNTkzNzUgMUwxIDguODEyNUw5LjU5Mzc1IDE2LjYyNSIgc3Ryb2tlPSIjRjU4MjIwIiBzdHJva2Utd2lkdGg9IjEuNTQwNTQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K");
+    }
+
+    &_next {
+      margin-left: 22px;
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTEiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxMSAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEgMTYuNjI1TDkuNTkzNzUgOC44MTI1TDEgMSIgc3Ryb2tlPSIjRjU4MjIwIiBzdHJva2Utd2lkdGg9IjEuNTQwNTQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K");
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+
+    a {
+      color: #510017;
+      font-size: 20px;
+      text-decoration: none;
+      display: flex;
+      width: 36px;
+      height: 36px;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      border: 1px solid #E2E2E2;
+      transition: all .35s;
+
+      &:hover,
+      &.current {
+        background-color: var(--color-accent);
+        color: #ffffff;
+        border-color: var(--color-accent);
+      }
+
+      &.current {
+        cursor: default;
+        pointer-events: none;
+      }
+    }
+
+    span {
+      display: flex;
+      width: 36px;
+      height: 36px;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      border: 1px solid #E2E2E2;
+      color: #510017;
+      cursor: default;
+    }
+
+    li {
+      &:nth-child(1) a {
+        border-radius: 4px 0 0 4px;
+      }
+
+      &:nth-last-child(1) a {
+        border-radius: 0 4px 4px 0;
+      }
+    }
+  }
+}

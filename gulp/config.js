@@ -31,10 +31,16 @@ export default {
 
       ['./node_modules/normalize.css/normalize.css', PATHS.build + 'styles/vendors/'],
       ['./node_modules/swiper/swiper-bundle.min.css', PATHS.build + 'styles/vendors/'],
+      ['./node_modules/nice-select2/dist/css/nice-select2.css', PATHS.build + 'styles/vendors/'],
+      ['./node_modules/nouislider/dist/nouislider.min.css', PATHS.build + 'styles/vendors/'],
+      ['./node_modules/@fancyapps/ui/dist/fancybox/fancybox.css', PATHS.build + 'styles/vendors/'],
 
       ['./node_modules/swiper/swiper-bundle.min.js', PATHS.build + 'scripts/vendors/'],
 
+      ['./node_modules/@fancyapps/ui/dist/fancybox/fancybox.umd.js', PATHS.build + 'scripts/vendors/'],
       ['./node_modules/lozad/dist/lozad.min.js', PATHS.build + 'scripts/vendors/'],
+      ['./node_modules/nice-select2/dist/js/nice-select2.js', PATHS.build + 'scripts/vendors/'],
+      ['./node_modules/nouislider/dist/nouislider.min.js', PATHS.build + 'scripts/vendors/'],
       // ['./node_modules/axios/dist/axios.min.js', PATHS.build + 'scripts/vendors/'],
       //['./node_modules/just-validate/dist/just-validate.production.min.js', PATHS.build + 'scripts/vendors/'],
       // ['./node_modules/fslightbox/index.js', PATHS.build + 'scripts/vendors/'],
