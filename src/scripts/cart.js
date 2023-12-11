@@ -313,7 +313,7 @@ const bindCartForm = (formNode) => {
                     Fancybox.show([
                         {
                             src: `<div class="modal-cart-confirmation">
-<div>Оформлен заказ №${number}. Детали заказа отправлены на электронную почту ${mail}. В ближайшее время наш менеджер свяжется с Вами.</div>
+<div class="modal-cart-confirmation__text">Оформлен заказ №${number}. Детали заказа отправлены на электронную почту ${mail}. В ближайшее время наш менеджер свяжется с Вами.</div>
 <div class="modal-cart-confirmation__buttons">
 <a href="/catalog/">Перейти в каталог</a>
 </div>
@@ -330,7 +330,7 @@ const bindCartForm = (formNode) => {
             Fancybox.show([
                 {
                     src: `<div class="modal-cart-confirmation">
-<div>Произошла ошибка при оформлении заказа.<br>Попробуйте еще раз, или свяжитесь с нами по телефону <a href="tel:+74959882028">+7(495) 988-20-28</a></div>
+<div class="modal-cart-confirmation__text">Произошла ошибка при оформлении заказа.<br>Попробуйте еще раз, или свяжитесь с нами по телефону <a href="tel:+74959882028">+7(495) 988-20-28</a></div>
 <div class="modal-cart-confirmation__buttons">
 <a onclick="window.location.reload()">Обновить страницу</a>
 <div class="is-close-btn" onclick="Fancybox.close()">Продолжить</div>

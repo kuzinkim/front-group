@@ -135,6 +135,10 @@ ul,li{
   font-size: 18px;
   line-height: 1.3;
 
+  &__text a {
+    color: var(--color-accent);
+  }
+
   &__buttons {
     margin-top: 24px;
     display: flex;
