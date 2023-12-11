@@ -41,6 +41,7 @@ export default {
       ['./node_modules/lozad/dist/lozad.min.js', PATHS.build + 'scripts/vendors/'],
       ['./node_modules/nice-select2/dist/js/nice-select2.js', PATHS.build + 'scripts/vendors/'],
       ['./node_modules/nouislider/dist/nouislider.min.js', PATHS.build + 'scripts/vendors/'],
+      ['./node_modules/inputmask/dist/inputmask.js', PATHS.build + 'scripts/vendors/'],
       // ['./node_modules/axios/dist/axios.min.js', PATHS.build + 'scripts/vendors/'],
       //['./node_modules/just-validate/dist/just-validate.production.min.js', PATHS.build + 'scripts/vendors/'],
       // ['./node_modules/fslightbox/index.js', PATHS.build + 'scripts/vendors/'],

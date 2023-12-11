@@ -71,9 +71,17 @@ ul,li{
   display: block;
   width: 100%;
   text-align: center;
+  border: 0;
+  cursor: pointer;
+  transition: .3s opacity;
+  will-change: opacity;
 
   &_brown{
     background-color: #510017;
+
+    &:hover {
+      opacity: .7;
+    }
   }
 
   &_orange{
@@ -99,6 +107,60 @@ ul,li{
       font-size: inherit;
       font-weight: inherit;
       color: inherit;
+    }
+  }
+  
+  &_left {
+    text-align: left;
+  }
+
+  &_mt-big {
+    margin-top: 142px;
+  }
+}
+
+.fancybox__container {
+  --fancybox-bg: rgba(24, 24, 27, 0.22);
+}
+
+.fancybox__content>.f-button.is-close-btn {
+  --f-button-color: #000000;
+  --f-button-hover-color: #999999;
+}
+
+.modal-cart-confirmation {
+  width: 100%;
+  max-width: 560px;
+  border-radius: 8px;
+  font-size: 18px;
+  line-height: 1.3;
+
+  &__buttons {
+    margin-top: 24px;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+
+    a, div {
+      background-color: #f58220;
+      color: #ffffff;
+      font-size: 16px;
+      text-align: center;
+      border-radius: 8px;
+      width: calc(50% - 8px);
+      text-decoration: none;
+      padding: 8px 12px;
+      font-weight: 500;
+      transition: opacity .3s;
+      cursor: pointer;
+
+      &:hover {
+        opacity: .8;
+      }
+    }
+
+    div {
+      background-color: #56b347;
     }
   }
 }
