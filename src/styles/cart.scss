@@ -184,26 +184,27 @@
   &__head-cell {
     flex-shrink: 0;
 
-    &:nth-child(1) {
+    &_name {
       width: calc(100% - 216px - 150px - 188px - 88px);
+      flex-grow: 1;
     }
 
-    &:nth-child(2) {
+    &_price {
       width: 216px;
       padding-left: 8px;
     }
 
-    &:nth-child(3) {
+    &_count {
       width: 150px;
       text-align: center;
     }
 
-    &:nth-child(4) {
+    &_sum {
       width: 188px;
       text-align: center;
     }
 
-    &:nth-child(5) {
+    &_del {
       width: 88px;
     }
   }
@@ -222,6 +223,7 @@
       display: flex;
       align-items: center;
       padding-right: 15px;
+      flex-grow: 1;
     }
 
     &-img {
