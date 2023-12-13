@@ -1,5 +1,5 @@
-let brandTabs = document.querySelectorAll('.brands-main__item')
-let brandContent = document.querySelectorAll('.brands-description__block')
+let brandTabs = document.querySelectorAll('[data-brand-tab]')
+let brandContent = document.querySelectorAll('[data-brand-content]')
 
 function removeActiveClass() {
     brandTabs.forEach(function(tab){
