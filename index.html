@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Разводящая</title>
+    <title>Главная</title>
     <link rel="stylesheet" href="build/styles/vendors/normalize.css">
     <link rel="stylesheet" href="build/styles/vendors/swiper-bundle.min.css">
     <link rel="stylesheet" href="build/styles/general.css">
+    <link rel="stylesheet" href="build/styles/main-page.css">
 </head>
 <body>
     <div class="page">
@@ -97,22 +98,619 @@
             </div>
         </header>
         <main class="main">
-            <div class="container">
-                <section class="front-block" style="margin-top: 0;">
-                    <div class="front-block__title" style="text-align: left;margin-bottom: 50px;">Разводящая</div>
-                    <ul>
-                        <li style="font-size: 20px;margin-bottom: 20px;"><a style="text-decoration: none; color:#510017;" href="./main.html" target="_blank">Главная</a></li>
-                        <li style="font-size: 20px;margin-bottom: 20px;"><a style="text-decoration: none; color:#510017;" href="./card.html" target="_blank">Карточка (1 вариант)</a></li>
-                        <li style="font-size: 20px;margin-bottom: 20px;"><a style="text-decoration: none; color:#510017;" href="./card2.html" target="_blank">Карточка (2 вариант)</a></li>
-                        <li style="font-size: 20px;margin-bottom: 20px;"><a style="text-decoration: none; color:#510017;" href="./catalog.html" target="_blank">Каталог (1 вариант)</a></li>
-                        <li style="font-size: 20px;margin-bottom: 20px;"><a style="text-decoration: none; color:#510017;" href="./catalog2.html" target="_blank">Каталог (2 вариант)</a></li>
-                        <li style="font-size: 20px;margin-bottom: 20px;"><a style="text-decoration: none; color:#510017;" href="./cart.html" target="_blank">Корзина (1 вариант)</a></li>
-                        <li style="font-size: 20px;margin-bottom: 20px;"><a style="text-decoration: none; color:#510017;" href="./cart2.html" target="_blank">Корзина (2 вариант)</a></li>
-                        <li style="font-size: 20px;margin-bottom: 0;"><a style="text-decoration: none; color:#510017;" href="./brand.html" target="_blank">Бренды общая</a></li>
-                        
-                    </ul>
-                </section>
-            </div>
+            <section class="front-slider front-slider_main js-first-screen">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <picture>
+                                <source srcset="assets/img/main_bg_no_text.png" media="(min-width: 768px)">
+                                <img src="assets/img/main_bg_no_text.png" alt="">
+                            </picture>
+                        </div>
+                        <div class="swiper-slide">
+                            <picture>
+                                <source srcset="assets/img/main_bg_no_text.png" media="(min-width: 768px)">
+                                <img src="assets/img/main_bg_no_text.png" alt="">
+                            </picture>
+                        </div>
+                        <div class="swiper-slide">
+                            <picture>
+                                <source srcset="assets/img/main_bg_no_text.png" media="(min-width: 768px)">
+                                <img src="assets/img/main_bg_no_text.png" alt="">
+                            </picture>
+                        </div>
+                        <div class="swiper-slide">
+                            <picture>
+                                <source srcset="assets/img/main_bg_no_text.png" media="(min-width: 768px)">
+                                <img src="assets/img/main_bg_no_text.png" alt="">
+                            </picture>
+                        </div>
+                        <div class="swiper-slide">
+                            <picture>
+                                <source srcset="assets/img/main_bg_no_text.png" media="(min-width: 768px)">
+                                <img src="assets/img/main_bg_no_text.png" alt="">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+                <div class="front-slider__block mainScreen">
+                    <div class="container">
+                        <div class="mainScreen__inner">
+                            <div class="mainScreen__logo">
+                                <img src="assets/svg/logo_main.svg" alt="">
+                            </div>
+                            <h1 class="mainScreen__title title__h1">ВСЕ ДЛЯ ОТДЫХА НА&nbsp;ПРИРОДЕ</h1>
+                            <div class="mainScreen__text">и создания хорошего настроения</div>
+                            <a href="#" class="mainScreen__button button button_orange">Подробнее</a>
+                            <div class="mainScreen__controls slideContols">
+                                <div class="slideContols__btn slideContols__btn_prev"></div>
+                                <div class="slideContols__btn slideContols__btn_next"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="front-block">
+                <div class="container">
+                    <div class="front-block__head">
+                        <div class="front-block__title">Наши категории</div>
+                        <div class="front-block__subtitle">оптовые поставки на экспорт и по РФ</div>
+                    </div>
+                    <div class="front-block__body category">
+                        <a href="#" class="category__item category__item_banya" style="background-image: url(assets/img/c_1.jpg);">
+                           <span class="category__title">Баня и сауна</span> 
+                        </a>
+                        <a href="#" class="category__item category__item_kovriki" style="background-image: url(assets/img/c_2.jpg);">
+                            <span class="category__title">Коврики</span>
+                        </a>
+                        <a href="#" class="category__item category__item_kuhnya" style="background-image: url(assets/img/c_3.jpg);">
+                           <span class="category__title">Кухня</span>
+                        </a>
+                        <a href="#" class="category__item category__item_interior" style="background-image: url(assets/img/c_4.jpg);">
+                            <span class="category__title">Интерьер</span>
+                        </a>
+                        <a href="#" class="category__item category__item_piknik" style="background-image: url(assets/img/c_5.jpg);">
+                            <span class="category__title">Пикник</span>
+                        </a>
+                        <a href="#" class="category__item category__item_sad" style="background-image: url(assets/img/c_6.jpg);">
+                            <span class="category__title">Сад и&nbsp;огород</span>
+                        </a>
+                        <a href="#" class="category__item category__item_nasekomiye" style="background-image: url(assets/img/c_7.jpg);">
+                            <span class="category__title">От насекомых и&nbsp;вредителей</span>
+                        </a>
+                        <a href="#" class="category__item category__item_turizm" style="background-image: url(assets/img/c_8.jpg);">
+                            <span class="category__title">Туризм и&nbsp;отдых</span>
+                        </a>
+                        <a href="#" class="category__item category__item_health" style="background-image: url(assets/img/c_9.jpg);">
+                            <span class="category__title">Красота и&nbsp;здоровье</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section class="front-block">
+                <div class="container">
+                    <div class="front-block__head">
+                        <div class="front-block__title">Бренды</div>
+                        <div class="front-block__subtitle">которые мы создаем</div>
+                    </div>
+                    <div class="front-block__body brands">
+                        <div class="brands__column brands-main">
+                            <div class="brands-main__grid">
+                                <div class="brands-main__item is-active" data-brand-tab="1">
+                                    <a href="#" class="brands-main__logo">
+                                        <img src="assets/svg/bannye.svg" alt="">
+                                    </a>
+                                    <span class="brands-main__text">для бани и сауны</span>
+                                </div>
+                                <div class="brands-main__item" data-brand-tab="2">
+                                    <a href="#" class="brands-main__logo">
+                                        <img src="assets/svg/pechnyie.svg" alt="">
+                                    </a>
+                                    <span class="brands-main__text">для печи и камина</span>
+                                </div>
+                                <div class="brands-main__item" data-brand-tab="3">
+                                    <a href="#" class="brands-main__logo">
+                                        <img src="assets/svg/blumen.svg" alt="">
+                                    </a>
+                                    <span class="brands-main__text">для дома и сада</span>
+                                </div>
+                                <div class="brands-main__item" data-brand-tab="4">
+                                    <a href="#" class="brands-main__logo">
+                                        <img src="assets/svg/help.svg" alt="">
+                                    </a>
+                                    <span class="brands-main__text">от вредителей</span>
+                                </div>
+                                <div class="brands-main__item" data-brand-tab="5">
+                                    <a href="#" class="brands-main__logo">
+                                        <img src="assets/svg/qwerty.svg" alt="">
+                                    </a>
+                                    <span class="brands-main__text">стильные решения</span>
+                                </div>
+                                <div class="brands-main__item" data-brand-tab="6">
+                                    <a href="#" class="brands-main__logo">
+                                        <img src="assets/svg/aroma.svg" alt="">
+                                    </a>
+                                    <span class="brands-main__text">парфюм для дома</span>
+                                </div>
+                                <div class="brands-main__item" data-brand-tab="7">
+                                    <a href="#" class="brands-main__logo">
+                                        <img src="assets/svg/vegas.svg" alt="">
+                                    </a>
+                                    <span class="brands-main__text">декоративный свет</span>
+                                </div>
+                                <div class="brands-main__item" data-brand-tab="8">
+                                    <a href="#" class="brands-main__logo">
+                                        <img src="assets/svg/hot_pot.svg" alt="">
+                                    </a>
+                                    <span class="brands-main__text">лучшая цена</span>
+                                </div>
+                                <div class="brands-main__item" data-brand-tab="9">
+                                    <a href="#" class="brands-main__logo">
+                                        <img src="assets/svg/marmiton.svg" alt="">
+                                    </a>
+                                    <span class="brands-main__text">товары для кухни</span>
+                                </div>
+                                <div class="brands-main__item" data-brand-tab="10">
+                                    <a href="#" class="brands-main__logo">
+                                        <img src="assets/svg/vortex.svg" alt="">
+                                    </a>
+                                    <span class="brands-main__text">напольные покрытия</span>
+                                </div>
+                                <div class="brands-main__item" data-brand-tab="11">
+                                    <a href="#" class="brands-main__logo">
+                                        <img src="assets/svg/boyScout.svg" alt="">
+                                    </a>
+                                    <span class="brands-main__text">для отдыха и пикника</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="brands__column brands-description">
+                            <div class="brands-description__block is-active" data-brand-content="1">
+                                <div class="brands-description__title">Банные штучки</div>
+                                <div class="brands-description__text">Баня, это территория высоких температур. Невозможно представить поход в баню без шапки, которая уберегает от теплового удара, без коврика, который убережёт Ваше тело  от повышенной температуры и бактерий, без тапочек, которые уберегают ваши ноги от обжигания о горячий пол в парилке, а ароматические масла добавят приятных ощущений.
+                                </div>
+                                <ul class="brands-description__list">
+                                    <li>Мочалки</li>
+                                    <li>Щетки</li>
+                                    <li>Массажеры</li>
+                                    <li>Пемзы и пилки</li>
+                                    <li>Расчески</li>
+                                    <li>Косметика</li>
+                                    <li>Изделия из дерева</li>
+                                    <li>Ковши и кружки и др.</li>
+                                </ul>
+                                <div class="brands-description__link">
+                                    <a href="#" class="brands-description__btn button button_brown">Перейти в каталог</a>
+                                    <a class="brands-description__pdf" href="#">Скачать в PDF</a>
+                                </div>
+                            </div>
+                            <div class="brands-description__block" data-brand-content="2">
+                                <div class="brands-description__title">Печные штучки</div>
+                                <div class="brands-description__text">Баня, это территория высоких температур. Невозможно представить поход в баню без шапки, которая уберегает от теплового удара, без коврика, который убережёт Ваше тело  от повышенной температуры и бактерий, без тапочек, которые уберегают ваши ноги от обжигания о горячий пол в парилке, а ароматические масла добавят приятных ощущений.
+                                </div>
+                                <ul class="brands-description__list">
+                                    <li>Мочалки</li>
+                                    <li>Щетки</li>
+                                    <li>Массажеры</li>
+                                    <li>Пемзы и пилки</li>
+                                    <li>Расчески</li>
+                                    <li>Косметика</li>
+                                    <li>Изделия из дерева</li>
+                                    <li>Ковши и кружки и др.</li>
+                                </ul>
+                                <div class="brands-description__link">
+                                    <a href="#" class="brands-description__btn button button_brown">Перейти в каталог</a>
+                                    <a class="brands-description__pdf" href="#">Скачать в PDF</a>
+                                </div>
+                            </div>
+                            <div class="brands-description__block" data-brand-content="3">
+                                <div class="brands-description__title">Blumen Haus</div>
+                                <div class="brands-description__text">Баня, это территория высоких температур. Невозможно представить поход в баню без шапки, которая уберегает от теплового удара, без коврика, который убережёт Ваше тело  от повышенной температуры и бактерий, без тапочек, которые уберегают ваши ноги от обжигания о горячий пол в парилке, а ароматические масла добавят приятных ощущений.
+                                </div>
+                                <ul class="brands-description__list">
+                                    <li>Мочалки</li>
+                                    <li>Щетки</li>
+                                    <li>Массажеры</li>
+                                    <li>Пемзы и пилки</li>
+                                    <li>Расчески</li>
+                                    <li>Косметика</li>
+                                    <li>Изделия из дерева</li>
+                                    <li>Ковши и кружки и др.</li>
+                                </ul>
+                                <div class="brands-description__link">
+                                    <a href="#" class="brands-description__btn button button_brown">Перейти в каталог</a>
+                                    <a class="brands-description__pdf" href="#">Скачать в PDF</a>
+                                </div>
+                            </div>
+                            <div class="brands-description__block" data-brand-content="4">
+                                <div class="brands-description__title">Банные штучки</div>
+                                <div class="brands-description__text">Баня, это территория высоких температур. Невозможно представить поход в баню без шапки, которая уберегает от теплового удара, без коврика, который убережёт Ваше тело  от повышенной температуры и бактерий, без тапочек, которые уберегают ваши ноги от обжигания о горячий пол в парилке, а ароматические масла добавят приятных ощущений.
+                                </div>
+                                <ul class="brands-description__list">
+                                    <li>Мочалки</li>
+                                    <li>Щетки</li>
+                                    <li>Массажеры</li>
+                                    <li>Пемзы и пилки</li>
+                                    <li>Расчески</li>
+                                    <li>Косметика</li>
+                                    <li>Изделия из дерева</li>
+                                    <li>Ковши и кружки и др.</li>
+                                </ul>
+                                <div class="brands-description__link">
+                                    <a href="#" class="brands-description__btn button button_brown">Перейти в каталог</a>
+                                    <a class="brands-description__pdf" href="#">Скачать в PDF</a>
+                                </div>
+                            </div>
+                            <div class="brands-description__block" data-brand-content="5">
+                                <div class="brands-description__title">Банные штучки</div>
+                                <div class="brands-description__text">Баня, это территория высоких температур. Невозможно представить поход в баню без шапки, которая уберегает от теплового удара, без коврика, который убережёт Ваше тело  от повышенной температуры и бактерий, без тапочек, которые уберегают ваши ноги от обжигания о горячий пол в парилке, а ароматические масла добавят приятных ощущений.
+                                </div>
+                                <ul class="brands-description__list">
+                                    <li>Мочалки</li>
+                                    <li>Щетки</li>
+                                    <li>Массажеры</li>
+                                    <li>Пемзы и пилки</li>
+                                    <li>Расчески</li>
+                                    <li>Косметика</li>
+                                    <li>Изделия из дерева</li>
+                                    <li>Ковши и кружки и др.</li>
+                                </ul>
+                                <div class="brands-description__link">
+                                    <a href="#" class="brands-description__btn button button_brown">Перейти в каталог</a>
+                                    <a class="brands-description__pdf" href="#">Скачать в PDF</a>
+                                </div>
+                            </div>
+                            <div class="brands-description__block" data-brand-content="6">
+                                <div class="brands-description__title">Банные штучки</div>
+                                <div class="brands-description__text">Баня, это территория высоких температур. Невозможно представить поход в баню без шапки, которая уберегает от теплового удара, без коврика, который убережёт Ваше тело  от повышенной температуры и бактерий, без тапочек, которые уберегают ваши ноги от обжигания о горячий пол в парилке, а ароматические масла добавят приятных ощущений.
+                                </div>
+                                <ul class="brands-description__list">
+                                    <li>Мочалки</li>
+                                    <li>Щетки</li>
+                                    <li>Массажеры</li>
+                                    <li>Пемзы и пилки</li>
+                                    <li>Расчески</li>
+                                    <li>Косметика</li>
+                                    <li>Изделия из дерева</li>
+                                    <li>Ковши и кружки и др.</li>
+                                </ul>
+                                <div class="brands-description__link">
+                                    <a href="#" class="brands-description__btn button button_brown">Перейти в каталог</a>
+                                    <a class="brands-description__pdf" href="#">Скачать в PDF</a>
+                                </div>
+                            </div>
+                            <div class="brands-description__block" data-brand-content="7">
+                                <div class="brands-description__title">Банные штучки</div>
+                                <div class="brands-description__text">Баня, это территория высоких температур. Невозможно представить поход в баню без шапки, которая уберегает от теплового удара, без коврика, который убережёт Ваше тело  от повышенной температуры и бактерий, без тапочек, которые уберегают ваши ноги от обжигания о горячий пол в парилке, а ароматические масла добавят приятных ощущений.
+                                </div>
+                                <ul class="brands-description__list">
+                                    <li>Мочалки</li>
+                                    <li>Щетки</li>
+                                    <li>Массажеры</li>
+                                    <li>Пемзы и пилки</li>
+                                    <li>Расчески</li>
+                                    <li>Косметика</li>
+                                    <li>Изделия из дерева</li>
+                                    <li>Ковши и кружки и др.</li>
+                                </ul>
+                                <div class="brands-description__link">
+                                    <a href="#" class="brands-description__btn button button_brown">Перейти в каталог</a>
+                                    <a class="brands-description__pdf" href="#">Скачать в PDF</a>
+                                </div>
+                            </div>
+                            <div class="brands-description__block" data-brand-content="8">
+                                <div class="brands-description__title">Банные штучки</div>
+                                <div class="brands-description__text">Баня, это территория высоких температур. Невозможно представить поход в баню без шапки, которая уберегает от теплового удара, без коврика, который убережёт Ваше тело  от повышенной температуры и бактерий, без тапочек, которые уберегают ваши ноги от обжигания о горячий пол в парилке, а ароматические масла добавят приятных ощущений.
+                                </div>
+                                <ul class="brands-description__list">
+                                    <li>Мочалки</li>
+                                    <li>Щетки</li>
+                                    <li>Массажеры</li>
+                                    <li>Пемзы и пилки</li>
+                                    <li>Расчески</li>
+                                    <li>Косметика</li>
+                                    <li>Изделия из дерева</li>
+                                    <li>Ковши и кружки и др.</li>
+                                </ul>
+                                <div class="brands-description__link">
+                                    <a href="#" class="brands-description__btn button button_brown">Перейти в каталог</a>
+                                    <a class="brands-description__pdf" href="#">Скачать в PDF</a>
+                                </div>
+                            </div>
+                            <div class="brands-description__block" data-brand-content="9">
+                                <div class="brands-description__title">Банные штучки</div>
+                                <div class="brands-description__text">Баня, это территория высоких температур. Невозможно представить поход в баню без шапки, которая уберегает от теплового удара, без коврика, который убережёт Ваше тело  от повышенной температуры и бактерий, без тапочек, которые уберегают ваши ноги от обжигания о горячий пол в парилке, а ароматические масла добавят приятных ощущений.
+                                </div>
+                                <ul class="brands-description__list">
+                                    <li>Мочалки</li>
+                                    <li>Щетки</li>
+                                    <li>Массажеры</li>
+                                    <li>Пемзы и пилки</li>
+                                    <li>Расчески</li>
+                                    <li>Косметика</li>
+                                    <li>Изделия из дерева</li>
+                                    <li>Ковши и кружки и др.</li>
+                                </ul>
+                                <div class="brands-description__link">
+                                    <a href="#" class="brands-description__btn button button_brown">Перейти в каталог</a>
+                                    <a class="brands-description__pdf" href="#">Скачать в PDF</a>
+                                </div>
+                            </div>
+                            <div class="brands-description__block" data-brand-content="10">
+                                <div class="brands-description__title">Банные штучки</div>
+                                <div class="brands-description__text">Баня, это территория высоких температур. Невозможно представить поход в баню без шапки, которая уберегает от теплового удара, без коврика, который убережёт Ваше тело  от повышенной температуры и бактерий, без тапочек, которые уберегают ваши ноги от обжигания о горячий пол в парилке, а ароматические масла добавят приятных ощущений.
+                                </div>
+                                <ul class="brands-description__list">
+                                    <li>Мочалки</li>
+                                    <li>Щетки</li>
+                                    <li>Массажеры</li>
+                                    <li>Пемзы и пилки</li>
+                                    <li>Расчески</li>
+                                    <li>Косметика</li>
+                                    <li>Изделия из дерева</li>
+                                    <li>Ковши и кружки и др.</li>
+                                </ul>
+                                <div class="brands-description__link">
+                                    <a href="#" class="brands-description__btn button button_brown">Перейти в каталог</a>
+                                    <a class="brands-description__pdf" href="#">Скачать в PDF</a>
+                                </div>
+                            </div>
+                            <div class="brands-description__block" data-brand-content="11">
+                                <div class="brands-description__title">Банные штучки</div>
+                                <div class="brands-description__text">Баня, это территория высоких температур. Невозможно представить поход в баню без шапки, которая уберегает от теплового удара, без коврика, который убережёт Ваше тело  от повышенной температуры и бактерий, без тапочек, которые уберегают ваши ноги от обжигания о горячий пол в парилке, а ароматические масла добавят приятных ощущений.
+                                </div>
+                                <ul class="brands-description__list">
+                                    <li>Мочалки</li>
+                                    <li>Щетки</li>
+                                    <li>Массажеры</li>
+                                    <li>Пемзы и пилки</li>
+                                    <li>Расчески</li>
+                                    <li>Косметика</li>
+                                    <li>Изделия из дерева</li>
+                                    <li>Ковши и кружки и др.</li>
+                                </ul>
+                                <div class="brands-description__link">
+                                    <a href="#" class="brands-description__btn button button_brown">Перейти в каталог</a>
+                                    <a class="brands-description__pdf" href="#">Скачать в PDF</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="front-block">
+                <div class="container">
+                    <div class="front-block__head">
+                        <div class="front-block__title">Партнеры</div>
+                        <div class="front-block__subtitle">которые нам доверяют</div>
+                    </div>
+                    <div class="front-block__body partners">
+                        <section class="front-slider front-slider_partners">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="partners__column">
+                                            <div class="partners__item"><img src="assets/svg/logo/pyat.svg" alt=""></div>
+                                            <div class="partners__item"><img src="assets/svg/logo/leroy.svg" alt=""></div>
+                                            <div class="partners__item"><img src="assets/svg/logo/nova.svg" alt=""></div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="partners__column">
+                                            <div class="partners__item"><img src="assets/svg/logo/viktor.svg" alt=""></div>
+                                            <div class="partners__item"><img src="assets/svg/logo/maksidom.svg" alt=""></div>
+                                            <div class="partners__item"><img src="assets/svg/logo/wb.svg" alt=""></div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="partners__column">
+                                            <div class="partners__item"><img src="assets/svg/logo/magnit.svg" alt=""></div>
+                                            <div class="partners__item"><img src="assets/svg/logo/castorama.svg" alt=""></div>
+                                            <div class="partners__item"><img src="assets/svg/logo/okey.svg" alt=""></div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="partners__column">
+                                            <div class="partners__item"><img src="assets/svg/logo/azbuka.svg"  alt=""></div>
+                                            <div class="partners__item"><img src="assets/svg/logo/obi.svg"  alt=""></div>
+                                            <div class="partners__item"><img src="assets/svg/logo/pleyer.svg"  alt=""></div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="partners__column">
+                                            <div class="partners__item"><img src="assets/svg/logo/karusel.svg"  alt=""></div>
+                                            <div class="partners__item"><img src="assets/svg/logo/ozon.svg"  alt=""></div>
+                                            <div class="partners__item"><img src="assets/svg/logo/akson.svg"  alt=""></div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="partners__column">
+                                            <div class="partners__item"><img src="assets/svg/logo/perekrestok.svg"  alt=""></div>
+                                            <div class="partners__item"><img src="assets/svg/logo/petrovich.svg"  alt=""></div>
+                                            <div class="partners__item"><img src="assets/svg/logo/tvoy.svg"  alt=""></div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="partners__column">
+                                            <div class="partners__item"><img src="assets/svg/logo/megastroy.svg" alt=""></div>
+                                            <div class="partners__item"><img src="assets/svg/logo/globus.svg" alt=""></div>
+                                            <div class="partners__item"><img src="assets/svg/logo/ashan.svg" alt=""></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="partners__circle partners__circle_tl"></span>
+                            <span class="partners__circle partners__circle_tr"></span>
+                            <span class="partners__circle partners__circle_bl"></span>
+                            <span class="partners__circle partners__circle_br"></span>
+                        </section>
+                    </div>
+                </div>
+            </section>
+            <section class="front-block news">
+                <div class="container">
+                    <div class="front-block__head">
+                        <div class="front-block__title">Новости</div>
+                        <div class="front-block__subtitle">и события в компании</div>
+                    </div>
+                    <div class="front-block__body">
+                        <div class="news__inner">
+                            <div class="news__item">
+                                <div class="news__head">
+                                    <div class="news__description">Lorem ipsum dolor sit amet consectetur. Sed mi feugiat eget sed sed id nisl enim magna.</div>
+                                    <div class="news__wrap">
+                                        <div class="news__day">06</div>
+                                        <div class="news__data">6 ноября – 2023</div>
+                                        <div class="news__title">Lorem ipsum dolor sit amet consectetur.</div>
+                                    </div>
+                                </div>
+                                <div class="news__bottom">
+                                    <div class="news__img">
+                                        <a href="#">
+                                            <img src="assets/img/n_3.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="news__preview">
+                                        <span>Lorem ipsum dolor sit amet consectetur. Sed mi feugiat eget sed sed id nisl enim magna. Lorem ipsum dolor sit amet consectetur. Sed mi feugiat eget sed sed id nisl enim magna.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="news__item">
+                                <div class="news__head">
+                                    <div class="news__description">Lorem ipsum dolor sit amet consectetur. Sed mi feugiat eget sed sed id nisl enim magna. </div>
+                                    <div class="news__wrap">
+                                        <div class="news__day">06</div>
+                                        <div class="news__data">6 ноября – 2023</div>
+                                        <div class="news__title">Lorem ipsum dolor sit amet consectetur.</div>
+                                    </div>
+                                </div>
+                                <div class="news__bottom">
+                                    <div class="news__img">
+                                        <a href="#">
+                                            <img src="assets/img/n_2.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="news__preview">
+                                        <span>Lorem ipsum dolor sit amet consectetur.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="news__item">
+                                <div class="news__head">
+                                    <div class="news__description">Lorem ipsum dolor sit amet consectetur. Sed mi feugiat eget sed sed id nisl enim magna. </div>
+                                    <div class="news__wrap">
+                                        <div class="news__day">17</div>
+                                        <div class="news__data">17 октября – 2023</div>
+                                        <div class="news__title">Lorem ipsum dolor sit amet consectetur.</div>
+                                    </div>
+                                </div>
+                                <div class="news__bottom">
+                                    <div class="news__img">
+                                        <a href="#">
+                                            <img src="assets/img/n_3.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="news__preview">
+                                        <span>Lorem ipsum dolor sit amet consectetur. Sed mi feugiat eget sed sed id nisl enim magna. Lorem ipsum dolor sit amet consectetur. </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="news__item">
+                                <div class="news__head">
+                                    <div class="news__description">Lorem ipsum dolor sit amet consectetur. Sed mi feugiat eget sed sed id nisl enim magna. </div>
+                                    <div class="news__wrap">
+                                        <div class="news__day">06</div>
+                                        <div class="news__data">6 ноября – 2023</div>
+                                        <div class="news__title">Lorem ipsum dolor sit amet consectetur.</div>
+                                    </div>
+                                </div>
+                                <div class="news__bottom">
+                                    <div class="news__img">
+                                        <a href="#">
+                                            <img src="assets/img/n_2.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="news__preview">
+                                        <span>Sed mi feugiat eget sed sed id nisl enim magna. Lorem ipsum dolor sit amet consectetur. Sed mi feugiat eget sed sed id nisl enim magna.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="front-block">
+                <div class="container">
+                    <div class="front-block__head">
+                        <div class="front-block__title">Цифры и география поставок</div>
+                        <div class="front-block__subtitle">общие показатели</div>
+                    </div>
+                    <div class="front-block__body stat">
+                        <div class="stat__wrap">
+                            <div class="stat__item">
+                                <b>3000</b>
+                                <div class="stat__title">партнеров</div>
+                                <div class="stat__text">Разработка индивидуальных партнерских программ</div> 
+                            </div>
+                            <div class="stat__item">
+                                <b>24</b>
+                                <div class="stat__title">часа</div>
+                                <div class="stat__text">Сбор заказа</div> 
+                            </div>
+                            <div class="stat__item">
+                                <b>400</b>
+                                <div class="stat__title">сотрудников</div>
+                                <div class="stat__text">Экспертиза и опыт на&nbsp;каждом&nbsp;этапе</div> 
+                            </div>
+                            <div class="stat__item">
+                                <b>100%</b>
+                                <div class="stat__title">поддержка</div>
+                                <div class="stat__text">Концептуальный подход к&nbsp;продвижению</div> 
+                            </div>
+                            <div class="stat__item">
+                                <b>3000</b>
+                                <div class="stat__title">артикулов</div>
+                                <div class="stat__text">Продажи и прибыль круглый год</div> 
+                            </div>
+                        </div>
+                        <div class="stat__map">
+                            <img src="assets/img/map.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="front-block">
+                <div class="container">
+                    <div class="front-block__head">
+                        <div class="front-block__title">Ценности</div>
+                        <div class="front-block__subtitle">которыми мы руководтствуемся</div>
+                    </div>
+                    <div class="front-block__body worth">
+                        <div class="worth__inner">
+                            <div class="worth__item">
+                                <div class="worth__title">Репутация</div>
+                                <div class="worth__text">Мы дорожим репутацией, а потому соблюдаем нормы и правила деловой этики и права.</div>
+                            </div>
+                            <div class="worth__item">
+                                <div class="worth__title">Честность</div>
+                                <div class="worth__text">Честность в отношениях и предоставлении правдивой информации партнерам.</div>
+                            </div>
+                            <div class="worth__item">
+                                <div class="worth__title">Компетентность</div>
+                                <div class="worth__text">Мы следим за инновациями и развиваем свою экспертизу, чтобы предлагать партнерам лучшие решения.</div>
+                            </div>
+                            <div class="worth__item">
+                                <div class="worth__title">Выгода</div>
+                                <div class="worth__text">Мы работаем, чтобы наши клиенты получали максимальный сервис и прибыль.</div>
+                            </div>
+                            <div class="worth__item">
+                                <div class="worth__title">Ответственность</div>
+                                <div class="worth__text">Выполняем свои обязательства и ожидаем выполнения обязательств от партнеров.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
         <footer class="footer">
             <div class="container">
@@ -201,5 +799,10 @@
             </div>
         </footer>
     </div>
+
+    <script src="build\scripts\vendors\lozad.min.js"></script>
+    <script src="build\scripts\vendors\swiper-bundle.min.js"></script>
+    <script src="build\scripts\general.min.js"></script>
+    <script src="build\scripts\main-page.min.js"></script>
 </body>
 </html>
