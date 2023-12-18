@@ -6,13 +6,19 @@
         border-bottom: 1px solid #F58220;
     }
 
-    &__logo{
-        grid-area: logo;
-        width: 182px;
-        margin-right: 115px;
+    &__left{
+        width: 100%;
+        max-width: 283px;
+        margin-right: 20px;
+        display: flex;
+        flex-direction: column;
+    }
 
+    &__logo{
         img{
             width: auto;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 
@@ -22,7 +28,7 @@
     }
 
     &__contact{
-        grid-column: 7/9;
+        grid-column: 8/9;
     }
 
     &__reviews{
@@ -32,11 +38,10 @@
     }
 
     &__callback{
-        grid-row: 2/3;
-        grid-column: 7/9;
-        align-self: center;
         border: 0;
         cursor: pointer;
+        margin-top: auto;
+        margin-bottom: 12px;
     }
 }
 
@@ -68,12 +73,12 @@
 
 
 .footerCategory{
-    grid-column: 4/7;
+    grid-column: 4/8;
     display: grid;
     grid-template-columns: repeat(3, auto);
     align-self: flex-start;
     gap: 0 36px;
-    margin: 0 62px;
+    margin: 0 59px;
 
     &__item{
         color: #510017;
