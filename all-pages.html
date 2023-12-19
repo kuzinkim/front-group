@@ -21,7 +21,7 @@
                     </ul>
                     <div class="header__search">
                         <form action="#" class="searchForm">
-                            <input type="text" class="searchForm__input">
+                            <input type="text" class="searchForm__input" placeholder="Поиск лучших товаров ...">
                             <button class="searchForm__submit" type="submit"><img src="assets/svg/search.svg" alt=""></button>
                         </form>
                     </div>
@@ -29,12 +29,15 @@
                     <div class="header__actions headerActions">
                         <div class="headerActions__btn headerActions__btn_favorites">
                             <img src="assets/svg/icon/Heart.svg" alt="">
+                            <span>Избранное</span>
                         </div>
                         <div class="headerActions__btn headerActions__btn_compare">
                             <img src="assets/svg/icon/Slider.svg" alt="">
+                            <span>Сравнение</span>
                         </div>
                         <div class="headerActions__btn headerActions__btn_basket">
                             <img src="assets/svg/icon/Shop.svg" alt="">
+                            <span>Корзина</span>
                         </div>
                     </div>
                     <div class="header__burger js-burger">
@@ -82,7 +85,15 @@
                                     <use xlink:href="assets/svg/sprite.svg#pin" />
                                   </svg>
                             </div>
-                            <span>г. Москва, ул. Нижняя, д. 14</span>
+                            <span>Офис: г. Москва, ул. Нижняя, д. 14, стр. 7</span>
+                        </li>
+                        <li class="menuContacts__item menuContacts__item_text">
+                            <div class="menuContacts__icon">
+                                <svg width="19" height="23">
+                                    <use xlink:href="assets/svg/sprite.svg#pin" />
+                                  </svg>
+                            </div>
+                            <span>Склад: г. Домодедово, мкр. Востряково, ул.&nbsp;Рябиновая, д. 14, стр. 1</span>
                         </li>
                         <li class="menuContacts__item menuContacts__item_text">
                             <div class="menuContacts__icon">
@@ -118,9 +129,13 @@
         <footer class="footer">
             <div class="container">
                 <div class="footer__grid">
-                    <a href="#" class="footer__logo">
-                        <img src="assets/svg/logo.svg" alt="">
-                    </a>
+                    <div class="footer__left">
+                        <a href="#" class="footer__logo">
+                            <img src="assets/svg/logo_footer.svg" alt="">
+                        </a>
+                        <button class="footer__callback button button_orange">Заказать звонок</button>
+                    </div>
+                    
                     <div class="footer__wrap">
                         <ul class="footer__menu footerMenu">
                             <li class="footerMenu__item"><a href="#">О нас</a></li>
@@ -175,7 +190,15 @@
                                         <use xlink:href="assets/svg/sprite.svg#pin"></use>
                                       </svg>
                                 </div>
-                                <span>г. Москва, ул. Нижняя, д. 14</span>
+                                <span>Офис: г. Москва, ул. Нижняя д.&nbsp;14,&nbsp;стр.&nbsp;7 </span>
+                            </li>
+                            <li class="menuContacts__item menuContacts__item_text">
+                                <div class="menuContacts__icon">
+                                    <svg width="19" height="23">
+                                        <use xlink:href="assets/svg/sprite.svg#pin"></use>
+                                      </svg>
+                                </div>
+                                <span>Склад: г. Домодедово мкр.&nbsp;Востряково, ул.&nbsp;Рябиновая,&nbsp;д.&nbsp;14,&nbsp;стр. 1</span>
                             </li>
                             <li class="menuContacts__item menuContacts__item_text">
                                 <div class="menuContacts__icon">
@@ -189,7 +212,6 @@
                         <div class="footer__reviews">
                             <img src="assets/img/footer_reviews.png" alt="">
                         </div>
-                        <button class="footer__callback button button_orange">Заказать звонок</button>
                     </div>
                 </div>
                 <div class="footer__bottom footerBottom">
