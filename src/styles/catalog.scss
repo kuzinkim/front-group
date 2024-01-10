@@ -1,5 +1,5 @@
 .sections-list {
-  margin-bottom: 65px;
+  margin-bottom: 40px;
 
   ul {
     margin: 0;
@@ -8,11 +8,19 @@
     display: flex;
     flex-wrap: wrap;
     column-gap: 20px;
-    row-gap: 60px;
+    row-gap: 40px;
   }
 
   li {
     width: calc(100% / 10 - 20px * 9 / 10);
+
+    @media screen and (max-width: 1500px) {
+      width: calc(100% / 8 - 20px * 7 / 8);
+    }
+
+    @media screen and (max-width: 1200px) {
+      width: calc(100% / 7 - 20px * 6 / 7);
+    }
   }
 
   &__item {
@@ -119,6 +127,14 @@
 
   &__item {
     width: calc(100% / 6 - 18px * 5 / 6);
+
+    @media screen and (max-width: 1700px) {
+      width: calc(100% / 5 - 18px * 4 / 5);
+    }
+
+    @media screen and (max-width: 1500px) {
+      width: calc(100% / 4 - 18px * 3 / 4);
+    }
   }
 }
 
