@@ -12,14 +12,14 @@
   }
 
   li {
-    width: calc(100% / 8 - 20px * 7 / 8);
+    width: calc(100% / 10 - 20px * 9 / 10);
   }
 
   &__item {
     display: block;
     text-decoration: none;
     color: #510017;
-    font-size: 20px;
+    font-size: 14px;
     font-weight: 400;
 
     &:hover {
@@ -32,8 +32,8 @@
   &__item-img {
     width: 100%;
     display: flex;
-    height: 142px;
-    margin-bottom: 24px;
+    height: 122px;
+    margin-bottom: 12px;
 
     img {
       display: block;
@@ -58,13 +58,13 @@
   margin-bottom: 96px;
 
   &__sidebar {
-    width: 400px;
+    width: 350px;
     margin-right: 50px;
     flex-shrink: 0;
   }
 
   &__content {
-    width: calc(100% - 450px);
+    width: calc(100% - 400px);
     padding-top: 14px;
   }
 
@@ -77,7 +77,7 @@
 
   &__pagination-wrapper {
     width: 100%;
-    margin-top: 100px;
+    margin-top: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -97,12 +97,12 @@
         height: 10px;
         border-bottom-color: var(--color-accent);
         border-right-color: var(--color-accent);
-        margin-top: -7px;
+        margin-top: -9px;
         right: 8px;
       }
 
       .current {
-        font-size: 22px;
+        font-size: 16px;
         color: #510017;
       }
     }
@@ -112,13 +112,13 @@
 .catalog {
   display: flex;
   flex-wrap: wrap;
-  gap: 22px;
+  gap: 18px;
   list-style: none;
   margin: 0;
   padding: 0;
 
   &__item {
-    width: calc(100% / 4 - 66px / 4);
+    width: calc(100% / 6 - 18px * 5 / 6);
   }
 }
 
@@ -126,7 +126,7 @@
   border-radius: 15px;
   border: 1px solid rgba(#000000, .25);
   position: relative;
-  padding: 50px 14px 18px;
+  padding: 50px 12px 18px;
   transition: border-color .25s;
 
   &:hover {
@@ -136,14 +136,14 @@
   &__controls {
     position: absolute;
     left: 14px;
-    top: 15px;
+    top: 12px;
     z-index: 4;
   }
 
   &__like {
     display: block;
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
     padding: 0;
     background-color: transparent;
     border: none;
@@ -153,7 +153,7 @@
     background-size: contain;
     cursor: pointer;
     transition: background-image .3s;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 
     &:hover {
       background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNC4yMjI5IDcuMzU3NzhDMTIuMDg2MyA1LjEzMTA3IDguNDg4MTIgNS4wOTkyNSA2LjE1Mzg1IDcuMzc5ODRDNi4xNDY0NiA3LjM4NzA3IDYuMTM4OTUgNy4zOTQxNyA2LjEzMTMzIDcuNDAxMTVDMy44NjY2NCA5LjQ3NTQ4IDMuODMzMTggMTIuOTQ3MSA2LjE1Mzg1IDE1LjIxNDRMNi4xNTk5NSAxNS4yMjA0TDE0LjkyMTcgMjMuOTMzNkwyMy44NDYyIDE1LjIxNDRDMjMuODUzNSAxNS4yMDcyIDIzLjg2MTEgMTUuMjAwMSAyMy44Njg3IDE1LjE5MzFDMjYuMTMzNCAxMy4xMTg4IDI2LjE2NjggOS42NDcxNSAyMy44NDYyIDcuMzc5ODRDMjEuNTI0NCA1LjExMTQ4IDE3LjkwODUgNS4xMTE0OCAxNS41ODY4IDcuMzc5ODRDMTUuNDAzNCA3LjU1OTAyIDE1LjE1NjMgNy42NTc0NSAxNC45MDAzIDcuNjUzM0MxNC42NDQzIDcuNjQ5MTYgMTQuNDAwNSA3LjU0Mjc5IDE0LjIyMjkgNy4zNTc3OFpNMTQuOTMzMSA1LjM5NzY2QzExLjk5MzMgMy4wMDQ4NCA3LjY1MzY1IDMuMjMyNTEgNC44MjI5OCA1Ljk4NzY1QzEuNzEwMDMgOC44NTA2MSAxLjc0NjA3IDEzLjU5NzMgNC44MDg3NyAxNi41OTI4QzQuODA5ODIgMTYuNTkzOCA0LjgxMDg2IDE2LjU5NDggNC44MTE5IDE2LjU5NThMMTQuMjM4NyAyNS45NzA0QzE0LjYxMTIgMjYuMzQwOSAxNS4yMTEgMjYuMzQzNSAxNS41ODY4IDI1Ljk3NjRMMjUuMTc3NCAxNi42MDYzQzI4LjI5MSAxMy43NDIzIDI4LjI1MzggOC45OTM2NCAyNS4xODgxIDUuOTk4NDVDMjIuMzQwNSAzLjIxNjMyIDE3Ljk5NjIgMy4wMTYwNSAxNC45MzMxIDUuMzk3NjZaIiBmaWxsPSIjRjU4MjIwIi8+Cjwvc3ZnPgo=");
@@ -167,8 +167,8 @@
 
   &__compare {
     display: block;
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
     padding: 0;
     background-color: transparent;
     border: none;
@@ -191,7 +191,7 @@
 
   &__labels {
     position: absolute;
-    top: 19px;
+    top: 12px;
     right: 12px;
     z-index: 4;
     max-width: calc(100% - 70px);
@@ -219,7 +219,7 @@
 
   &__gallery {
 
-    margin-bottom: 34px;
+    margin-bottom: 24px;
 
     .swiper-slide {
       display: flex;
@@ -228,7 +228,7 @@
     a {
       display: flex;
       width: 100%;
-      height: 246px;
+      height: 156px;
     }
 
     img {
@@ -237,7 +237,7 @@
       height: auto;
       width: auto;
       max-width: 100%;
-      max-height: 246px;
+      max-height: 150px;
     }
 
     .swiper-pagination {
@@ -270,19 +270,19 @@
   &__art {
     margin-bottom: 5px;
     color: #510017;
-    font-size: 14px;
+    font-size: 10px;
   }
 
   &__name {
     color: #510017;
-    font-size: 20px;
+    font-size: 14px;
     line-height: 1.3;
     text-decoration: none;
     display: block;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-    height: 52px;
+    height: 37px;
     overflow: hidden;
     transition: color .25s;
     flex-grow: 1;
@@ -294,8 +294,8 @@
 
   &__cart {
     display: block;
-    width: 35px;
-    height: 35px;
+    width: 24px;
+    height: 24px;
     border: 0;
     padding: 0;
     font-size: 0;
@@ -333,25 +333,25 @@
   }
 
   &__price-current {
-    font-size: 36px;
+    font-size: 18px;
     font-weight: 700;
     color: var(--color-accent);
     white-space: nowrap;
   }
 
   &__price-old {
-    margin-left: 14px;
+    margin-left: 10px;
 
     span {
       color: rgba(#000000, .27);
       display: block;
 
       &:nth-child(1) {
-        font-size: 10px;
+        font-size: 9px;
       }
 
       &:nth-child(2) {
-        font-size: 20px;
+        font-size: 14px;
         text-decoration: line-through;
         white-space: nowrap;
       }
@@ -372,18 +372,19 @@
 
 .block {
   &__title {
-    font-size: 44px;
+    font-size: 30px;
     text-align: center;
-    margin-bottom: 46px;
+    margin-bottom: 30px;
     color: #510017;
   }
 }
 
 .filters {
   &__title {
-    font-size: 36px;
+    font-size: 24px;
     color: #510017;
     margin-bottom: 28px;
+    font-weight: 800;
   }
 
   &__item {
@@ -398,7 +399,7 @@
 
 .filter {
   &__name {
-    font-size: 20px;
+    font-size: 14px;
     color: #510017;
     margin-bottom: 20px;
   }
@@ -432,8 +433,8 @@
       &::before {
         content: "";
         display: block;
-        width: 32px;
-        height: 32px;
+        width: 24px;
+        height: 24px;
         border-radius: 8px;
         border: 1px solid #8D7D77;
         margin-right: 14px;
@@ -441,7 +442,7 @@
         background-color: transparent;
         background-repeat: no-repeat;
         background-position: 50% 50%;
-        background-size: 26px auto;
+        background-size: 20px auto;
         transition: all .3s;
       }
 
