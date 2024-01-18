@@ -17,8 +17,8 @@
     }
 
     &__logo{
-        margin-right: 53px;
-        max-width: 273px;
+        margin-right: 50px;
+        max-width: 200px;
         width: 100%;
     }
 
@@ -34,13 +34,14 @@
 
     &__search{
         flex: 1;
-        margin-left: 30px;
+        margin-left: 50px;
     }
 
     &__button{
         max-width: 204px;
         margin-left: 56px;
         margin-right: 56px;
+        padding: 12px 20px;
     }
 
     &__burger{
@@ -90,8 +91,8 @@
     padding: 0;
 
     &__item{
-        margin-right: 51px;
-        font-size: 20px;
+        margin-right: 50px;
+        font-size: 18px;
         font-weight: 700;
         a{
             text-decoration: none;
