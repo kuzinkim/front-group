@@ -176,8 +176,26 @@ const itemsSlider = (sliderNode) => {
 
     if (!!Swiper) {
         return new Swiper(sliderNode.querySelector('.swiper'), {
-            slidesPerView: 5,
-            spaceBetween: 50,
+            slidesPerView: 8,
+            spaceBetween: 20,
+            breakpoints: {
+                1730: {
+                    slidesPerView: 8,
+                },
+                1560: {
+                    slidesPerView: 7,
+                },
+                1360: {
+                    slidesPerView: 6,
+                },
+                1100: {
+                    slidesPerView: 5,
+                },
+                900: {
+                    slidesPerView: 4,
+                }
+
+            }
         })
     }
 }
