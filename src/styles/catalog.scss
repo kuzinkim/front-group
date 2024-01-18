@@ -214,22 +214,22 @@
   }
 
   &__label {
-    color: #ffffff;
+    color: var(--color-accent);
     font-size: 14px;
-    padding: 4px 6px;
+    padding: 4px 2px;
     border-radius: 8px;
-    background-color: #56b347;
+    //background-color: #56b347;
     margin-left: 2px;
     display: inline-block;
     vertical-align: middle;
     margin-bottom: 3px;
 
     &_orange {
-      background-color: #f58220;
+      color: var(--color-accent);
     }
 
     &_green {
-      background-color: #56b347;
+      color: var(--color-title);
     }
   }
 
