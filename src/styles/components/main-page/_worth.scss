@@ -1,12 +1,13 @@
 .worth{
-    border-top: 0.5px dashed #000;
-    border-bottom: 0.5px dashed #000;
 
     @media screen and (max-width:1199px){
-        padding: 6px;
+        padding: 10px;
         overflow: auto;
-        margin-left: -6px;
-        margin-right: -6px;
+        margin: -10px;
+
+        &::-webkit-scrollbar{
+            display: none;
+        }
     }
     
     &__inner{
@@ -53,6 +54,8 @@
         border-right: 0.5px dashed #000;
         position: relative;
         padding: 38px 24px 24px;
+        border-top: 0.5px dashed #000;
+        border-bottom: 0.5px dashed #000;
 
         @media screen and (max-width:1199px){
             width: 240px;
