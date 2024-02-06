@@ -1,10 +1,21 @@
 .worth{
+    border-top: 0.5px dashed #000;
+    border-bottom: 0.5px dashed #000;
+
+    @media screen and (max-width:1199px){
+        padding: 6px;
+        overflow: auto;
+        margin-left: -6px;
+        margin-right: -6px;
+    }
     
     &__inner{
         display: flex;
-        border-top: 0.5px dashed #000;
         border-left: 0.5px dashed #000;
-        border-bottom: 0.5px dashed #000;
+
+        @media screen and (max-width:1199px){
+            flex-wrap: nowrap;
+        }
 
         position: relative;
 
@@ -42,6 +53,11 @@
         border-right: 0.5px dashed #000;
         position: relative;
         padding: 38px 24px 24px;
+
+        @media screen and (max-width:1199px){
+            width: 240px;
+            flex-shrink: 0;
+        }
 
         &::after{
             content: "";

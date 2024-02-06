@@ -4,6 +4,10 @@
     &__map{
         width: 100%;
         max-width: 1314px;
+
+        @media screen and (max-width:1199px){
+            display: none;
+        }
     }
 
     &__wrap{
@@ -12,6 +16,15 @@
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 10px;
         grid-row-gap: 64px;
+
+        @media screen and (max-width:1199px){
+            width: 100%;
+            text-align: center;
+        }
+
+        @media screen and (max-width:495px){
+            grid-row-gap: 36px;
+        }
     }
 
     b{
@@ -19,6 +32,11 @@
         line-height: calc(94/78);
         font-weight: 700;
         color: #F58220;
+
+        @media screen and (max-width:495px){
+            font-size: 20px;
+            margin-bottom: 6px;
+        }
     }
 
     &__title{
@@ -26,12 +44,21 @@
         color: #510017;
         font-weight: 600;
         margin-bottom: 6px;
+
+        @media screen and (max-width:495px){
+            font-weight: 400;
+            font-size: 16px;
+        }
     }
 
     &__text{
         color: #000;
         font-size: 16px;
         font-weight: 600;
+
+        @media screen and (max-width:495px){
+            font-size: 10px;
+        }
     }
 
     &__item{

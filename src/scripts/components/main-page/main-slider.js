@@ -28,11 +28,25 @@ const bindPartnerSlider = (node) => {
   const options = {
     grabCursor: true,
     centeredSlides: true,
-    slidesPerView: 7,
     autoplay: {
       delay: 1000,
     },
     loop: true,
+
+    breakpoints: {
+      // when window width is >= 320px
+      0: {
+        slidesPerView: 3,
+      },
+      // when window width is >= 480px
+      495: {
+        slidesPerView: 5,
+      },
+      // when window width is >= 640px
+      1000: {
+        slidesPerView: 7,
+      }
+    }
   }
 
   return new Swiper(node, options);
