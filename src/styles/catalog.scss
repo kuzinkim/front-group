@@ -90,6 +90,12 @@
     align-items: center;
     justify-content: center;
   }
+
+  &_no-sidebar {
+    .catalog-layout__content {
+      width: 100%;
+    }
+  }
 }
 
 .sort {
@@ -135,7 +141,21 @@
     @media screen and (max-width: 1500px) {
       width: calc(100% / 4 - 18px * 3 / 4);
     }
+
+    .catalog-layout_no-sidebar & {
+      width: calc(100% / 8 - 18px * 7 / 8);
+
+      @media screen and (max-width: 1700px) {
+        width: calc(100% / 6 - 18px * 5 / 6);
+      }
+      @media screen and (max-width: 1400px) {
+        width: calc(100% / 5 - 18px * 4 / 5);
+      }
+
+    }
   }
+
+
 }
 
 .item-card {
