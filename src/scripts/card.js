@@ -4,14 +4,13 @@ const bindProductGallery = (node) => {
     }
 
     let sliderThumbs = new Swiper(node.querySelector('.card-thumb .swiper'), {
-        loop: true,
         spaceBetween: 8,
         slidesPerView: 4,
         freeMode: true,
         watchSlidesProgress: true,
 
         breakpoints: {
-            1500: {
+            900: {
                 direction: "vertical",
             }
         }
@@ -20,6 +19,10 @@ const bindProductGallery = (node) => {
     let sliderTop = new Swiper(node.querySelector('.card-slider .swiper'), {
         thumbs: {
             swiper: sliderThumbs,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
         },
     });
 };

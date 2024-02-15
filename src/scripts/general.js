@@ -10,10 +10,6 @@ const projectOptions = {
 };
 
 
-//=require helpers/toggle-visibility.js
-//=require helpers/toggle-page-fix.js
-
-
 //=require components/base/menu.js
 //=require components/base/adapt.js
 //=require components/base/search.js

@@ -193,6 +193,9 @@ const itemsSlider = (sliderNode) => {
                 },
                 900: {
                     slidesPerView: 4,
+                },
+                320: {
+                    slidesPerView: 2,
                 }
 
             }
