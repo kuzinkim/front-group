@@ -139,6 +139,16 @@ ul,li{
     font-weight: 700;
     color: var(--color-title);
 
+    @media screen and (max-width:1199px){
+      font-size: 38px;
+      margin-bottom: 20px;
+    }
+
+    @media screen and (max-width:495px){
+      font-size: 24px;
+      margin-top: 30px;
+    }
+
     h1, h2, h3, h4, h5 {
       margin: 0;
       font-size: inherit;
