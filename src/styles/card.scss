@@ -221,6 +221,26 @@
         }
     
     }
+
+    &_price{
+        @media screen and (max-width:500px){
+            display: flex;
+            justify-content: space-between;
+        }
+    
+        .cardInfo__button{
+            @media screen and (max-width:500px){
+                max-width: 37px;
+                font-size: 0;
+                background-color: transparent;
+                background-image: url('/assets/svg/icon/Shop.svg');
+                background-size: contain;
+                background-position: center center;
+                background-repeat: no-repeat;
+                padding: 0;
+            }
+        }
+    }
 }
 
 .card-slider{
@@ -420,7 +440,32 @@
     align-items: center;
 
     @media screen and (max-width:767px){
-        display: none;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    @media screen and (max-width:500px){
+        margin-bottom: 0;
+        flex: 1;
+        justify-content: flex-start;
+    }
+
+    &__wrap{
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+
+        @media screen and (max-width:1570px){
+            margin-left: 40px;
+        }
+
+        @media screen and (max-width:1199px){
+            margin-left: 28px;
+        }
+
+        @media screen and (max-width:500px){
+            margin-left: 20px;
+        }
     }
 
     &__new{
@@ -445,25 +490,26 @@
             padding-top: 12px;
             padding-bottom: 12px;
         }
+
+        @media screen and (max-width:500px){
+            padding: 0;
+            background-color: transparent;
+            color: #F58220;
+        }
     }
 
     &__old{
-        margin-left: auto;
         font-size: 20px;
         color: rgba(0, 0, 0, 0.27);
         font-weight: 600;
 
-        @media screen and (max-width:1570px){
-            margin-left: 40px;
-        }
-
         @media screen and (max-width:1199px){
-            margin-left: 28px;
             font-size: 16px;
         }
 
         @media screen and (max-width:500px){
-            margin-left: auto;
+            font-size: 12px;
+            text-align: center;
         }
 
         span{
@@ -474,6 +520,22 @@
             @media screen and (max-width:1199px){
                 font-size: 28px;
             }
+
+            @media screen and (max-width:500px){
+                font-size: 12px;
+            }
+        }
+    }
+
+    &__stock{
+        display: none;
+        font-size: 16px;
+        color: #F58220;
+        opacity: 0.5;
+        margin-left: 5px;
+
+        @media screen and (max-width:767px){
+            display: block;
         }
     }
 }
