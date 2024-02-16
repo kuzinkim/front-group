@@ -1,7 +1,8 @@
 @import 'components/main-page/news';
 
 .news-page{
-
+    min-height: 1620px;
+    max-height: 1620px;
     &__block{
         display: flex;
         margin: 0 -10px;
