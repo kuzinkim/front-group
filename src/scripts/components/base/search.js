@@ -1,33 +1,19 @@
-let selectSearchToggle = document.querySelector('.js-select-search')
-let selectSearchList = document.querySelector('.js-select-list')
-let selectItem = document.querySelectorAll('.js-select-item')
-let selectTitle = document.querySelector('.js-select-title')
-
-let searchInput = document.querySelector('.js-search-input')
-let searchResult = document.querySelector('.js-search-result')
+let headerSearch = document.querySelector('.header__search');
+let headerSearchClose = document.querySelector('.header__search-close');
+let searchBtn = document.querySelector('.headerActions__btn_search');
+let page = document.querySelector('.page');
+let body = document.querySelector('body');
 
 window.addEventListener('load', function () {
-
-    if (!searchInput) return false
-
-    selectSearchToggle.addEventListener('click', function(){
-        selectSearchList.classList.toggle('is-open')
+    searchBtn.addEventListener('click', function(){
+        headerSearch.classList.add('is-open');
+        page.classList.add('is-bg');
+        body.classList.add('is-hidden')
     })
 
-    searchInput.addEventListener('input', function(){
-
-        if(this.value.length > 2){
-            searchResult.classList.add('is-open')
-        }else{
-            searchResult.classList.remove('is-open')
-        }
-    })
-
-    selectItem.forEach(function(item){
-        item.addEventListener('click', function(){
-            let text = this.textContent
-            selectTitle.textContent = text
-            selectSearchList.classList.remove('is-open')
-        })
+    headerSearchClose.addEventListener('click', function(){
+        headerSearch.classList.remove('is-open');
+        page.classList.remove('is-bg');
+        body.classList.remove('is-hidden')
     })
 })
