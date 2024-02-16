@@ -29,8 +29,6 @@
 
     &:last-child {
       margin-right: 0;
-      overflow: hidden;
-      text-overflow: ellipsis;
 
       &::after {
         content: none;
