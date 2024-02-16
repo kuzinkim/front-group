@@ -1,0 +1,13 @@
+@import 'components/main-page/news';
+
+.news-page{
+
+    &__block{
+        display: flex;
+        margin: 0 -10px;
+
+        &_md{
+            margin-bottom: 38px;
+        }
+    }
+}
