@@ -6,7 +6,8 @@ const projectOptions = {
   error: {
     default: 'Ошибка при отправке данных! Пожалуйста, попробуйте позже.',
     request: 'Ошибка при отправке данных! Пожалуйста, свяжитесь с нами по телефону <a class="customLink customLink_light" href="tel:88005112733"><nobr>8 (800) 511-27-33</nobr></a>'
-  }
+  },
+  onClick: [],
 };
 
 
@@ -14,6 +15,9 @@ const projectOptions = {
 //=require components/base/adapt.js
 //=require components/base/search.js
 //=require components/base/headerFixed.js
+//=require components/base/breadcrumbs.js
+//=require helpers/trottle.js
+//=require helpers/toggle-visibility.js
 
 //=require components/load-images.js
 
@@ -29,6 +33,7 @@ const pageReady = function(e) {
   initDefaultElements(e);
   showMobileMenu();
   useDynamicAdapt();
+  breadcrumbs();
 }
 
 document.addEventListener("DOMContentLoaded", pageReady);

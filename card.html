@@ -119,13 +119,19 @@
             <!--breadcrumbs-->
             <div class="container">
                 <div class="breadcrumbs js-breadcrumbs">
-                    <ul data-list>
-                        <li data-item="main"><a href="/">Главная</a></li>
-                        <li data-item="link"><a href="/catalog/">Каталог</a></li>
-                        <li data-item="link"><a href="#">Баня и сауна</a></li>
-                        <li data-item="current"><span>Шапка с узором и логотипом "Банные штучки"</span></li>
+                    <ul class="breadcrumbs__list" data-list>
+                        <li class="breadcrumbs__item" data-item="main"><a href="/">Главная</a></li>
+                        <li class="breadcrumbs__item breadcrumbs__item_dots" data-item="dots">
+                            <button class="breadcrumbs__dots" type="button" data-item="toggle">...</button>
+                        </li>
+                        <li class="breadcrumbs__item" data-item="link" data-index="1"><a href="/catalog/">Каталог</a></li>
+                        <li class="breadcrumbs__item" data-item="link" data-index="2"><a href="#">Баня и сауна</a></li>
+                        <li class="breadcrumbs__item" data-item="current"><span>Шапка с узором и логотипом "Банные штучки"</span></li>
                     </ul>
-                    <ul class="breadcrumbs__hidden" data-inside></ul>
+                    <ul class="breadcrumbs__hidden" data-inside>
+                        <li class="breadcrumbs__item" data-item="1"><a href="/catalog/">Каталог</a></li>
+                        <li class="breadcrumbs__item" data-item="2"><a href="#">Баня и сауна</a></li>
+                    </ul>
                 </div>
             </div>
             <!--page title-->

@@ -3,7 +3,7 @@ const toggleVisibility = (element, action = 'auto', params = {}, callback) => {
 
   const options = Object.assign({
     display: 'block',
-    changeHeight: false,
+    changeHeight: true,
     changeOpacity: true,
     animation: 'ease-in-out',
     timeout: 200,
@@ -99,7 +99,7 @@ const toggleVisibility = (element, action = 'auto', params = {}, callback) => {
       element.style.borderTopWidth = options._targetVisible ? (options._btw + 'px') : '0';
       element.style.borderBottomWidth = options._targetVisible ? (options._bbw + 'px') : '0';
     }
-  }, 0);
+  }, 15);
 
   setTimeout(function() {
     element.setAttribute(

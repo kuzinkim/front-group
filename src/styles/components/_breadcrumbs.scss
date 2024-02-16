@@ -2,23 +2,16 @@
   font-size: 16px;
   margin-top: 44px;
   margin-bottom: 25px;
+  position: relative;
 
-  @media screen and (max-width:767px){
-    margin-top: 10px;
-    margin-bottom: 17px;
-  }
-
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  &__list{
     display: flex;
-    flex-wrap: wrap;
   }
 
-  li {
+  &__item{
     margin-right: 52px;
     position: relative;
+    white-space: nowrap;
 
     &::after {
       content: "";
@@ -36,11 +29,39 @@
 
     &:last-child {
       margin-right: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
 
       &::after {
         content: none;
       }
     }
+
+    &.hide{
+      display: none;
+    }
+  }
+
+  &__dots{
+    padding: 0 4px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #85898C;
+    transition: color .2s ease-in-out;
+    cursor: pointer;
+    border: 0;
+    background-color: transparent;
+  }
+
+  @media screen and (max-width:767px){
+    margin-top: 10px;
+    margin-bottom: 17px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
 
   a {
@@ -48,6 +69,7 @@
     text-decoration: none;
     transition: color .25s, border-color .25s;
     border-bottom: 1px solid transparent;
+    white-space: nowrap;
 
     &:hover {
       color: var(--color-accent);
@@ -59,5 +81,44 @@
     font-weight: 700;
     color: var(--color-accent);
     cursor: default;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__hidden{
+    width: 360px;
+    display: none;
+    margin-top: 12px;
+    max-width: calc(100% - 40px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    background: #fff;
+    position: absolute;
+    z-index: 15;
+    top: calc(100% + 8px);
+    left: 0;
+
+    &.hide{
+      display: none !important;
+    }
+
+    .breadcrumbs__item{
+      padding: 10px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      margin-right: 0;
+
+      a{
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      &:nth-last-child(1){
+        border-bottom: 0;
+      }
+      
+      &::after{
+        content: none;
+      }
+    }
   }
 }
