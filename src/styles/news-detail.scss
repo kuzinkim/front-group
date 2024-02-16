@@ -1,0 +1,43 @@
+.news-detail{
+
+    &__list{
+        margin-bottom: 30px;
+        ul{
+            li{
+                margin-bottom: 20px;
+                font-size: 16px;
+            }
+        }
+    }
+
+    &__slider{
+
+        &_horizontal{
+            .swiper-slide{
+                a{
+                    display: block;
+
+                    &:nth-child(1){
+                        margin-bottom: 20px;
+    
+                        @media screen and (max-width:500px){
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &_vertical{
+            margin-top: 40px;
+
+            .swiper{
+                height: 600px;
+            }
+            .swiper-slide{
+                display: flex;
+                gap: 20px;
+            }
+        }
+    }
+}
