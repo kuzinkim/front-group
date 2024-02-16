@@ -32,6 +32,9 @@
                     </div>
                     <a href="#" class="header__button button button_brown">Продукция</a>
                     <div class="header__actions headerActions">
+                        <div class="headerActions__btn headerActions__btn_search">
+                            <img src="assets/svg/search.svg" alt="">
+                        </div>
                         <div class="headerActions__btn headerActions__btn_favorites">
                             <img src="assets/svg/icon/Heart.svg" alt="">
                             <span>Избранное</span>
@@ -142,8 +145,11 @@
                                     </a>
                                 </div>
                             </div>
+                            <div class="brand-detail__img brand-detail__img_mobile">
+                                <img src="assets/img/content/brand/b_1.jpg" alt="">
+                            </div>
                         </div>
-                        <div class="brand-detail__text">
+                        <div class="brand-detail__text js-collapse-brand-text">
                             <p>«Банные Штучки» поддерживают традиции настоящей душевной русской бани, лечащей разум, тело и душу - той бани, где сходят семь потов, душистый пар ласково обволакивает тело, а вода смывает все заботы и тревоги.</p>
                             <p>В каждой группе товаров «Банные штучки» вы найдете всё, что нужно для создания безмятежной атмосферы во время банных процедур и оформления интерьера вашей бани.</p>
                             <p>Мы сами любим баню и знаем, что настоящий поход в парную зависит от таких важных деталей как: качественные материалы бондарных изделий, удобные размеры мебели, приятные на ощупь ткани, натуральные эфирные масла без добавок, и конечно, выбор веников на любой вкус. Не секрет, что часто товары для бани покупают в подарок, у нас вы всегда найдете креативные подарочные наборы, которыми можно удивить даже самых заядлых парильщиков.</p>
@@ -161,6 +167,7 @@
                             <img src="assets/img/content/brand/b_3.jpg" alt="">
                         </div>
                     </div>
+                    <button class="brand-detail__button">Выбрать раздел каталога</button>
                     <div class="brand-detail__grid catalog-layout">
                         <div class="brand-detail__nav brand-nav">
                             <ul class="brand-nav__list">
@@ -191,6 +198,7 @@
                                 <li class="brand-nav__item"><a href="#">Пемзы и пилки</a></li>
                                 <li class="brand-nav__item"><a href="#">Расчески</a></li>
                             </ul>
+                            <div class="brand-detail__close"></div>
                         </div>
                         <section class="catalog-layout__content">
                             <div class="catalog-layout__content-top-line sort">
@@ -804,6 +812,7 @@
                                 <a href="#" class="pagination__button pagination__button_next">Вперед</a>
                             </div>
                         </div>
+                        <div class="brand-detail__bg"></div>
                     </div>
                 </section>
             </div>
@@ -820,78 +829,87 @@
                     </div>
                     
                     <div class="footer__wrap">
-                        <ul class="footer__menu footerMenu">
-                            <li class="footerMenu__item"><a href="#">О нас</a></li>
-                            <li class="footerMenu__item"><a href="#">Где купить</a></li>
-                            <li class="footerMenu__item"><a href="#">Транснациональная корпорация</a></li>
-                            <li class="footerMenu__item"><a href="#">Производство</a></li>
-                            <li class="footerMenu__item"><a href="#">Новости</a></li>
-                            <li class="footerMenu__item"><a href="#">Поставки на территорию РФ</a></li>
-                            <li class="footerMenu__item"><a href="#">Контакты</a></li>
-                            <li class="footerMenu__item"><a href="#">Партнерам</a></li>
-                            <li class="footerMenu__item"><a href="#">Поставки на экспорт</a></li>
-                        </ul>
-                        <ul class="footer__category footerCategory">
-                            <li class="footerCategory__item"><a href="#">Баня и сауна</a></li>
-                            <li class="footerCategory__item"><a href="#">Интерьер</a></li>
-                            <li class="footerCategory__item"><a href="#">От насекомых и вредителей</a></li>
-                            <li class="footerCategory__item"><a href="#">Коврики</a></li>
-                            <li class="footerCategory__item"><a href="#">Пикник</a></li>
-                            <li class="footerCategory__item"><a href="#">Туризм и отдых</a></li>
-                            <li class="footerCategory__item"><a href="#">Кухня</a></li>
-                            <li class="footerCategory__item"><a href="#">Сад и огород</a></li>
-                            <li class="footerCategory__item"><a href="#">Красота и здоровье</a></li>
-                        </ul>
-                        <ul class="footer__contact menuContacts">
-                            <li class="menuContacts__item menuContacts__item_phone">
-                                <div class="menuContacts__icon">
-                                    <svg width="17" height="19">
-                                        <use xlink:href="assets/svg/sprite.svg#phone"></use>
-                                      </svg>
-                                </div>
-                                <a href="tel:+74959882028">+7(495) 988-20-28</a>
-                            </li>
-                            <li class="menuContacts__item menuContacts__item_phone">
-                                <div class="menuContacts__icon">
-                                    <svg width="17" height="19">
-                                        <use xlink:href="assets/svg/sprite.svg#phone"></use>
-                                      </svg>
-                                </div>
-                                <a href="tel:88007000264">8(800) 700-02-64</a>
-                            </li>
-                            <li class="menuContacts__item menuContacts__item_mail">
-                                <div class="menuContacts__icon">
-                                    <svg width="17" height="16">
-                                        <use xlink:href="assets/svg/sprite.svg#mail"></use>
-                                      </svg>
-                                </div>
-                                <a href="mailto:info@linkgroup.ru">info@linkgroup.ru</a>
-                            </li>
-                            <li class="menuContacts__item menuContacts__item_text">
-                                <div class="menuContacts__icon">
-                                    <svg width="19" height="23">
-                                        <use xlink:href="assets/svg/sprite.svg#pin"></use>
-                                      </svg>
-                                </div>
-                                <span>Офис: г. Москва, ул. Нижняя д.&nbsp;14,&nbsp;стр.&nbsp;7 </span>
-                            </li>
-                            <li class="menuContacts__item menuContacts__item_text">
-                                <div class="menuContacts__icon">
-                                    <svg width="19" height="23">
-                                        <use xlink:href="assets/svg/sprite.svg#pin"></use>
-                                      </svg>
-                                </div>
-                                <span>Склад: г. Домодедово мкр.&nbsp;Востряково, ул.&nbsp;Рябиновая,&nbsp;д.&nbsp;14,&nbsp;стр. 1</span>
-                            </li>
-                            <li class="menuContacts__item menuContacts__item_text">
-                                <div class="menuContacts__icon">
-                                    <svg width="19" height="19">
-                                        <use xlink:href="assets/svg/sprite.svg#time"></use>
-                                      </svg>
-                                </div>
-                                <span>Режим работы: 08:00-19:00</span>
-                            </li>
-                        </ul>
+                        <div class="footer__menu footerMenu">
+                            <div class="footer__control footerMenu__title">О компании</div>
+                            <ul class="footerMenu__list">
+                                <li class="footerMenu__item"><a href="#">О нас</a></li>
+                                <li class="footerMenu__item"><a href="#">Где купить</a></li>
+                                <li class="footerMenu__item"><a href="#">Транснациональная корпорация</a></li>
+                                <li class="footerMenu__item"><a href="#">Производство</a></li>
+                                <li class="footerMenu__item"><a href="#">Новости</a></li>
+                                <li class="footerMenu__item"><a href="#">Поставки на территорию РФ</a></li>
+                                <li class="footerMenu__item"><a href="#">Контакты</a></li>
+                                <li class="footerMenu__item"><a href="#">Партнерам</a></li>
+                                <li class="footerMenu__item"><a href="#">Поставки на экспорт</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__category footerCategory">
+                            <div class="footer__control footerCategory__title">Каталог</div>
+                            <ul class="footerCategory__list">
+                                <li class="footerCategory__item"><a href="#">Баня и сауна</a></li>
+                                <li class="footerCategory__item"><a href="#">Интерьер</a></li>
+                                <li class="footerCategory__item"><a href="#">От насекомых и вредителей</a></li>
+                                <li class="footerCategory__item"><a href="#">Коврики</a></li>
+                                <li class="footerCategory__item"><a href="#">Пикник</a></li>
+                                <li class="footerCategory__item"><a href="#">Туризм и отдых</a></li>
+                                <li class="footerCategory__item"><a href="#">Кухня</a></li>
+                                <li class="footerCategory__item"><a href="#">Сад и огород</a></li>
+                                <li class="footerCategory__item"><a href="#">Красота и здоровье</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__contact">
+                            <div class="footer__control footer__contact-title">Контакты</div>
+                            <ul class="menuContacts">
+                                <li class="menuContacts__item menuContacts__item_phone">
+                                    <div class="menuContacts__icon">
+                                        <svg width="17" height="19">
+                                            <use xlink:href="assets/svg/sprite.svg#phone"></use>
+                                        </svg>
+                                    </div>
+                                    <a href="tel:+74959882028">+7(495) 988-20-28</a>
+                                </li>
+                                <li class="menuContacts__item menuContacts__item_phone">
+                                    <div class="menuContacts__icon">
+                                        <svg width="17" height="19">
+                                            <use xlink:href="assets/svg/sprite.svg#phone"></use>
+                                        </svg>
+                                    </div>
+                                    <a href="tel:88007000264">8(800) 700-02-64</a>
+                                </li>
+                                <li class="menuContacts__item menuContacts__item_mail">
+                                    <div class="menuContacts__icon">
+                                        <svg width="17" height="16">
+                                            <use xlink:href="assets/svg/sprite.svg#mail"></use>
+                                        </svg>
+                                    </div>
+                                    <a href="mailto:info@linkgroup.ru">info@linkgroup.ru</a>
+                                </li>
+                                <li class="menuContacts__item menuContacts__item_text">
+                                    <div class="menuContacts__icon">
+                                        <svg width="19" height="23">
+                                            <use xlink:href="assets/svg/sprite.svg#pin"></use>
+                                        </svg>
+                                    </div>
+                                    <span>Офис: г. Москва, ул. Нижняя д.&nbsp;14,&nbsp;стр.&nbsp;7 </span>
+                                </li>
+                                <li class="menuContacts__item menuContacts__item_text">
+                                    <div class="menuContacts__icon">
+                                        <svg width="19" height="23">
+                                            <use xlink:href="assets/svg/sprite.svg#pin"></use>
+                                        </svg>
+                                    </div>
+                                    <span>Склад: г. Домодедово мкр.&nbsp;Востряково, ул.&nbsp;Рябиновая,&nbsp;д.&nbsp;14,&nbsp;стр. 1</span>
+                                </li>
+                                <li class="menuContacts__item menuContacts__item_text">
+                                    <div class="menuContacts__icon">
+                                        <svg width="19" height="19">
+                                            <use xlink:href="assets/svg/sprite.svg#time"></use>
+                                        </svg>
+                                    </div>
+                                    <span>Режим работы: 08:00-19:00</span>
+                                </li>
+                            </ul>
+                        </div>
                         <div class="footer__reviews">
                             <img src="assets/img/footer_reviews.png" alt="">
                         </div>
@@ -915,5 +933,6 @@
     <script src="build/scripts/vendors/fancybox.umd.min.js"></script>
     <script src="build/scripts/general.min.js"></script>
     <script src="build/scripts/catalog.min.js"></script>
+    <script src="build/scripts/brands-detail.min.js"></script>
 </body>
 </html>
