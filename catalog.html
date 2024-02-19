@@ -132,7 +132,7 @@
                 <div class="sections-list">
                     <ul>
                         <li>
-                            <a class="sections-list__item" href="#">
+                            <a class="sections-list__item sections-list__item_active" href="#">
                                 <div class="sections-list__item-img">
                                     <img src="assets/img/content/catalog/1.png" alt="">
                                 </div>
@@ -248,6 +248,7 @@
             <div class="container">
                 <div class="catalog-layout">
                     <aside class="catalog-layout__sidebar">
+                        <button class="catalog-layout__sidebar-close">Закрыть</button>
                         <div class="filters">
                             <div class="filters__title">Фильтр</div>
                             <div class="filters__wrapper">
@@ -335,6 +336,10 @@
                                         </ul>
                                     </div>
                                 </div>
+
+                                <div class="filters__actions">
+                                    <button>Показать <i>70 товаров</i></button>
+                                </div>
                             </div>
                         </div>
                     </aside>
@@ -353,6 +358,10 @@
                                     <option value="24">Показывать по 24</option>
                                     <option value="36">Показывать по 36</option>
                                 </select>
+                            </div>
+
+                            <div class="sort__item sort__item_filters">
+                                <button class="sort__filters-adaptive">Открыть фильтры</button>
                             </div>
                         </div>
 

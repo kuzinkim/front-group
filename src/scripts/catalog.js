@@ -191,11 +191,17 @@ const itemsSlider = (sliderNode) => {
                 1100: {
                     slidesPerView: 5,
                 },
-                900: {
+                851: {
                     slidesPerView: 4,
                 },
-                320: {
+                641: {
+                    slidesPerView: 3,
+                },
+                351: {
                     slidesPerView: 2,
+                },
+                0: {
+                    slidesPerView: 1,
                 }
 
             }
@@ -322,6 +328,129 @@ const bindFilterPrice = (filterNode) => {
 
 }
 
+const bindSectionsListAdaptive = (node) => {
+    if (!node) {
+        return false;
+    }
+
+    if (window.matchMedia('(max-width: 750px)').matches && window.ADAPTIVE_SUBSECTIONS_FLAG) {
+        return false;
+    }
+
+    if (window.matchMedia('(min-width: 751px)').matches && !window.ADAPTIVE_SUBSECTIONS_FLAG) {
+        return false;
+    }
+
+    if (window.matchMedia('(max-width: 750px)').matches && !window.ADAPTIVE_SUBSECTIONS_FLAG) {
+
+        window.ADAPTIVE_SUBSECTIONS_FLAG = true;
+
+        const select = document.createElement('div');
+        select.classList.add('sections-list__select');
+
+        const list = node.querySelector('ul');
+
+        const activeEl = list.querySelector('.sections-list__item_active');
+
+
+        if (!activeEl) {
+            select.innerText = 'Выбрать раздел каталога';
+        }
+
+        if (activeEl) {
+            select.append(activeEl.cloneNode(true));
+
+            select.querySelector('a').addEventListener('click', (e) => {
+                e.preventDefault();
+            })
+        }
+
+        node.prepend(select);
+
+        select.addEventListener('click', (e) => {
+            node.classList.toggle('sections-list_opened');
+        })
+
+    }
+
+    if (window.matchMedia('(min-width: 751px)').matches && window.ADAPTIVE_SUBSECTIONS_FLAG) {
+        window.ADAPTIVE_SUBSECTIONS_FLAG = false;
+
+        node.querySelector('.sections-list__select') && node.querySelector('.sections-list__select').remove();
+    }
+
+}
+
+const bindFiltersAdaptive = () => {
+    const btn = document.querySelector('.sort__filters-adaptive');
+    const sidebar = document.querySelector('.catalog-layout__sidebar');
+
+    if (!sidebar && btn) {
+        btn.style.display = 'none';
+        return false;
+    }
+
+    if (!sidebar || !btn) {
+        return false;
+    }
+
+    const closeSidebar = (e) => {
+        if (!e) {
+            sidebar.classList.remove('catalog-layout__sidebar_opened');
+            document.removeEventListener('click', closeSidebar);
+            return true;
+        }
+        if (e.target === btn) {
+            return false;
+        }
+        if (e.target === sidebar || sidebar.contains(e.target)) {
+            return false;
+        }
+        sidebar.classList.remove('catalog-layout__sidebar_opened');
+        document.removeEventListener('click', closeSidebar);
+    }
+
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (!sidebar.classList.contains('catalog-layout__sidebar_opened')) {
+            sidebar.classList.add('catalog-layout__sidebar_opened');
+            document.addEventListener('click', closeSidebar);
+        } else {
+            closeSidebar();
+        }
+    })
+    sidebar.querySelector('.catalog-layout__sidebar-close').addEventListener('click', (e) => {
+        e.preventDefault();
+        closeSidebar();
+    })
+
+    sidebar.querySelector('.filters__actions button').addEventListener('click', () => {
+        closeSidebar()
+    })
+}
+
+const bindFilterChange = (node) => {
+    if (!node) {
+        return false;
+    }
+
+    const inputs = [...node.querySelectorAll('input')];
+    const btn = node.querySelector('.filters__actions button');
+
+    inputs.map((input) => {
+        input.addEventListener('change', () => {
+            btn.style.visibility = 'visible';
+            btn.style.opacity = '1';
+        })
+    })
+
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        btn.style.visibility = 'hidden';
+        btn.style.opacity = '0';
+    })
+}
+
 window.addEventListener('DOMContentLoaded', () => {
 
     for (const cardItemNode of document.querySelectorAll('.item-card')) {
@@ -346,6 +475,15 @@ window.addEventListener('DOMContentLoaded', () => {
         bindFilterPrice(filterNode)
     }
 
+    bindSectionsListAdaptive(document.querySelector('.sections-list'));
+
+    bindFiltersAdaptive();
+
+    bindFilterChange(document.querySelector('.filters'));
+})
+
+window.addEventListener('resize', () => {
+    bindSectionsListAdaptive(document.querySelector('.sections-list'));
 })
 
 
