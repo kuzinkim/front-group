@@ -49,6 +49,10 @@
         @media screen and (max-width:495px){
             max-width: 124px;
         }
+
+        @media screen and (max-width:359px){
+            max-width: 100px;
+        }
     }
 
     &__row{
@@ -299,7 +303,7 @@
         position: relative;
         transition: transform .2s ease .1s;
 
-        &::after{
+        &[data-count]::after{
             content: attr(data-count);
             position: absolute;
             right: -10px;
@@ -314,12 +318,12 @@
             border-radius: 50%;
 
             @media screen and (max-width:500px){
-                right: -6px;
-                top: -6px;
-                width: 10px;
-                height: 10px;
+                right: -7px;
+                top: -7px;
+                width: 14px;
+                height: 14px;
                 font-size: 10px;
-                line-height: 10px;
+                line-height: 14px;
             }
         }
 
@@ -332,8 +336,8 @@
         }
 
         @media screen and (max-width:495px){
-            max-width: 15px;
-            margin-right: 20px;
+            max-width: 20px;
+            margin-right: 18px;
         }
 
         img{
