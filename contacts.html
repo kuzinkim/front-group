@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+    <link rel="stylesheet" href="build/styles/vendors/normalize.css">
+    <link rel="stylesheet" href="build/styles/vendors/swiper-bundle.min.css">
+    <link rel="stylesheet" href="build/styles/vendors/nice-select2.css">
+    <link rel="stylesheet" href="build/styles/vendors/nouislider.min.css">
+    <link rel="stylesheet" href="build/styles/vendors/fancybox.css">
+    <link rel="stylesheet" href="build/styles/general.css">
+    <link rel="stylesheet" href="build/styles/contacts.css">
+</head>
+<body>
+<div class="page">
+    <header class="header">
+        <div class="container">
+            <div class="header__row">
+                <a href="#" class="header__logo"><img src="assets/svg/logo.svg" alt=""></a>
+                <ul class="header__nav nav">
+                    <li class="nav__item"><a href="#">О нас</a></li>
+                    <li class="nav__item"><a href="#">Производство</a></li>
+                    <li class="nav__item"><a href="#">Контакты</a></li>
+                </ul>
+                <div class="header__search">
+                    <form action="#" class="searchForm">
+                        <input type="text" class="searchForm__input" placeholder="Поиск лучших товаров ...">
+                        <button class="searchForm__submit" type="submit"><img src="assets/svg/search.svg" alt="">
+                        </button>
+                    </form>
+                    <div class="header__search-close"></div>
+                </div>
+                <a href="#" class="header__button button button_brown">Продукция</a>
+                <div class="header__actions headerActions">
+                    <div class="headerActions__btn headerActions__btn_search">
+                        <img src="assets/svg/search.svg" alt="">
+                    </div>
+                    <div class="headerActions__btn headerActions__btn_favorites" data-count="2">
+                        <img src="assets/svg/icon/Heart.svg" alt="">
+                        <span>Избранное</span>
+                    </div>
+                    <div class="headerActions__btn headerActions__btn_compare" data-count="2">
+                        <img src="assets/svg/icon/Slider.svg" alt="">
+                        <span>Сравнение</span>
+                    </div>
+                    <div class="headerActions__btn headerActions__btn_basket" data-count="2">
+                        <img src="assets/svg/icon/Shop.svg" alt="">
+                        <span>Корзина</span>
+                    </div>
+                </div>
+                <div class="header__burger js-burger">
+                    <img src="assets/svg/burger.svg" alt="">
+                </div>
+            </div>
+            <div class="header__menu menu js-header-menu">
+                <ul class="menu__nav menuNav">
+                    <li class="menuNav__item"><a href="#">Каталог</a></li>
+                    <li class="menuNav__item"><a href="#">Производство</a></li>
+                    <li class="menuNav__item"><a href="#">Где купить</a></li>
+                    <li class="menuNav__item"><a href="#">Новости</a></li>
+                    <li class="menuNav__item"><a href="#">Партнёрам</a></li>
+                    <li class="menuNav__item"><a href="#">Транснациональная<br> корпорация</a></li>
+                    <li class="menuNav__item"><a href="#">Поставки на территории РФ</a></li>
+                    <li class="menuNav__item"><a href="#">Поставки на экспорт</a></li>
+                    <li class="menuNav__item"><a href="#">Контакты</a></li>
+                </ul>
+                <ul class="menu__contacts menuContacts">
+                    <li class="menuContacts__item menuContacts__item_phone">
+                        <div class="menuContacts__icon">
+                            <svg width="17" height="19">
+                                <use xlink:href="assets/svg/sprite.svg#phone"/>
+                            </svg>
+                        </div>
+                        <a href="tel:+74959882028">+7(495) 988-20-28</a></li>
+                    <li class="menuContacts__item menuContacts__item_phone">
+                        <div class="menuContacts__icon">
+                            <svg width="17" height="19">
+                                <use xlink:href="assets/svg/sprite.svg#phone"/>
+                            </svg>
+                        </div>
+                        <a href="tel:88007000264">8(800) 700-02-64</a></li>
+                    <li class="menuContacts__item menuContacts__item_mail">
+                        <div class="menuContacts__icon">
+                            <svg width="17" height="16">
+                                <use xlink:href="assets/svg/sprite.svg#mail"/>
+                            </svg>
+                        </div>
+                        <a href="mailto:info@linkgroup.ru">info@linkgroup.ru</a>
+                    </li>
+                    <li class="menuContacts__item menuContacts__item_text">
+                        <div class="menuContacts__icon">
+                            <svg width="19" height="23">
+                                <use xlink:href="assets/svg/sprite.svg#pin"/>
+                            </svg>
+                        </div>
+                        <span>Офис: г. Москва, ул. Нижняя, д. 14, стр. 7</span>
+                    </li>
+                    <li class="menuContacts__item menuContacts__item_text">
+                        <div class="menuContacts__icon">
+                            <svg width="19" height="23">
+                                <use xlink:href="assets/svg/sprite.svg#pin"/>
+                            </svg>
+                        </div>
+                        <span>Склад: г. Домодедово, мкр. Востряково, ул.&nbsp;Рябиновая, д. 14, стр. 1</span>
+                    </li>
+                    <li class="menuContacts__item menuContacts__item_text">
+                        <div class="menuContacts__icon">
+                            <svg width="19" height="19">
+                                <use xlink:href="assets/svg/sprite.svg#time"/>
+                            </svg>
+                        </div>
+                        <span>Режим работы: 08:00-19:00</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="header__bg"></div>
+        </div>
+    </header>
+    <main class="main">
+        <!--breadcrumbs-->
+        <div class="container">
+            <div class="breadcrumbs">
+                <ul class="breadcrumbs__list">
+                    <li class="breadcrumbs__item"><a href="/">Главная</a></li>
+                    <li class="breadcrumbs__item"><span>Контакты</span></li>
+                </ul>
+            </div>
+        </div>
+        <!--page title-->
+        <div class="container">
+            <div class="page-title page-title_inner">
+                <h1>Контакты</h1>
+            </div>
+        </div>
+
+        <!--contacts-->
+
+        <div class="container">
+
+            <div class="contacts-page">
+                <div class="contacts-page__toggles">
+                    <a href="#tab1" class="contacts-page__toggle contacts-page__toggle_active">Офис в Москве</a>
+                    <a href="#tab2" class="contacts-page__toggle">Склад в Домодедово</a>
+                </div>
+
+                <div class="contacts-page__content contacts-page__content_active contacts-content" id="tab1">
+                    <div class="contacts-content__text">
+                        <ul class="contacts-content__list-icons">
+                            <li>
+                                <svg width="15" height="19" viewBox="0 0 15 19" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.5 0C9.48912 0 11.3968 0.819882 12.8033 2.27928C14.2098 3.73868 15 5.71805 15 7.78195C15 11.0037 12.6333 14.3793 8 17.985C7.85575 18.0972 7.68031 18.1579 7.5 18.1579C7.31969 18.1579 7.14425 18.0972 7 17.985C2.36667 14.3793 0 11.0037 0 7.78195C0 5.71805 0.790176 3.73868 2.1967 2.27928C3.60322 0.819882 5.51088 0 7.5 0ZM7.5 5.18797C6.83696 5.18797 6.20107 5.46126 5.73223 5.94773C5.26339 6.4342 5 7.09399 5 7.78195C5 8.46992 5.26339 9.12971 5.73223 9.61618C6.20107 10.1026 6.83696 10.3759 7.5 10.3759C8.16304 10.3759 8.79893 10.1026 9.26777 9.61618C9.73661 9.12971 10 8.46992 10 7.78195C10 7.09399 9.73661 6.4342 9.26777 5.94773C8.79893 5.46126 8.16304 5.18797 7.5 5.18797Z"
+                                          fill="#600019"/>
+                                </svg>
+                                <span>г. Москва, ул. Нижняя, д. 14, стр. 7, БЦ «Петровский»</span>
+                            </li>
+                            <li>
+                                <svg width="15" height="17" viewBox="0 0 15 17" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.9649 12.5027C14.7901 12.2972 14.173 11.6893 13.0386 10.8851C11.8958 10.0738 11.0531 9.56798 10.8113 9.45003C10.79 9.43959 10.7665 9.43576 10.7434 9.43896C10.7203 9.44215 10.6984 9.45224 10.6801 9.46815C10.2906 9.80352 9.63505 10.4195 9.59989 10.4528C9.37288 10.6676 9.37288 10.6676 9.18705 10.6007C8.86025 10.4824 7.84505 9.88708 6.96043 8.90796C6.07581 7.92885 5.50894 6.78001 5.40179 6.41949C5.34052 6.21391 5.34052 6.21391 5.53572 5.96321C5.56586 5.92439 6.12402 5.2004 6.42771 4.77074C6.44212 4.75051 6.45125 4.72633 6.45414 4.70079C6.45703 4.67525 6.45357 4.64933 6.44412 4.6258C6.33731 4.35846 5.87926 3.42815 5.14464 2.16617C4.41538 0.913802 3.86559 0.232339 3.67942 0.0393254C3.66234 0.0215227 3.64123 0.00913809 3.6183 0.00347663C3.59538 -0.00218483 3.5715 -0.000913499 3.54918 0.00715652C2.89842 0.254112 2.27055 0.569224 1.67413 0.94819C1.09836 1.31781 0.553261 1.74283 0.0451769 2.21831C0.0274409 2.23496 0.0141437 2.25663 0.00671144 2.28099C-0.00072084 2.30535 -0.00200786 2.33149 0.00298831 2.3566C0.0729678 2.71674 0.407463 4.22018 1.44544 6.30265C2.50451 8.42802 3.23845 9.51695 4.79374 11.2286C6.34903 12.9402 7.36624 13.7995 9.29285 14.969C11.1786 16.1153 12.5407 16.485 12.8662 16.5616C12.889 16.567 12.9127 16.5656 12.9348 16.5574C12.9569 16.5492 12.9765 16.5345 12.9917 16.515C13.4222 15.9539 13.807 15.352 14.1415 14.7161C14.4846 14.0574 14.77 13.3641 14.9937 12.6455C15.0008 12.621 15.0019 12.5949 14.9969 12.5698C14.9918 12.5447 14.9808 12.5215 14.9649 12.5027Z"
+                                          fill="#600019"/>
+                                </svg>
+                                <p><a href="tel:+74959882028">+7 495 988-20-28</a>, <a href="tel:+74959888919">+7 495
+                                    988-89-19</a>
+                                <p>
+                            </li>
+                            <li>
+                                <svg width="15" height="17" viewBox="0 0 15 17" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.9649 12.5027C14.7901 12.2972 14.173 11.6893 13.0386 10.8851C11.8958 10.0738 11.0531 9.56798 10.8113 9.45003C10.79 9.43959 10.7665 9.43576 10.7434 9.43896C10.7203 9.44215 10.6984 9.45224 10.6801 9.46815C10.2906 9.80352 9.63505 10.4195 9.59989 10.4528C9.37288 10.6676 9.37288 10.6676 9.18705 10.6007C8.86025 10.4824 7.84505 9.88708 6.96043 8.90796C6.07581 7.92885 5.50894 6.78001 5.40179 6.41949C5.34052 6.21391 5.34052 6.21391 5.53572 5.96321C5.56586 5.92439 6.12402 5.2004 6.42771 4.77074C6.44212 4.75051 6.45125 4.72633 6.45414 4.70079C6.45703 4.67525 6.45357 4.64933 6.44412 4.6258C6.33731 4.35846 5.87926 3.42815 5.14464 2.16617C4.41538 0.913802 3.86559 0.232339 3.67942 0.0393254C3.66234 0.0215227 3.64123 0.00913809 3.6183 0.00347663C3.59538 -0.00218483 3.5715 -0.000913499 3.54918 0.00715652C2.89842 0.254112 2.27055 0.569224 1.67413 0.94819C1.09836 1.31781 0.553261 1.74283 0.0451769 2.21831C0.0274409 2.23496 0.0141437 2.25663 0.00671144 2.28099C-0.00072084 2.30535 -0.00200786 2.33149 0.00298831 2.3566C0.0729678 2.71674 0.407463 4.22018 1.44544 6.30265C2.50451 8.42802 3.23845 9.51695 4.79374 11.2286C6.34903 12.9402 7.36624 13.7995 9.29285 14.969C11.1786 16.1153 12.5407 16.485 12.8662 16.5616C12.889 16.567 12.9127 16.5656 12.9348 16.5574C12.9569 16.5492 12.9765 16.5345 12.9917 16.515C13.4222 15.9539 13.807 15.352 14.1415 14.7161C14.4846 14.0574 14.77 13.3641 14.9937 12.6455C15.0008 12.621 15.0019 12.5949 14.9969 12.5698C14.9918 12.5447 14.9808 12.5215 14.9649 12.5027Z"
+                                          fill="#600019"/>
+                                </svg>
+                                <a href="tel:88007000264">8 800 700-02-64</a>
+                            </li>
+                            <li>
+                                <svg width="15" height="14" viewBox="0 0 15 14" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.75581e-09 3.88331L7.26409 8.08266C7.33696 8.12477 7.41787 8.14676 7.5 8.14676C7.58213 8.14676 7.66304 8.12477 7.73591 8.08266L15 3.88407V11.1786C15 11.8077 14.7835 12.413 14.3948 12.8703C14.0061 13.3276 13.4746 13.6022 12.9095 13.6378L12.7841 13.6416H2.21591C1.64991 13.6417 1.10534 13.401 0.693934 12.9689C0.282523 12.5368 0.0354536 11.9461 0.00340917 11.318L4.75581e-09 11.1786V3.88331ZM2.21591 5.28627e-09H12.7841C13.3501 -4.11876e-05 13.8947 0.240664 14.3061 0.672738C14.7175 1.10481 14.9645 1.6955 14.9966 2.32362L15 2.46307V2.60252L7.5 6.93752L4.75581e-09 2.60252V2.46307C-3.70546e-05 1.83394 0.216514 1.22863 0.605231 0.771335C0.993947 0.314035 1.52536 0.0394081 2.09045 0.00378943L2.21591 5.28627e-09Z"
+                                          fill="#600019"/>
+                                </svg>
+                                <a href="mailto:info@linkgroup.ru">info@linkgroup.ru</a>
+                            </li>
+                        </ul>
+                        <div class="contacts-content__text-block contacts-content__text-block_mt">
+                            <b>Как добраться:</b>
+                            <br>
+                            <p>от м. Белорусская (радиальная) спуститься в подземный переход на Ленинградский проспект,
+                                далее повернуть на ул. Нижняя, следовать прямо. Ориентир АЗС "Газпромнефть". Пройдите
+                                прямо вверх по горке до конца улицы. Справа вход в БЦ "Петровский". Наш корпус №7 он
+                                находится левее. Вам нужен 5 подъезд, 4 этаж.</p>
+                        </div>
+                    </div>
+                    <div class="contacts-content__map">
+                        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A5bab2c2c538086a645497d5d7d35e817261dabb400bbdb985da7318990b0be33&amp;source=constructor"
+                                width="100%" height="708" frameborder="0" loading="lazy"></iframe>
+                    </div>
+                </div>
+                <div class="contacts-page__content contacts-content" id="tab2">
+                    <div class="contacts-content__text">
+                        <ul class="contacts-content__list-icons">
+                            <li>
+                                <svg width="15" height="19" viewBox="0 0 15 19" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.5 0C9.48912 0 11.3968 0.819882 12.8033 2.27928C14.2098 3.73868 15 5.71805 15 7.78195C15 11.0037 12.6333 14.3793 8 17.985C7.85575 18.0972 7.68031 18.1579 7.5 18.1579C7.31969 18.1579 7.14425 18.0972 7 17.985C2.36667 14.3793 0 11.0037 0 7.78195C0 5.71805 0.790176 3.73868 2.1967 2.27928C3.60322 0.819882 5.51088 0 7.5 0ZM7.5 5.18797C6.83696 5.18797 6.20107 5.46126 5.73223 5.94773C5.26339 6.4342 5 7.09399 5 7.78195C5 8.46992 5.26339 9.12971 5.73223 9.61618C6.20107 10.1026 6.83696 10.3759 7.5 10.3759C8.16304 10.3759 8.79893 10.1026 9.26777 9.61618C9.73661 9.12971 10 8.46992 10 7.78195C10 7.09399 9.73661 6.4342 9.26777 5.94773C8.79893 5.46126 8.16304 5.18797 7.5 5.18797Z"
+                                          fill="#600019"/>
+                                </svg>
+                                <span>г. Домодедово, м/р Востряково, владение Агрокомплекс, корпус 2, склад ООО «СВХ»</span>
+                            </li>
+                            <li>
+                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.07016 0C6.14169 0 5.22232 0.193993 4.36453 0.570904C3.50673 0.947814 2.72733 1.50026 2.0708 2.1967C0.744889 3.60322 0 5.51088 0 7.5C0 9.48912 0.744889 11.3968 2.0708 12.8033C2.72733 13.4997 3.50673 14.0522 4.36453 14.4291C5.22232 14.806 6.14169 15 7.07016 15C8.94528 15 10.7436 14.2098 12.0695 12.8033C13.3954 11.3968 14.1403 9.48912 14.1403 7.5C14.1403 6.51509 13.9574 5.53982 13.6021 4.62987C13.2468 3.71993 12.726 2.89314 12.0695 2.1967C11.413 1.50026 10.6336 0.947814 9.77579 0.570904C8.918 0.193993 7.99862 0 7.07016 0ZM10.0396 10.65L6.36314 8.25V3.75H7.42367V7.65L10.6052 9.675L10.0396 10.65Z"
+                                          fill="#600019"/>
+                                </svg>
+                                <p>Приемка товара с 9-00 до 18-00
+                                    <br>
+                                    Отгрузка товара с 9-00 до 20-00
+                                </p>
+                            </li>
+                        </ul>
+                        <div class="contacts-content__text-block">
+                            <b>Как добраться:</b>
+                            <br>
+                            <p>На Яндекс Картах для нахождения нашего склада <b>наберите ООО СВХ Заборье</b>. Обращаем
+                                ваше внимание, что в г.о. Домодедово и в пос. Востряково есть <b>две(!)</b> Рябиновые
+                                улицы.
+                                <br>Будьте внимательны при прокладывании маршрута!</p>
+
+                            <div class="contacts-content__subtabs">
+                                <div class="contacts-content__subtabs-toggles">
+                                    <a href="#tab3"
+                                       class="contacts-content__subtabs-toggle contacts-content__subtabs-toggle_active">со
+                                        стороны МКАД</a>
+                                    <a href="#tab4" class="contacts-content__subtabs-toggle">со стороны А-107 (М-5)</a>
+                                </div>
+                                <div class="contacts-content__subtabs-content contacts-content__subtabs-content_active"
+                                     id="tab3">
+                                    <p>Проще всего найти в навигаторе проезд до с. Битягово, однако свернув с Каширского
+                                        шоссе направо в сторону с. Битягово через 200 м повернуть налево, в проезд
+                                        ведущий к сине-зеленым корпусам. В конце проезда вагончик КПП для оформления
+                                        пропуска на въезд. За КПП прямо 150 м, нужный вам корпус слева.</p>
+
+                                    <div class="contacts-content__subtabs-gallery">
+                                        <a href="/assets/img/content/contacts/3.jpg" data-fancybox="contacts1">
+                                            <img src="/assets/img/content/contacts/3.jpg" alt="">
+                                        </a>
+                                        <a href="/assets/img/content/contacts/1.jpg" data-fancybox="contacts1">
+                                            <img src="/assets/img/content/contacts/1.jpg" alt="">
+                                        </a>
+                                        <a href="/assets/img/content/contacts/2.jpg" data-fancybox="contacts1">
+                                            <img src="/assets/img/content/contacts/2.jpg" alt="">
+                                        </a>
+                                    </div>
+
+                                </div>
+
+                                <div class="contacts-content__subtabs-content"
+                                     id="tab4">
+                                    <p>Проще всего найти в навигаторе проезд до с. Битягово, однако свернув с Каширского
+                                        шоссе направо в сторону с. Битягово через 200 м повернуть налево, в проезд
+                                        ведущий к сине-зеленым корпусам. В конце проезда вагончик КПП для оформления
+                                        пропуска на въезд. За КПП прямо 150 м, нужный вам корпус слева.</p>
+
+                                    <div class="contacts-content__subtabs-gallery">
+                                        <a href="/assets/img/content/contacts/1.jpg" data-fancybox="contacts1">
+                                            <img src="/assets/img/content/contacts/1.jpg" alt="">
+                                        </a>
+                                        <a href="/assets/img/content/contacts/2.jpg" data-fancybox="contacts1">
+                                            <img src="/assets/img/content/contacts/2.jpg" alt="">
+                                        </a>
+                                        <a href="/assets/img/content/contacts/3.jpg" data-fancybox="contacts1">
+                                            <img src="/assets/img/content/contacts/3.jpg" alt="">
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="contacts-content__map">
+                        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A802fbdac192ac8244ef65b3b47df2eba66b155392dec2766e33453038909df64&amp;source=constructor"
+                                width="100%" height="708" frameborder="0" loading="lazy"></iframe>
+                    </div>
+                </div>
+
+                <div class="contacts-page__feedback">
+                    <p class="contacts-page__feedback-text">
+                        Нам очень важно Ваше мнение о работе нашей компании. Отзывы, предложения, благодарности,
+                        критика, идеи, пожелания - будем Вам благодарны за всё. Благодаря Вам мы становимся лучше!
+                    </p>
+                    <a href="#feedbackForm" data-fancybox="fbForm" class="contacts-page__feedback-btn">Оставить
+                        отзыв</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="feedbackForm" class="modal" style="display: none;">
+            <div class="modal__title">Оставить отзыв</div>
+            <div class="modal__body">
+                <form action="#" class="form form_feedback">
+                    <div class="form__item">
+                        <label for="nameField">Имя*</label>
+                        <input type="text" id="nameField" placeholder="Введите ваше имя" required>
+                    </div>
+                    <div class="form__item">
+                        <label for="telField">Телефон*</label>
+                        <input type="tel" id="telField" placeholder="Введите ваш телефон" required>
+                    </div>
+                    <div class="form__item">
+                        <label for="mailField">E-mail</label>
+                        <input type="email" id="mailField" placeholder="info@linkgroup.ru">
+                    </div>
+                    <div class="form__item">
+                        <label for="regionField">Регион</label>
+                        <input type="text" id="regionField" placeholder="Введите ваш регион" required>
+                    </div>
+                    <div class="form__item">
+                        <label for="messageField">Комментарий</label>
+                        <textarea id="messageField" placeholder="Ваше сообщение"></textarea>
+                    </div>
+                    <div class="form__item form__item_text">
+                        <p>Нажимая кнопку отправить я даю согласие на обработку <a href="#">персональных данных</a>.</p>
+                    </div>
+                    <div class="form__actions">
+                        <button type="submit">
+                            Отправить
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__left">
+                    <a href="#" class="footer__logo">
+                        <img src="assets/svg/logo_footer.svg" alt="">
+                    </a>
+                    <button class="footer__callback button button_orange">Заказать звонок</button>
+                </div>
+
+                <div class="footer__wrap">
+                    <ul class="footer__menu footerMenu">
+                        <li class="footerMenu__item"><a href="#">О нас</a></li>
+                        <li class="footerMenu__item"><a href="#">Где купить</a></li>
+                        <li class="footerMenu__item"><a href="#">Транснациональная корпорация</a></li>
+                        <li class="footerMenu__item"><a href="#">Производство</a></li>
+                        <li class="footerMenu__item"><a href="#">Новости</a></li>
+                        <li class="footerMenu__item"><a href="#">Поставки на территорию РФ</a></li>
+                        <li class="footerMenu__item"><a href="#">Контакты</a></li>
+                        <li class="footerMenu__item"><a href="#">Партнерам</a></li>
+                        <li class="footerMenu__item"><a href="#">Поставки на экспорт</a></li>
+                    </ul>
+                    <ul class="footer__category footerCategory">
+                        <li class="footerCategory__item"><a href="#">Баня и сауна</a></li>
+                        <li class="footerCategory__item"><a href="#">Интерьер</a></li>
+                        <li class="footerCategory__item"><a href="#">От насекомых и вредителей</a></li>
+                        <li class="footerCategory__item"><a href="#">Коврики</a></li>
+                        <li class="footerCategory__item"><a href="#">Пикник</a></li>
+                        <li class="footerCategory__item"><a href="#">Туризм и отдых</a></li>
+                        <li class="footerCategory__item"><a href="#">Кухня</a></li>
+                        <li class="footerCategory__item"><a href="#">Сад и огород</a></li>
+                        <li class="footerCategory__item"><a href="#">Красота и здоровье</a></li>
+                    </ul>
+                    <ul class="footer__contact menuContacts">
+                        <li class="menuContacts__item menuContacts__item_phone">
+                            <div class="menuContacts__icon">
+                                <svg width="17" height="19">
+                                    <use xlink:href="assets/svg/sprite.svg#phone"></use>
+                                </svg>
+                            </div>
+                            <a href="tel:+74959882028">+7(495) 988-20-28</a>
+                        </li>
+                        <li class="menuContacts__item menuContacts__item_phone">
+                            <div class="menuContacts__icon">
+                                <svg width="17" height="19">
+                                    <use xlink:href="assets/svg/sprite.svg#phone"></use>
+                                </svg>
+                            </div>
+                            <a href="tel:88007000264">8(800) 700-02-64</a>
+                        </li>
+                        <li class="menuContacts__item menuContacts__item_mail">
+                            <div class="menuContacts__icon">
+                                <svg width="17" height="16">
+                                    <use xlink:href="assets/svg/sprite.svg#mail"></use>
+                                </svg>
+                            </div>
+                            <a href="mailto:info@linkgroup.ru">info@linkgroup.ru</a>
+                        </li>
+                        <li class="menuContacts__item menuContacts__item_text">
+                            <div class="menuContacts__icon">
+                                <svg width="19" height="23">
+                                    <use xlink:href="assets/svg/sprite.svg#pin"></use>
+                                </svg>
+                            </div>
+                            <span>Офис: г. Москва, ул. Нижняя д.&nbsp;14,&nbsp;стр.&nbsp;7 </span>
+                        </li>
+                        <li class="menuContacts__item menuContacts__item_text">
+                            <div class="menuContacts__icon">
+                                <svg width="19" height="23">
+                                    <use xlink:href="assets/svg/sprite.svg#pin"></use>
+                                </svg>
+                            </div>
+                            <span>Склад: г. Домодедово мкр.&nbsp;Востряково, ул.&nbsp;Рябиновая,&nbsp;д.&nbsp;14,&nbsp;стр. 1</span>
+                        </li>
+                        <li class="menuContacts__item menuContacts__item_text">
+                            <div class="menuContacts__icon">
+                                <svg width="19" height="19">
+                                    <use xlink:href="assets/svg/sprite.svg#time"></use>
+                                </svg>
+                            </div>
+                            <span>Режим работы: 08:00-19:00</span>
+                        </li>
+                    </ul>
+                    <div class="footer__reviews">
+                        <img src="assets/img/footer_reviews.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom footerBottom">
+                <ul class="footerBottom__doc">
+                    <li><a href="#">Пользовательское соглашение</a></li>
+                    <li><a href="#">Политика конфиденциальности данных</a></li>
+                </ul>
+                <span>LINKGROUP 2023 ©</span>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script src="build/scripts/vendors/lozad.min.js"></script>
+<script src="build/scripts/vendors/fancybox.umd.min.js"></script>
+<script src="build/scripts/vendors/inputmask.min.js"></script>
+<script src="build/scripts/general.min.js"></script>
+<script src="build/scripts/contacts.min.js"></script>
+</body>
+</html>

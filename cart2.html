@@ -23,21 +23,24 @@
                 <div class="header__search">
                     <form action="#" class="searchForm">
                         <input type="text" class="searchForm__input" placeholder="Поиск лучших товаров ...">
-                        <button class="searchForm__submit" type="submit"><img src="assets/svg/search.svg" alt="">
-                        </button>
+                        <button class="searchForm__submit" type="submit"><img src="assets/svg/search.svg" alt=""></button>
                     </form>
+                    <div class="header__search-close"></div>
                 </div>
                 <a href="#" class="header__button button button_brown">Продукция</a>
                 <div class="header__actions headerActions">
-                    <div class="headerActions__btn headerActions__btn_favorites">
+                    <div class="headerActions__btn headerActions__btn_search">
+                        <img src="assets/svg/search.svg" alt="">
+                    </div>
+                    <div class="headerActions__btn headerActions__btn_favorites" data-count="2">
                         <img src="assets/svg/icon/Heart.svg" alt="">
                         <span>Избранное</span>
                     </div>
-                    <div class="headerActions__btn headerActions__btn_compare">
+                    <div class="headerActions__btn headerActions__btn_compare" data-count="2">
                         <img src="assets/svg/icon/Slider.svg" alt="">
                         <span>Сравнение</span>
                     </div>
-                    <div class="headerActions__btn headerActions__btn_basket">
+                    <div class="headerActions__btn headerActions__btn_basket" data-count="2">
                         <img src="assets/svg/icon/Shop.svg" alt="">
                         <span>Корзина</span>
                     </div>
@@ -62,21 +65,21 @@
                     <li class="menuContacts__item menuContacts__item_phone">
                         <div class="menuContacts__icon">
                             <svg width="17" height="19">
-                                <use xlink:href="assets/svg/sprite.svg#phone"/>
+                                <use xlink:href="assets/svg/sprite.svg#phone" />
                             </svg>
                         </div>
                         <a href="tel:+74959882028">+7(495) 988-20-28</a></li>
                     <li class="menuContacts__item menuContacts__item_phone">
                         <div class="menuContacts__icon">
                             <svg width="17" height="19">
-                                <use xlink:href="assets/svg/sprite.svg#phone"/>
+                                <use xlink:href="assets/svg/sprite.svg#phone" />
                             </svg>
                         </div>
                         <a href="tel:88007000264">8(800) 700-02-64</a></li>
                     <li class="menuContacts__item menuContacts__item_mail">
                         <div class="menuContacts__icon">
                             <svg width="17" height="16">
-                                <use xlink:href="assets/svg/sprite.svg#mail"/>
+                                <use xlink:href="assets/svg/sprite.svg#mail" />
                             </svg>
                         </div>
                         <a href="mailto:info@linkgroup.ru">info@linkgroup.ru</a>
@@ -84,7 +87,7 @@
                     <li class="menuContacts__item menuContacts__item_text">
                         <div class="menuContacts__icon">
                             <svg width="19" height="23">
-                                <use xlink:href="assets/svg/sprite.svg#pin"/>
+                                <use xlink:href="assets/svg/sprite.svg#pin" />
                             </svg>
                         </div>
                         <span>Офис: г. Москва, ул. Нижняя, д. 14, стр. 7</span>
@@ -92,7 +95,7 @@
                     <li class="menuContacts__item menuContacts__item_text">
                         <div class="menuContacts__icon">
                             <svg width="19" height="23">
-                                <use xlink:href="assets/svg/sprite.svg#pin"/>
+                                <use xlink:href="assets/svg/sprite.svg#pin" />
                             </svg>
                         </div>
                         <span>Склад: г. Домодедово, мкр. Востряково, ул.&nbsp;Рябиновая, д. 14, стр. 1</span>
@@ -100,13 +103,14 @@
                     <li class="menuContacts__item menuContacts__item_text">
                         <div class="menuContacts__icon">
                             <svg width="19" height="19">
-                                <use xlink:href="assets/svg/sprite.svg#time"/>
+                                <use xlink:href="assets/svg/sprite.svg#time" />
                             </svg>
                         </div>
                         <span>Режим работы: 08:00-19:00</span>
                     </li>
                 </ul>
             </div>
+            <div class="header__bg"></div>
         </div>
     </header>
     <main class="main">
