@@ -1,8 +1,8 @@
 let brandTabs = document.querySelectorAll('[data-brand-tab]')
 let brandContent = document.querySelectorAll('[data-brand-content]')
-let brandContentWrap = document.querySelector('.brands-content')
-let brandBg = document.querySelector('.brands-page__bg')
-let brandClose = document.querySelector('.brands-content__close')
+let brandContentWrap = document.querySelector('.js-wrap-content')
+let brandBg = document.querySelector('.js-bg-content')
+let brandClose = document.querySelector('.js-close-content')
 
 function removeActiveClass() {
     brandTabs.forEach(function(tab){
@@ -26,8 +26,6 @@ function brandsTabToogle() {
 
             brandContent.forEach(function(content){
                 let dataContent = content.getAttribute('data-brand-content')
-
-                console.log(dataContent)
 
                 if(dataTab == dataContent){
                     content.classList.add('is-active')

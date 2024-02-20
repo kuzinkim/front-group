@@ -10,7 +10,7 @@ const bindProductGallery = (node) => {
         watchSlidesProgress: true,
 
         breakpoints: {
-            900: {
+            1571: {
                 direction: "vertical",
             }
         }
