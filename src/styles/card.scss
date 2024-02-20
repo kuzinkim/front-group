@@ -14,7 +14,7 @@
         display: flex;
         position: relative;
 
-        @media screen and (max-width:1570px){
+        @media screen and (max-width:1199px){
             flex-wrap: wrap;
         }
     }
@@ -32,14 +32,20 @@
         }
 
         @media screen and (max-width:1570px){
-            margin-right: 40px;
-            width: 50%;
-        }
-
-        @media screen and (max-width:899px){
             flex-direction: column-reverse;
             justify-content: flex-end;
             height: 100%;
+            max-width: 448px;
+        }
+
+        @media screen and (max-width:1440px){
+            max-width: 380px;
+        }
+
+        @media screen and (max-width:1199px){
+            margin-right: 40px;
+            width: 50%;
+            max-width: 100%;
         }
 
         @media screen and (max-width:767px){
@@ -54,7 +60,7 @@
     flex: 1;
     margin: 0 22px 0 37px;
 
-    @media screen and (max-width:1570px){
+    @media screen and (max-width:1199px){
         order: 1;
         margin-left: 0;
         margin-right: 0;
@@ -66,6 +72,10 @@
         color: #510017;
         font-weight: 600;
         margin-bottom: 10px;
+
+        @media screen and (max-width:1440px){
+            font-size: 28px;
+        }
 
         @media screen and (max-width:767px){
             font-size: 24px;
@@ -81,6 +91,11 @@
             padding-top: 30px;
             padding-bottom: 30px;
 
+            @media screen and (max-width:1440px){
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+
             @media screen and (max-width:767px){
                 padding-top: 10px;
                 padding-bottom: 10px;
@@ -95,6 +110,10 @@
                 color: #510017;
                 font-weight: 600;
 
+                @media screen and (max-width:1440px){
+                    font-size: 18px;
+                }
+
                 @media screen and (max-width:767px){
                     font-size: 14px;
                 }
@@ -106,7 +125,11 @@
 .cardInfo{
     width: 433px;
 
-    @media screen and (max-width:1570px){
+    @media screen and (max-width:1440px){
+        width: 360px;
+    }
+
+    @media screen and (max-width:1199px){
         width: calc(50% - 40px);
         margin-left: auto;
     }
@@ -251,9 +274,13 @@
        max-width: calc(100% - 110px);
     }
 
-    @media screen and (max-width:899px){
+    @media screen and (max-width:1570px){
         max-width: 100%;
     }
+
+    // @media screen and (max-width:899px){
+    //     max-width: 100%;
+    // }
 
     @media screen and (max-width:767px){
         padding-top: 20px;
@@ -308,10 +335,15 @@
         max-width: 90px;
     }
 
-    @media screen and (max-width:899px){
+    @media screen and (max-width:1570px){
         max-width: 100%;
         margin-right: 0;
     }
+
+    // @media screen and (max-width:899px){
+    //     max-width: 100%;
+    //     margin-right: 0;
+    // }
 
     @media screen and (max-width:767px){
         display: none;
@@ -398,7 +430,7 @@
     top: 15px;
     display: flex;
     margin: 0 -4px;
-    z-index: 10;
+    z-index: 2;
 
     @media screen and (max-width:767px){
         top: 0;
@@ -455,9 +487,9 @@
         align-items: center;
         margin-left: auto;
 
-        @media screen and (max-width:1570px){
-            margin-left: 40px;
-        }
+        // @media screen and (max-width:1570px){
+        //     margin-left: 40px;
+        // }
 
         @media screen and (max-width:1199px){
             margin-left: 28px;
@@ -476,8 +508,11 @@
         border-radius: 30px;
         background: #F58220;
 
-        @media screen and (max-width:1199px){
+        @media screen and (max-width:1440px){
             font-size: 35px;
+        }
+
+        @media screen and (max-width:1199px){
             border-radius: 21px;
             padding-left: 28px;
             padding-right: 28px;
@@ -503,7 +538,7 @@
         color: rgba(0, 0, 0, 0.27);
         font-weight: 600;
 
-        @media screen and (max-width:1199px){
+        @media screen and (max-width:1440px){
             font-size: 16px;
         }
 
@@ -517,7 +552,7 @@
             font-size: 36px;
             text-decoration: line-through;
 
-            @media screen and (max-width:1199px){
+            @media screen and (max-width:1440px){
                 font-size: 28px;
             }
 
