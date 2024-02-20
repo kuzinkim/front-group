@@ -29,36 +29,36 @@ const bindNewsSlider = (node) => {
   return new Swiper(node, options);
 }
 
-const bindNewsVerticalSlider = (node) => {
-  if (!node) {
-    return false;
-  }
+// const bindNewsVerticalSlider = (node) => {
+//   if (!node) {
+//     return false;
+//   }
 
-  const options = {
-    slidesPerView: 2,
-    direction: 'vertical',
-    mousewheel: {
-        releaseOnEdges: true,
-    },
+//   const options = {
+//     slidesPerView: 2,
+//     direction: 'vertical',
+//     mousewheel: {
+//         releaseOnEdges: true,
+//     },
 
-    breakpoints: {
-        // when window width is >= 320px
-        0: {
-          slidesPerView: 2,
-        },
-        // when window width is >= 480px
-        500: {
-          slidesPerView: 2,
-        },
-        // when window width is >= 640px
-        1000: {
-          slidesPerView: 2,
-        }
-    }
-  }
+//     breakpoints: {
+//         // when window width is >= 320px
+//         0: {
+//           slidesPerView: 2,
+//         },
+//         // when window width is >= 480px
+//         500: {
+//           slidesPerView: 2,
+//         },
+//         // when window width is >= 640px
+//         1000: {
+//           slidesPerView: 2,
+//         }
+//     }
+//   }
 
-  return new Swiper(node, options);
-}
+//   return new Swiper(node, options);
+// }
 
 window.addEventListener('load', () => {
 
@@ -66,7 +66,7 @@ window.addEventListener('load', () => {
     bindNewsSlider(slider);
   }
 
-  for (const slider of document.querySelectorAll('.news-detail__slider_vertical .swiper')) {
-    bindNewsVerticalSlider(slider);
-  }
+  // for (const slider of document.querySelectorAll('.news-detail__slider_vertical .swiper')) {
+  //   bindNewsVerticalSlider(slider);
+  // }
 })
