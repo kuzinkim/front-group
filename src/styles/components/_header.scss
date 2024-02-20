@@ -435,6 +435,10 @@
             font-weight: 700;
             transition: color .2s ease;
             line-height: calc(22/17);
+
+            @media screen and (max-width:500px){
+                font-size: 14px;
+            }
         }
 
         a:hover{
