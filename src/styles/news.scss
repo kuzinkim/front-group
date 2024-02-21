@@ -1,11 +1,23 @@
 @import 'components/main-page/news';
 
 .news-page{
-    min-height: 1620px;
-    max-height: 1620px;
+    height: 1620px;
+
+    @media screen and (max-width:1699px){
+        height: auto;
+    }
+
     &__block{
         display: flex;
         margin: 0 -10px;
+
+        @media screen and (max-width:1699px){
+            overflow: auto;
+
+            &::-webkit-scrollbar{
+                display: none;
+            }
+        }
 
         &_md{
             margin-bottom: 38px;
