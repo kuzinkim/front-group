@@ -346,7 +346,7 @@ const bindSectionsListAdaptive = (node) => {
         window.ADAPTIVE_SUBSECTIONS_FLAG = true;
 
         const select = document.createElement('div');
-        select.classList.add('sections-list__select');
+        select.classList.add('sections-list-select');
 
         const list = node.querySelector('ul');
 
@@ -365,18 +365,31 @@ const bindSectionsListAdaptive = (node) => {
             })
         }
 
-        node.prepend(select);
+        const btnClose = document.createElement('li');
+        btnClose.setAttribute('type', 'button');
+        btnClose.classList.add('sections-list__close-btn');
+
+        list.append(btnClose)
+
+        node.after(select);
 
         select.addEventListener('click', (e) => {
             node.classList.toggle('sections-list_opened');
         })
+
+        node.addEventListener('click', (e) => {
+            if (node === e.target || btnClose === e.target) {
+                node.classList.remove('sections-list_opened');
+            }
+        })
+
 
     }
 
     if (window.matchMedia('(min-width: 751px)').matches && window.ADAPTIVE_SUBSECTIONS_FLAG) {
         window.ADAPTIVE_SUBSECTIONS_FLAG = false;
 
-        node.querySelector('.sections-list__select') && node.querySelector('.sections-list__select').remove();
+        document.querySelector('.sections-list-select') && document.querySelector('.sections-list-select').remove();
     }
 
 }
