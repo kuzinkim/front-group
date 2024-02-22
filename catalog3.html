@@ -1,0 +1,1680 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог</title>
+    <link rel="stylesheet" href="build/styles/vendors/normalize.css">
+    <link rel="stylesheet" href="build/styles/vendors/swiper-bundle.min.css">
+    <link rel="stylesheet" href="build/styles/vendors/nice-select2.css">
+    <link rel="stylesheet" href="build/styles/vendors/nouislider.min.css">
+    <link rel="stylesheet" href="build/styles/vendors/fancybox.css">
+    <link rel="stylesheet" href="build/styles/general.css">
+    <link rel="stylesheet" href="build/styles/catalog.css">
+</head>
+<body>
+    <div class="page">
+        <header class="header">
+            <div class="container">
+                <div class="header__row">
+                    <a href="#" class="header__logo"><img src="assets/svg/logo.svg" alt=""></a>
+                    <ul class="header__nav nav">
+                        <li class="nav__item"><a href="#">О нас</a></li>
+                        <li class="nav__item"><a href="#">Производство</a></li>
+                        <li class="nav__item"><a href="#">Контакты</a></li>
+                    </ul>
+                    <div class="header__search">
+                        <form action="#" class="searchForm">
+                            <input type="text" class="searchForm__input" placeholder="Поиск лучших товаров ...">
+                            <button class="searchForm__submit" type="submit"><img src="assets/svg/search.svg" alt=""></button>
+                        </form>
+                        <div class="header__search-close"></div>
+                    </div>
+                    <a href="#" class="header__button button button_brown">Продукция</a>
+                    <div class="header__actions headerActions">
+                        <div class="headerActions__btn headerActions__btn_search">
+                            <img src="assets/svg/search.svg" alt="">
+                        </div>
+                        <div class="headerActions__btn headerActions__btn_favorites" data-count="2">
+                            <img src="assets/svg/icon/Heart.svg" alt="">
+                            <span>Избранное</span>
+                        </div>
+                        <div class="headerActions__btn headerActions__btn_compare" data-count="2">
+                            <img src="assets/svg/icon/Slider.svg" alt="">
+                            <span>Сравнение</span>
+                        </div>
+                        <div class="headerActions__btn headerActions__btn_basket" data-count="2">
+                            <img src="assets/svg/icon/Shop.svg" alt="">
+                            <span>Корзина</span>
+                        </div>
+                    </div>
+                    <div class="header__burger js-burger">
+                        <img src="assets/svg/burger.svg" alt="">
+                    </div>
+                </div>
+                <div class="header__menu menu js-header-menu">
+                    <ul class="menu__nav menuNav">
+                        <li class="menuNav__item"><a href="#">Каталог</a></li>
+                        <li class="menuNav__item"><a href="#">Производство</a></li>
+                        <li class="menuNav__item"><a href="#">Где купить</a></li>
+                        <li class="menuNav__item"><a href="#">Новости</a></li>
+                        <li class="menuNav__item"><a href="#">Партнёрам</a></li>
+                        <li class="menuNav__item"><a href="#">Транснациональная<br> корпорация</a></li>
+                        <li class="menuNav__item"><a href="#">Поставки на территории РФ</a></li>
+                        <li class="menuNav__item"><a href="#">Поставки на экспорт</a></li>
+                        <li class="menuNav__item"><a href="#">Контакты</a></li>
+                    </ul>
+                    <ul class="menu__contacts menuContacts">
+                        <li class="menuContacts__item menuContacts__item_phone">
+                            <div class="menuContacts__icon">
+                                <svg width="17" height="19">
+                                    <use xlink:href="assets/svg/sprite.svg#phone" />
+                                </svg>
+                            </div>
+                            <a href="tel:+74959882028">+7(495) 988-20-28</a></li>
+                        <li class="menuContacts__item menuContacts__item_phone">
+                            <div class="menuContacts__icon">
+                                <svg width="17" height="19">
+                                    <use xlink:href="assets/svg/sprite.svg#phone" />
+                                </svg>
+                            </div>
+                            <a href="tel:88007000264">8(800) 700-02-64</a></li>
+                        <li class="menuContacts__item menuContacts__item_mail">
+                            <div class="menuContacts__icon">
+                                <svg width="17" height="16">
+                                    <use xlink:href="assets/svg/sprite.svg#mail" />
+                                </svg>
+                            </div>
+                            <a href="mailto:info@linkgroup.ru">info@linkgroup.ru</a>
+                        </li>
+                        <li class="menuContacts__item menuContacts__item_text">
+                            <div class="menuContacts__icon">
+                                <svg width="19" height="23">
+                                    <use xlink:href="assets/svg/sprite.svg#pin" />
+                                </svg>
+                            </div>
+                            <span>Офис: г. Москва, ул. Нижняя, д. 14, стр. 7</span>
+                        </li>
+                        <li class="menuContacts__item menuContacts__item_text">
+                            <div class="menuContacts__icon">
+                                <svg width="19" height="23">
+                                    <use xlink:href="assets/svg/sprite.svg#pin" />
+                                </svg>
+                            </div>
+                            <span>Склад: г. Домодедово, мкр. Востряково, ул.&nbsp;Рябиновая, д. 14, стр. 1</span>
+                        </li>
+                        <li class="menuContacts__item menuContacts__item_text">
+                            <div class="menuContacts__icon">
+                                <svg width="19" height="19">
+                                    <use xlink:href="assets/svg/sprite.svg#time" />
+                                </svg>
+                            </div>
+                            <span>Режим работы: 08:00-19:00</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header__bg"></div>
+            </div>
+        </header>
+        <main class="main">
+            <!--breadcrumbs-->
+            <div class="container">
+                <div class="breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item"><a href="/">Главная</a></li>
+                        <li class="breadcrumbs__item"><span>Каталог</span></li>
+                    </ul>
+                </div>
+            </div>
+            <!--page title-->
+            <div class="container">
+                <div class="page-title page-title_inner">
+                    <h1>Баня и сауна</h1>
+                </div>
+            </div>
+            <!--sections list-->
+            <div class="container">
+                <div class="sections-list">
+                    <ul>
+                        <li>
+                            <a class="sections-list__item sections-list__item_active" href="#">
+                                <div class="sections-list__item-img">
+                                    <img src="assets/img/content/catalog/1.png" alt="">
+                                </div>
+                                <div class="sections-list__item-name">
+                                    Ведра, ковши, кружки
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="sections-list__item" href="#">
+                                <div class="sections-list__item-img">
+                                    <img src="assets/img/content/catalog/2.png" alt="">
+                                </div>
+                                <div class="sections-list__item-name">
+                                    Термометры, гигрометры и часы
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="sections-list__item" href="#">
+                                <div class="sections-list__item-img">
+                                    <img src="assets/img/content/catalog/3.png" alt="">
+                                </div>
+                                <div class="sections-list__item-name">
+                                    Строительство бани
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="sections-list__item" href="#">
+                                <div class="sections-list__item-img">
+                                    <img src="assets/img/content/catalog/4.png" alt="">
+                                </div>
+                                <div class="sections-list__item-name">
+                                    Мебель и аксессуары для бани
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="sections-list__item" href="#">
+                                <div class="sections-list__item-img">
+                                    <img src="assets/img/content/catalog/5.png" alt="">
+                                </div>
+                                <div class="sections-list__item-name">
+                                    Веники для бани
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="sections-list__item" href="#">
+                                <div class="sections-list__item-img">
+                                    <img src="assets/img/content/catalog/6.png" alt="">
+                                </div>
+                                <div class="sections-list__item-name">
+                                    Ароматерапия для бани
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="sections-list__item" href="#">
+                                <div class="sections-list__item-img">
+                                    <img src="assets/img/content/catalog/7.png" alt="">
+                                </div>
+                                <div class="sections-list__item-name">
+                                    Текстиль для бани и сауны
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="sections-list__item" href="#">
+                                <div class="sections-list__item-img">
+                                    <img src="assets/img/content/catalog/8.png" alt="">
+                                </div>
+                                <div class="sections-list__item-name">
+                                    Косметика и уход за телом
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="sections-list__item" href="#">
+                                <div class="sections-list__item-img">
+                                    <img src="assets/img/content/catalog/9.png" alt="">
+                                </div>
+                                <div class="sections-list__item-name">
+                                    Для печей и каминов
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="sections-list__item" href="#">
+                                <div class="sections-list__item-img">
+                                    <img src="assets/img/content/catalog/10.png" alt="">
+                                </div>
+                                <div class="sections-list__item-name">
+                                    Подарочные наборы
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="sections-list__item" href="#">
+                                <div class="sections-list__item-img">
+                                    <img src="assets/img/content/catalog/11.png" alt="">
+                                </div>
+                                <div class="sections-list__item-name">
+                                    Средства для розжига банных печей и каминов
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--catalog layout-->
+            <div class="container">
+                <div class="catalog-layout">
+                    <aside class="catalog-layout__sidebar">
+                        <button class="catalog-layout__sidebar-close">Закрыть</button>
+                        <div class="filters">
+                            <div class="filters__title">Фильтр</div>
+                            <div class="filters__wrapper">
+                                <div class="filters__item filter">
+                                    <div class="filter__name">Цена, ₽</div>
+                                    <div class="filter__content">
+                                        <div class="filter__price">
+                                            <div class="filter__price-line">
+                                                <div class="filter__price-input">
+                                                    <label for="price_from">от</label>
+                                                    <input type="number" name="price_from" id="price_from">
+                                                </div>
+                                                <div class="filter__price-input">
+                                                    <label for="price_to">до</label>
+                                                    <input type="number" name="price_to" id="price_to">
+                                                </div>
+                                            </div>
+                                            <div class="filter__price-slider" data-min="0" data-max="358000"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="filters__item filter">
+                                    <div class="filter__name">Страна производитель</div>
+                                    <div class="filter__content">
+                                        <ul class="filter__checkboxes">
+                                            <li class="filter__checkbox filter__checkbox_show">
+                                                <!--класс filter__checkbox_show для тех, которые показываются сразу. Без этого класса показываются после нажатия на "показать ещё"-->
+                                                <input type="checkbox" id="111" name="filterName" value="Россия">
+                                                <label for="111">
+                                                    <span>Россия <i>(13122)</i></span>
+                                                </label>
+                                            </li>
+                                            <li class="filter__checkbox filter__checkbox_show">
+                                                <input type="checkbox" id="222" name="filterName" value="Китай">
+                                                <label for="222">
+                                                    <span>Китай <i>(122)</i></span>
+                                                </label>
+                                            </li>
+                                            <li class="filter__checkbox">
+                                                <input type="checkbox" id="333" name="filterName" value="Испания">
+                                                <label for="333">
+                                                    <span>Испания <i>(2122)</i></span>
+                                                </label>
+                                            </li>
+                                            <li class="filter__checkbox">
+                                                <input type="checkbox" id="444" name="filterName" value="Испания">
+                                                <label for="444">
+                                                    <span>Боливия <i>(42122)</i></span>
+                                                </label>
+                                            </li>
+                                            <li class="filter__checkbox">
+                                                <input type="checkbox" id="555" name="filterName" value="Никарагуа">
+                                                <label for="555">
+                                                    <span>Никарагуа <i>(42)</i></span>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                        <button type="button" class="filter__show-more">Показать еще <i>3</i></button>
+                                    </div>
+                                </div>
+                                <div class="filters__item filter">
+                                    <div class="filter__name">Сертификат</div>
+                                    <div class="filter__content">
+                                        <ul class="filter__checkboxes">
+                                            <li class="filter__checkbox filter__checkbox_show">
+                                                <!--класс filter__checkbox_show для тех, которые показываются сразу. Без этого класса показываются после нажатия на "показать ещё"-->
+                                                <input type="checkbox" id="21" name="filterName" value="РСТ">
+                                                <label for="21">
+                                                    <span>РСТ <i>(3122)</i></span>
+                                                </label>
+                                            </li>
+                                            <li class="filter__checkbox filter__checkbox_show">
+                                                <input type="checkbox" id="22" name="filterName" value="EAC">
+                                                <label for="22">
+                                                    <span>EAC <i>(122)</i></span>
+                                                </label>
+                                            </li>
+                                            <li class="filter__checkbox">
+                                                <input type="checkbox" id="33" name="filterName" value="none">
+                                                <label for="33">
+                                                    <span>Не подлежит сертификации <i>(2122)</i></span>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="filters__actions">
+                                    <button>Показать <i>70 товаров</i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                    <section class="catalog-layout__content">
+                        <div class="catalog-layout__content-top-line sort">
+                            <div class="sort__item sort__item_sort">
+                                <select name="sort">
+                                    <option value="cheapest" selected>Сначала дешевые</option>
+                                    <option value="valued">Сначала дорогие</option>
+                                    <option value="popular">По популярности</option>
+                                </select>
+                            </div>
+                            <div class="sort__item sort__item_per-page">
+                                <select name="per_page">
+                                    <option value="12" selected>Показывать по 12</option>
+                                    <option value="24">Показывать по 24</option>
+                                    <option value="36">Показывать по 36</option>
+                                </select>
+                            </div>
+
+                            <div class="sort__item sort__item_filters">
+                                <button class="sort__filters-adaptive">Открыть фильтры</button>
+                            </div>
+                        </div>
+
+                        <ul class="catalog">
+                            <li class="catalog__item">
+                                <div class="item-card" data-item-id="123">
+                                    <div class="item-card__controls">
+                                        <button class="item-card__like item-card__like_liked js-item-card-like" type="button"></button>
+                                        <button class="item-card__compare item-card__compare_compared js-item-card-compare" type="button"></button>
+                                    </div>
+                                    <div class="item-card__labels">
+                                        <span class="item-card__label item-card__label_orange">Хит</span>
+                                        <span class="item-card__label item-card__label_green">Новинка</span>
+                                    </div>
+                                    <div class="item-card__gallery">
+                                        <div class="swiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="assets/img/content/item1.jpg" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="assets/img/content/item2.jpg" alt="" loading="lazy">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="assets/img/content/item3.jpg" alt="" loading="lazy">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="assets/img/content/item4.jpg" alt="" loading="lazy">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-pagination"></div>
+                                        </div>
+                                    </div>
+                                    <div class="item-card__art">
+                                        Арт. 367187
+                                    </div>
+                                    <div class="item-card__name-line">
+                                        <a href="#" class="item-card__name">
+                                            Пример очень длинного названия в несколько строк Пример очень длинного названия в несколько строк
+                                        </a>
+                                        <button class="item-card__cart js-item-card-cart" type="button">В корзину</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="catalog__item">
+                                <div class="item-card" data-item-id="123">
+                                    <div class="item-card__controls">
+                                        <button class="item-card__like js-item-card-like" type="button"></button>
+                                        <button class="item-card__compare js-item-card-compare" type="button"></button>
+                                    </div>
+                                    <div class="item-card__labels">
+                                        <span class="item-card__label item-card__label_orange">Хит</span>
+                                        <span class="item-card__label item-card__label_green">Новинка</span>
+                                    </div>
+                                    <div class="item-card__gallery">
+                                        <div class="swiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="assets/img/content/item1.jpg" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="assets/img/content/item2.jpg" alt="" loading="lazy">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="assets/img/content/item3.jpg" alt="" loading="lazy">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="assets/img/content/item4.jpg" alt="" loading="lazy">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-pagination"></div>
+                                        </div>
+                                    </div>
+                                    <div class="item-card__art">
+                                        Арт. 367187
+                                    </div>
+                                    <div class="item-card__name-line">
+                                        <a href="#" class="item-card__name">
+                                            Пример очень длинного названия в несколько строк Пример очень длинного названия в несколько строк
+                                        </a>
+                                        <button class="item-card__cart js-item-card-cart" type="button">В корзину</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="catalog__item">
+                                <div class="item-card" data-item-id="123">
+                                    <div class="item-card__controls">
+                                        <button class="item-card__like item-card__like_liked js-item-card-like" type="button"></button>
+                                        <button class="item-card__compare item-card__compare_compared js-item-card-compare" type="button"></button>
+                                    </div>
+                                    <div class="item-card__labels">
+                                        <span class="item-card__label item-card__label_orange">Хит</span>
+                                        <span class="item-card__label item-card__label_green">Новинка</span>
+                                    </div>
+                                    <div class="item-card__gallery">
+                                        <div class="swiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="assets/img/content/item1.jpg" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="assets/img/content/item2.jpg" alt="" loading="lazy">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="assets/img/content/item3.jpg" alt="" loading="lazy">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="assets/img/content/item4.jpg" alt="" loading="lazy">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-pagination"></div>
+                                        </div>
+                                    </div>
+                                    <div class="item-card__art">
+                                        Арт. 367187
+                                    </div>
+                                    <div class="item-card__name-line">
+                                        <a href="#" class="item-card__name">
+                                            Пример очень длинного названия в несколько строк Пример очень длинного названия в несколько строк
+                                        </a>
+                                        <button class="item-card__cart item-card__cart_in-cart js-item-card-cart" type="button">В корзину</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="catalog__item">
+                                <div class="item-card" data-item-id="123">
+                                    <div class="item-card__controls">
+                                        <button class="item-card__like item-card__like_liked js-item-card-like" type="button"></button>
+                                        <button class="item-card__compare item-card__compare_compared js-item-card-compare" type="button"></button>
+                                    </div>
+                                    <div class="item-card__labels">
+                                        <span class="item-card__label item-card__label_orange">Хит</span>
+                                        <span class="item-card__label item-card__label_green">Новинка</span>
+                                    </div>
+                                    <div class="item-card__gallery">
+                                        <div class="swiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="assets/img/content/item1.jpg" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="assets/img/content/item2.jpg" alt="" loading="lazy">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="assets/img/content/item3.jpg" alt="" loading="lazy">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="assets/img/content/item4.jpg" alt="" loading="lazy">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-pagination"></div>
+                                        </div>
+                                    </div>
+                                    <div class="item-card__art">
+                                        Арт. 367187
+                                    </div>
+                                    <div class="item-card__name-line">
+                                        <a href="#" class="item-card__name">
+                                            Пример очень длинного названия в несколько строк Пример очень длинного названия в несколько строк
+                                        </a>
+                                        <button class="item-card__cart js-item-card-cart" type="button">В корзину</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="catalog__item">
+                                <div class="item-card" data-item-id="123">
+                                    <div class="item-card__controls">
+                                        <button class="item-card__like item-card__like_liked js-item-card-like" type="button"></button>
+                                        <button class="item-card__compare item-card__compare_compared js-item-card-compare" type="button"></button>
+                                    </div>
+                                    <div class="item-card__labels">
+                                        <span class="item-card__label item-card__label_orange">Хит</span>
+                                        <span class="item-card__label item-card__label_green">Новинка</span>
+                                    </div>
+                                    <div class="item-card__gallery">
+                                        <div class="swiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="assets/img/content/item1.jpg" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="assets/img/content/item2.jpg" alt="" loading="lazy">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="assets/img/content/item3.jpg" alt="" loading="lazy">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="assets/img/content/item4.jpg" alt="" loading="lazy">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-pagination"></div>
+                                        </div>
+                                    </div>
+                                    <div class="item-card__art">
+                                        Арт. 367187
+                                    </div>
+                                    <div class="item-card__name-line">
+                                        <a href="#" class="item-card__name">
+                                            Пример очень длинного названия в несколько строк Пример очень длинного названия в несколько строк
+                                        </a>
+                                        <button class="item-card__cart js-item-card-cart" type="button">В корзину</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="catalog__item">
+                                <div class="item-card" data-item-id="123">
+                                    <div class="item-card__controls">
+                                        <button class="item-card__like item-card__like_liked js-item-card-like" type="button"></button>
+                                        <button class="item-card__compare item-card__compare_compared js-item-card-compare" type="button"></button>
+                                    </div>
+                                    <div class="item-card__labels">
+                                        <span class="item-card__label item-card__label_orange">Хит</span>
+                                        <span class="item-card__label item-card__label_green">Новинка</span>
+                                    </div>
+                                    <div class="item-card__gallery">
+                                        <div class="swiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="assets/img/content/item1.jpg" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="assets/img/content/item2.jpg" alt="" loading="lazy">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="assets/img/content/item3.jpg" alt="" loading="lazy">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="assets/img/content/item4.jpg" alt="" loading="lazy">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-pagination"></div>
+                                        </div>
+                                    </div>
+                                    <div class="item-card__art">
+                                        Арт. 367187
+                                    </div>
+                                    <div class="item-card__name-line">
+                                        <a href="#" class="item-card__name">
+                                            Пример очень длинного названия в несколько строк Пример очень длинного названия в несколько строк
+                                        </a>
+                                        <button class="item-card__cart js-item-card-cart" type="button">В корзину</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="catalog__item">
+                                <div class="item-card" data-item-id="123">
+                                    <div class="item-card__controls">
+                                        <button class="item-card__like item-card__like_liked js-item-card-like" type="button"></button>
+                                        <button class="item-card__compare item-card__compare_compared js-item-card-compare" type="button"></button>
+                                    </div>
+                                    <div class="item-card__labels">
+                                        <span class="item-card__label item-card__label_orange">Хит</span>
+                                        <span class="item-card__label item-card__label_green">Новинка</span>
+                                    </div>
+                                    <div class="item-card__gallery">
+                                        <div class="swiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="assets/img/content/item1.jpg" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="assets/img/content/item2.jpg" alt="" loading="lazy">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="assets/img/content/item3.jpg" alt="" loading="lazy">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="assets/img/content/item4.jpg" alt="" loading="lazy">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-pagination"></div>
+                                        </div>
+                                    </div>
+                                    <div class="item-card__art">
+                                        Арт. 367187
+                                    </div>
+                                    <div class="item-card__name-line">
+                                        <a href="#" class="item-card__name">
+                                            Пример очень длинного названия в несколько строк Пример очень длинного названия в несколько строк
+                                        </a>
+                                        <button class="item-card__cart js-item-card-cart" type="button">В корзину</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="catalog__item">
+                                <div class="item-card" data-item-id="123">
+                                    <div class="item-card__controls">
+                                        <button class="item-card__like item-card__like_liked js-item-card-like" type="button"></button>
+                                        <button class="item-card__compare item-card__compare_compared js-item-card-compare" type="button"></button>
+                                    </div>
+                                    <div class="item-card__labels">
+                                        <span class="item-card__label item-card__label_orange">Хит</span>
+                                        <span class="item-card__label item-card__label_green">Новинка</span>
+                                    </div>
+                                    <div class="item-card__gallery">
+                                        <div class="swiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="assets/img/content/item1.jpg" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="assets/img/content/item2.jpg" alt="" loading="lazy">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="assets/img/content/item3.jpg" alt="" loading="lazy">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="assets/img/content/item4.jpg" alt="" loading="lazy">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-pagination"></div>
+                                        </div>
+                                    </div>
+                                    <div class="item-card__art">
+                                        Арт. 367187
+                                    </div>
+                                    <div class="item-card__name-line">
+                                        <a href="#" class="item-card__name">
+                                            Пример очень длинного названия в несколько строк Пример очень длинного названия в несколько строк
+                                        </a>
+                                        <button class="item-card__cart js-item-card-cart" type="button">В корзину</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="catalog__item">
+                                <div class="item-card" data-item-id="123">
+                                    <div class="item-card__controls">
+                                        <button class="item-card__like item-card__like_liked js-item-card-like" type="button"></button>
+                                        <button class="item-card__compare item-card__compare_compared js-item-card-compare" type="button"></button>
+                                    </div>
+                                    <div class="item-card__labels">
+                                        <span class="item-card__label item-card__label_orange">Хит</span>
+                                        <span class="item-card__label item-card__label_green">Новинка</span>
+                                    </div>
+                                    <div class="item-card__gallery">
+                                        <div class="swiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="assets/img/content/item1.jpg" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="assets/img/content/item2.jpg" alt="" loading="lazy">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="assets/img/content/item3.jpg" alt="" loading="lazy">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="assets/img/content/item4.jpg" alt="" loading="lazy">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-pagination"></div>
+                                        </div>
+                                    </div>
+                                    <div class="item-card__art">
+                                        Арт. 367187
+                                    </div>
+                                    <div class="item-card__name-line">
+                                        <a href="#" class="item-card__name">
+                                            Пример очень длинного названия в несколько строк Пример очень длинного названия в несколько строк
+                                        </a>
+                                        <button class="item-card__cart js-item-card-cart" type="button">В корзину</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="catalog__item">
+                                <div class="item-card" data-item-id="123">
+                                    <div class="item-card__controls">
+                                        <button class="item-card__like item-card__like_liked js-item-card-like" type="button"></button>
+                                        <button class="item-card__compare item-card__compare_compared js-item-card-compare" type="button"></button>
+                                    </div>
+                                    <div class="item-card__labels">
+                                        <span class="item-card__label item-card__label_orange">Хит</span>
+                                        <span class="item-card__label item-card__label_green">Новинка</span>
+                                    </div>
+                                    <div class="item-card__gallery">
+                                        <div class="swiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="assets/img/content/item1.jpg" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="assets/img/content/item2.jpg" alt="" loading="lazy">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="assets/img/content/item3.jpg" alt="" loading="lazy">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="assets/img/content/item4.jpg" alt="" loading="lazy">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-pagination"></div>
+                                        </div>
+                                    </div>
+                                    <div class="item-card__art">
+                                        Арт. 367187
+                                    </div>
+                                    <div class="item-card__name-line">
+                                        <a href="#" class="item-card__name">
+                                            Пример очень длинного названия в несколько строк Пример очень длинного названия в несколько строк
+                                        </a>
+                                        <button class="item-card__cart js-item-card-cart" type="button">В корзину</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="catalog__item">
+                                <div class="item-card" data-item-id="123">
+                                    <div class="item-card__controls">
+                                        <button class="item-card__like item-card__like_liked js-item-card-like" type="button"></button>
+                                        <button class="item-card__compare item-card__compare_compared js-item-card-compare" type="button"></button>
+                                    </div>
+                                    <div class="item-card__labels">
+                                        <span class="item-card__label item-card__label_orange">Хит</span>
+                                        <span class="item-card__label item-card__label_green">Новинка</span>
+                                    </div>
+                                    <div class="item-card__gallery">
+                                        <div class="swiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="assets/img/content/item1.jpg" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="assets/img/content/item2.jpg" alt="" loading="lazy">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="assets/img/content/item3.jpg" alt="" loading="lazy">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="assets/img/content/item4.jpg" alt="" loading="lazy">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-pagination"></div>
+                                        </div>
+                                    </div>
+                                    <div class="item-card__art">
+                                        Арт. 367187
+                                    </div>
+                                    <div class="item-card__name-line">
+                                        <a href="#" class="item-card__name">
+                                            Пример очень длинного названия в несколько строк Пример очень длинного названия в несколько строк
+                                        </a>
+                                        <button class="item-card__cart js-item-card-cart" type="button">В корзину</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="catalog__item">
+                                <div class="item-card" data-item-id="123">
+                                    <div class="item-card__controls">
+                                        <button class="item-card__like item-card__like_liked js-item-card-like" type="button"></button>
+                                        <button class="item-card__compare item-card__compare_compared js-item-card-compare" type="button"></button>
+                                    </div>
+                                    <div class="item-card__labels">
+                                        <span class="item-card__label item-card__label_orange">Хит</span>
+                                        <span class="item-card__label item-card__label_green">Новинка</span>
+                                    </div>
+                                    <div class="item-card__gallery">
+                                        <div class="swiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="assets/img/content/item1.jpg" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="assets/img/content/item2.jpg" alt="" loading="lazy">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="assets/img/content/item3.jpg" alt="" loading="lazy">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="assets/img/content/item4.jpg" alt="" loading="lazy">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-pagination"></div>
+                                        </div>
+                                    </div>
+                                    <div class="item-card__art">
+                                        Арт. 367187
+                                    </div>
+                                    <div class="item-card__name-line">
+                                        <a href="#" class="item-card__name">
+                                            Пример очень длинного названия в несколько строк Пример очень длинного названия в несколько строк
+                                        </a>
+                                        <button class="item-card__cart js-item-card-cart" type="button">В корзину</button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    <div class="catalog-layout__pagination-wrapper">
+                        <div class="pagination">
+                            <a href="#" class="pagination__button pagination__button_prev">Назад</a>
+                            <ul>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#" class="current">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><span>...</span></li>
+                                <li><a href="#">12</a></li>
+                            </ul>
+                            <a href="#" class="pagination__button pagination__button_next">Вперед</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--viewed products-->
+            <div class="container">
+                <div class="block">
+                    <div class="block__title">Просмотренные товары</div>
+                    <div class="block__content">
+                        <div class="items-slider">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="item-card" data-item-id="123">
+                                            <div class="item-card__controls">
+                                                <button class="item-card__like item-card__like_liked js-item-card-like" type="button"></button>
+                                                <button class="item-card__compare item-card__compare_compared js-item-card-compare" type="button"></button>
+                                            </div>
+                                            <div class="item-card__labels">
+                                                <span class="item-card__label item-card__label_orange">Хит</span>
+                                                <span class="item-card__label item-card__label_green">Новинка</span>
+                                            </div>
+                                            <div class="item-card__gallery">
+                                                <div class="swiper">
+                                                    <div class="swiper-wrapper">
+                                                        <div class="swiper-slide">
+                                                            <a href="#">
+                                                                <img src="assets/img/content/item1.jpg" alt="">
+                                                            </a>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <a href="#">
+                                                                <img src="assets/img/content/item2.jpg" alt="" loading="lazy">
+                                                            </a>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <a href="#">
+                                                                <img src="assets/img/content/item3.jpg" alt="" loading="lazy">
+                                                            </a>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <a href="#">
+                                                                <img src="assets/img/content/item4.jpg" alt="" loading="lazy">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-pagination"></div>
+                                                </div>
+                                            </div>
+                                            <div class="item-card__art">
+                                                Арт. 367187
+                                            </div>
+                                            <div class="item-card__name-line">
+                                                <a href="#" class="item-card__name">
+                                                    Пример очень длинного названия в несколько строк Пример очень длинного названия в несколько строк
+                                                </a>
+                                            </div>
+                                            <div class="item-card__bottom-line">
+                                                <div class="item-card__prices">
+                                                    <div class="item-card__price-current">80 879 ₽</div>
+                                                    <div class="item-card__price-old">
+                                                        <span>Старая цена</span>
+                                                        <span>150 999 ₽</span>
+                                                    </div>
+                                                </div>
+
+                                                <button class="item-card__cart js-item-card-cart" type="button">В корзину</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item-card" data-item-id="123">
+                                            <div class="item-card__controls">
+                                                <button class="item-card__like item-card__like_liked js-item-card-like" type="button"></button>
+                                                <button class="item-card__compare item-card__compare_compared js-item-card-compare" type="button"></button>
+                                            </div>
+                                            <div class="item-card__labels">
+                                                <span class="item-card__label item-card__label_orange">Хит</span>
+                                                <span class="item-card__label item-card__label_green">Новинка</span>
+                                            </div>
+                                            <div class="item-card__gallery">
+                                                <div class="swiper">
+                                                    <div class="swiper-wrapper">
+                                                        <div class="swiper-slide">
+                                                            <a href="#">
+                                                                <img src="assets/img/content/item1.jpg" alt="">
+                                                            </a>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <a href="#">
+                                                                <img src="assets/img/content/item2.jpg" alt="" loading="lazy">
+                                                            </a>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <a href="#">
+                                                                <img src="assets/img/content/item3.jpg" alt="" loading="lazy">
+                                                            </a>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <a href="#">
+                                                                <img src="assets/img/content/item4.jpg" alt="" loading="lazy">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-pagination"></div>
+                                                </div>
+                                            </div>
+                                            <div class="item-card__art">
+                                                Арт. 367187
+                                            </div>
+                                            <div class="item-card__name-line">
+                                                <a href="#" class="item-card__name">
+                                                    Пример очень длинного названия в несколько строк Пример очень длинного названия в несколько строк
+                                                </a>
+                                            </div>
+                                            <div class="item-card__bottom-line">
+                                                <div class="item-card__prices">
+                                                    <div class="item-card__price-current">80 879 ₽</div>
+                                                    <div class="item-card__price-old">
+                                                        <span>Старая цена</span>
+                                                        <span>150 999 ₽</span>
+                                                    </div>
+                                                </div>
+
+                                                <button class="item-card__cart js-item-card-cart" type="button">В корзину</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item-card" data-item-id="123">
+                                            <div class="item-card__controls">
+                                                <button class="item-card__like item-card__like_liked js-item-card-like" type="button"></button>
+                                                <button class="item-card__compare item-card__compare_compared js-item-card-compare" type="button"></button>
+                                            </div>
+                                            <div class="item-card__labels">
+                                                <span class="item-card__label item-card__label_orange">Хит</span>
+                                                <span class="item-card__label item-card__label_green">Новинка</span>
+                                            </div>
+                                            <div class="item-card__gallery">
+                                                <div class="swiper">
+                                                    <div class="swiper-wrapper">
+                                                        <div class="swiper-slide">
+                                                            <a href="#">
+                                                                <img src="assets/img/content/item1.jpg" alt="">
+                                                            </a>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <a href="#">
+                                                                <img src="assets/img/content/item2.jpg" alt="" loading="lazy">
+                                                            </a>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <a href="#">
+                                                                <img src="assets/img/content/item3.jpg" alt="" loading="lazy">
+                                                            </a>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <a href="#">
+                                                                <img src="assets/img/content/item4.jpg" alt="" loading="lazy">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-pagination"></div>
+                                                </div>
+                                            </div>
+                                            <div class="item-card__art">
+                                                Арт. 367187
+                                            </div>
+                                            <div class="item-card__name-line">
+                                                <a href="#" class="item-card__name">
+                                                    Пример очень длинного названия в несколько строк Пример очень длинного названия в несколько строк
+                                                </a>
+                                            </div>
+                                            <div class="item-card__bottom-line">
+                                                <div class="item-card__prices">
+                                                    <div class="item-card__price-current">80 879 ₽</div>
+                                                    <div class="item-card__price-old">
+                                                        <span>Старая цена</span>
+                                                        <span>150 999 ₽</span>
+                                                    </div>
+                                                </div>
+
+                                                <button class="item-card__cart js-item-card-cart" type="button">В корзину</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item-card" data-item-id="123">
+                                            <div class="item-card__controls">
+                                                <button class="item-card__like item-card__like_liked js-item-card-like" type="button"></button>
+                                                <button class="item-card__compare item-card__compare_compared js-item-card-compare" type="button"></button>
+                                            </div>
+                                            <div class="item-card__labels">
+                                                <span class="item-card__label item-card__label_orange">Хит</span>
+                                                <span class="item-card__label item-card__label_green">Новинка</span>
+                                            </div>
+                                            <div class="item-card__gallery">
+                                                <div class="swiper">
+                                                    <div class="swiper-wrapper">
+                                                        <div class="swiper-slide">
+                                                            <a href="#">
+                                                                <img src="assets/img/content/item1.jpg" alt="">
+                                                            </a>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <a href="#">
+                                                                <img src="assets/img/content/item2.jpg" alt="" loading="lazy">
+                                                            </a>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <a href="#">
+                                                                <img src="assets/img/content/item3.jpg" alt="" loading="lazy">
+                                                            </a>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <a href="#">
+                                                                <img src="assets/img/content/item4.jpg" alt="" loading="lazy">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-pagination"></div>
+                                                </div>
+                                            </div>
+                                            <div class="item-card__art">
+                                                Арт. 367187
+                                            </div>
+                                            <div class="item-card__name-line">
+                                                <a href="#" class="item-card__name">
+                                                    Пример очень длинного названия в несколько строк Пример очень длинного названия в несколько строк
+                                                </a>
+                                            </div>
+                                            <div class="item-card__bottom-line">
+                                                <div class="item-card__prices">
+                                                    <div class="item-card__price-current">80 879 ₽</div>
+                                                    <div class="item-card__price-old">
+                                                        <span>Старая цена</span>
+                                                        <span>150 999 ₽</span>
+                                                    </div>
+                                                </div>
+
+                                                <button class="item-card__cart js-item-card-cart" type="button">В корзину</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item-card" data-item-id="123">
+                                            <div class="item-card__controls">
+                                                <button class="item-card__like item-card__like_liked js-item-card-like" type="button"></button>
+                                                <button class="item-card__compare item-card__compare_compared js-item-card-compare" type="button"></button>
+                                            </div>
+                                            <div class="item-card__labels">
+                                                <span class="item-card__label item-card__label_orange">Хит</span>
+                                                <span class="item-card__label item-card__label_green">Новинка</span>
+                                            </div>
+                                            <div class="item-card__gallery">
+                                                <div class="swiper">
+                                                    <div class="swiper-wrapper">
+                                                        <div class="swiper-slide">
+                                                            <a href="#">
+                                                                <img src="assets/img/content/item1.jpg" alt="">
+                                                            </a>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <a href="#">
+                                                                <img src="assets/img/content/item2.jpg" alt="" loading="lazy">
+                                                            </a>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <a href="#">
+                                                                <img src="assets/img/content/item3.jpg" alt="" loading="lazy">
+                                                            </a>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <a href="#">
+                                                                <img src="assets/img/content/item4.jpg" alt="" loading="lazy">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-pagination"></div>
+                                                </div>
+                                            </div>
+                                            <div class="item-card__art">
+                                                Арт. 367187
+                                            </div>
+                                            <div class="item-card__name-line">
+                                                <a href="#" class="item-card__name">
+                                                    Пример очень длинного названия в несколько строк Пример очень длинного названия в несколько строк
+                                                </a>
+                                            </div>
+                                            <div class="item-card__bottom-line">
+                                                <div class="item-card__prices">
+                                                    <div class="item-card__price-current">80 879 ₽</div>
+                                                    <div class="item-card__price-old">
+                                                        <span>Старая цена</span>
+                                                        <span>150 999 ₽</span>
+                                                    </div>
+                                                </div>
+
+                                                <button class="item-card__cart js-item-card-cart" type="button">В корзину</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item-card" data-item-id="123">
+                                            <div class="item-card__controls">
+                                                <button class="item-card__like item-card__like_liked js-item-card-like" type="button"></button>
+                                                <button class="item-card__compare item-card__compare_compared js-item-card-compare" type="button"></button>
+                                            </div>
+                                            <div class="item-card__labels">
+                                                <span class="item-card__label item-card__label_orange">Хит</span>
+                                                <span class="item-card__label item-card__label_green">Новинка</span>
+                                            </div>
+                                            <div class="item-card__gallery">
+                                                <div class="swiper">
+                                                    <div class="swiper-wrapper">
+                                                        <div class="swiper-slide">
+                                                            <a href="#">
+                                                                <img src="assets/img/content/item1.jpg" alt="">
+                                                            </a>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <a href="#">
+                                                                <img src="assets/img/content/item2.jpg" alt="" loading="lazy">
+                                                            </a>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <a href="#">
+                                                                <img src="assets/img/content/item3.jpg" alt="" loading="lazy">
+                                                            </a>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <a href="#">
+                                                                <img src="assets/img/content/item4.jpg" alt="" loading="lazy">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-pagination"></div>
+                                                </div>
+                                            </div>
+                                            <div class="item-card__art">
+                                                Арт. 367187
+                                            </div>
+                                            <div class="item-card__name-line">
+                                                <a href="#" class="item-card__name">
+                                                    Пример очень длинного названия в несколько строк Пример очень длинного названия в несколько строк
+                                                </a>
+                                            </div>
+                                            <div class="item-card__bottom-line">
+                                                <div class="item-card__prices">
+                                                    <div class="item-card__price-current">80 879 ₽</div>
+                                                    <div class="item-card__price-old">
+                                                        <span>Старая цена</span>
+                                                        <span>150 999 ₽</span>
+                                                    </div>
+                                                </div>
+
+                                                <button class="item-card__cart js-item-card-cart" type="button">В корзину</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item-card" data-item-id="123">
+                                            <div class="item-card__controls">
+                                                <button class="item-card__like item-card__like_liked js-item-card-like" type="button"></button>
+                                                <button class="item-card__compare item-card__compare_compared js-item-card-compare" type="button"></button>
+                                            </div>
+                                            <div class="item-card__labels">
+                                                <span class="item-card__label item-card__label_orange">Хит</span>
+                                                <span class="item-card__label item-card__label_green">Новинка</span>
+                                            </div>
+                                            <div class="item-card__gallery">
+                                                <div class="swiper">
+                                                    <div class="swiper-wrapper">
+                                                        <div class="swiper-slide">
+                                                            <a href="#">
+                                                                <img src="assets/img/content/item1.jpg" alt="">
+                                                            </a>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <a href="#">
+                                                                <img src="assets/img/content/item2.jpg" alt="" loading="lazy">
+                                                            </a>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <a href="#">
+                                                                <img src="assets/img/content/item3.jpg" alt="" loading="lazy">
+                                                            </a>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <a href="#">
+                                                                <img src="assets/img/content/item4.jpg" alt="" loading="lazy">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-pagination"></div>
+                                                </div>
+                                            </div>
+                                            <div class="item-card__art">
+                                                Арт. 367187
+                                            </div>
+                                            <div class="item-card__name-line">
+                                                <a href="#" class="item-card__name">
+                                                    Пример очень длинного названия в несколько строк Пример очень длинного названия в несколько строк
+                                                </a>
+                                            </div>
+                                            <div class="item-card__bottom-line">
+                                                <div class="item-card__prices">
+                                                    <div class="item-card__price-current">80 879 ₽</div>
+                                                    <div class="item-card__price-old">
+                                                        <span>Старая цена</span>
+                                                        <span>150 999 ₽</span>
+                                                    </div>
+                                                </div>
+
+                                                <button class="item-card__cart js-item-card-cart" type="button">В корзину</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item-card" data-item-id="123">
+                                            <div class="item-card__controls">
+                                                <button class="item-card__like item-card__like_liked js-item-card-like" type="button"></button>
+                                                <button class="item-card__compare item-card__compare_compared js-item-card-compare" type="button"></button>
+                                            </div>
+                                            <div class="item-card__labels">
+                                                <span class="item-card__label item-card__label_orange">Хит</span>
+                                                <span class="item-card__label item-card__label_green">Новинка</span>
+                                            </div>
+                                            <div class="item-card__gallery">
+                                                <div class="swiper">
+                                                    <div class="swiper-wrapper">
+                                                        <div class="swiper-slide">
+                                                            <a href="#">
+                                                                <img src="assets/img/content/item1.jpg" alt="">
+                                                            </a>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <a href="#">
+                                                                <img src="assets/img/content/item2.jpg" alt="" loading="lazy">
+                                                            </a>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <a href="#">
+                                                                <img src="assets/img/content/item3.jpg" alt="" loading="lazy">
+                                                            </a>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <a href="#">
+                                                                <img src="assets/img/content/item4.jpg" alt="" loading="lazy">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-pagination"></div>
+                                                </div>
+                                            </div>
+                                            <div class="item-card__art">
+                                                Арт. 367187
+                                            </div>
+                                            <div class="item-card__name-line">
+                                                <a href="#" class="item-card__name">
+                                                    Пример очень длинного названия в несколько строк Пример очень длинного названия в несколько строк
+                                                </a>
+                                            </div>
+                                            <div class="item-card__bottom-line">
+                                                <div class="item-card__prices">
+                                                    <div class="item-card__price-current">80 879 ₽</div>
+                                                    <div class="item-card__price-old">
+                                                        <span>Старая цена</span>
+                                                        <span>150 999 ₽</span>
+                                                    </div>
+                                                </div>
+
+                                                <button class="item-card__cart js-item-card-cart" type="button">В корзину</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item-card" data-item-id="123">
+                                            <div class="item-card__controls">
+                                                <button class="item-card__like item-card__like_liked js-item-card-like" type="button"></button>
+                                                <button class="item-card__compare item-card__compare_compared js-item-card-compare" type="button"></button>
+                                            </div>
+                                            <div class="item-card__labels">
+                                                <span class="item-card__label item-card__label_orange">Хит</span>
+                                                <span class="item-card__label item-card__label_green">Новинка</span>
+                                            </div>
+                                            <div class="item-card__gallery">
+                                                <div class="swiper">
+                                                    <div class="swiper-wrapper">
+                                                        <div class="swiper-slide">
+                                                            <a href="#">
+                                                                <img src="assets/img/content/item1.jpg" alt="">
+                                                            </a>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <a href="#">
+                                                                <img src="assets/img/content/item2.jpg" alt="" loading="lazy">
+                                                            </a>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <a href="#">
+                                                                <img src="assets/img/content/item3.jpg" alt="" loading="lazy">
+                                                            </a>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <a href="#">
+                                                                <img src="assets/img/content/item4.jpg" alt="" loading="lazy">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-pagination"></div>
+                                                </div>
+                                            </div>
+                                            <div class="item-card__art">
+                                                Арт. 367187
+                                            </div>
+                                            <div class="item-card__name-line">
+                                                <a href="#" class="item-card__name">
+                                                    Пример очень длинного названия в несколько строк Пример очень длинного названия в несколько строк
+                                                </a>
+                                            </div>
+                                            <div class="item-card__bottom-line">
+                                                <div class="item-card__prices">
+                                                    <div class="item-card__price-current">80 879 ₽</div>
+                                                    <div class="item-card__price-old">
+                                                        <span>Старая цена</span>
+                                                        <span>150 999 ₽</span>
+                                                    </div>
+                                                </div>
+
+                                                <button class="item-card__cart js-item-card-cart" type="button">В корзину</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item-card" data-item-id="123">
+                                            <div class="item-card__controls">
+                                                <button class="item-card__like item-card__like_liked js-item-card-like" type="button"></button>
+                                                <button class="item-card__compare item-card__compare_compared js-item-card-compare" type="button"></button>
+                                            </div>
+                                            <div class="item-card__labels">
+                                                <span class="item-card__label item-card__label_orange">Хит</span>
+                                                <span class="item-card__label item-card__label_green">Новинка</span>
+                                            </div>
+                                            <div class="item-card__gallery">
+                                                <div class="swiper">
+                                                    <div class="swiper-wrapper">
+                                                        <div class="swiper-slide">
+                                                            <a href="#">
+                                                                <img src="assets/img/content/item1.jpg" alt="">
+                                                            </a>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <a href="#">
+                                                                <img src="assets/img/content/item2.jpg" alt="" loading="lazy">
+                                                            </a>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <a href="#">
+                                                                <img src="assets/img/content/item3.jpg" alt="" loading="lazy">
+                                                            </a>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <a href="#">
+                                                                <img src="assets/img/content/item4.jpg" alt="" loading="lazy">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-pagination"></div>
+                                                </div>
+                                            </div>
+                                            <div class="item-card__art">
+                                                Арт. 367187
+                                            </div>
+                                            <div class="item-card__name-line">
+                                                <a href="#" class="item-card__name">
+                                                    Пример очень длинного названия в несколько строк Пример очень длинного названия в несколько строк
+                                                </a>
+                                            </div>
+                                            <div class="item-card__bottom-line">
+                                                <div class="item-card__prices">
+                                                    <div class="item-card__price-current">80 879 ₽</div>
+                                                    <div class="item-card__price-old">
+                                                        <span>Старая цена</span>
+                                                        <span>150 999 ₽</span>
+                                                    </div>
+                                                </div>
+
+                                                <button class="item-card__cart js-item-card-cart" type="button">В корзину</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__grid">
+                    <div class="footer__left">
+                        <a href="#" class="footer__logo">
+                            <img src="assets/svg/logo_footer.svg" alt="">
+                        </a>
+                        <button class="footer__callback button button_orange">Заказать звонок</button>
+                    </div>
+
+                    <div class="footer__wrap">
+                        <div class="footer__menu footerMenu">
+                            <div class="footer__control footerMenu__title">О компании</div>
+                            <ul class="footerMenu__list">
+                                <li class="footerMenu__item"><a href="#">О нас</a></li>
+                                <li class="footerMenu__item"><a href="#">Где купить</a></li>
+                                <li class="footerMenu__item"><a href="#">Транснациональная корпорация</a></li>
+                                <li class="footerMenu__item"><a href="#">Производство</a></li>
+                                <li class="footerMenu__item"><a href="#">Новости</a></li>
+                                <li class="footerMenu__item"><a href="#">Поставки на территорию РФ</a></li>
+                                <li class="footerMenu__item"><a href="#">Контакты</a></li>
+                                <li class="footerMenu__item"><a href="#">Партнерам</a></li>
+                                <li class="footerMenu__item"><a href="#">Поставки на экспорт</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__category footerCategory">
+                            <div class="footer__control footerCategory__title">Каталог</div>
+                            <ul class="footerCategory__list">
+                                <li class="footerCategory__item"><a href="#">Баня и сауна</a></li>
+                                <li class="footerCategory__item"><a href="#">Интерьер</a></li>
+                                <li class="footerCategory__item"><a href="#">От насекомых и вредителей</a></li>
+                                <li class="footerCategory__item"><a href="#">Коврики</a></li>
+                                <li class="footerCategory__item"><a href="#">Пикник</a></li>
+                                <li class="footerCategory__item"><a href="#">Туризм и отдых</a></li>
+                                <li class="footerCategory__item"><a href="#">Кухня</a></li>
+                                <li class="footerCategory__item"><a href="#">Сад и огород</a></li>
+                                <li class="footerCategory__item"><a href="#">Красота и здоровье</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__contact">
+                            <div class="footer__control footer__contact-title">Контакты</div>
+                            <ul class="menuContacts">
+                                <li class="menuContacts__item menuContacts__item_phone">
+                                    <div class="menuContacts__icon">
+                                        <svg width="17" height="19">
+                                            <use xlink:href="assets/svg/sprite.svg#phone"></use>
+                                        </svg>
+                                    </div>
+                                    <a href="tel:+74959882028">+7(495) 988-20-28</a>
+                                </li>
+                                <li class="menuContacts__item menuContacts__item_phone">
+                                    <div class="menuContacts__icon">
+                                        <svg width="17" height="19">
+                                            <use xlink:href="assets/svg/sprite.svg#phone"></use>
+                                        </svg>
+                                    </div>
+                                    <a href="tel:88007000264">8(800) 700-02-64</a>
+                                </li>
+                                <li class="menuContacts__item menuContacts__item_mail">
+                                    <div class="menuContacts__icon">
+                                        <svg width="17" height="16">
+                                            <use xlink:href="assets/svg/sprite.svg#mail"></use>
+                                        </svg>
+                                    </div>
+                                    <a href="mailto:info@linkgroup.ru">info@linkgroup.ru</a>
+                                </li>
+                                <li class="menuContacts__item menuContacts__item_text">
+                                    <div class="menuContacts__icon">
+                                        <svg width="19" height="23">
+                                            <use xlink:href="assets/svg/sprite.svg#pin"></use>
+                                        </svg>
+                                    </div>
+                                    <span>Офис: г. Москва, ул. Нижняя д.&nbsp;14,&nbsp;стр.&nbsp;7 </span>
+                                </li>
+                                <li class="menuContacts__item menuContacts__item_text">
+                                    <div class="menuContacts__icon">
+                                        <svg width="19" height="23">
+                                            <use xlink:href="assets/svg/sprite.svg#pin"></use>
+                                        </svg>
+                                    </div>
+                                    <span>Склад: г. Домодедово мкр.&nbsp;Востряково, ул.&nbsp;Рябиновая,&nbsp;д.&nbsp;14,&nbsp;стр. 1</span>
+                                </li>
+                                <li class="menuContacts__item menuContacts__item_text">
+                                    <div class="menuContacts__icon">
+                                        <svg width="19" height="19">
+                                            <use xlink:href="assets/svg/sprite.svg#time"></use>
+                                        </svg>
+                                    </div>
+                                    <span>Режим работы: 08:00-19:00</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__reviews">
+                            <img src="assets/img/footer_reviews.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__bottom footerBottom">
+                    <ul class="footerBottom__doc">
+                        <li><a href="#">Пользовательское соглашение</a></li>
+                        <li><a href="#">Политика конфиденциальности данных</a></li>
+                    </ul>
+                    <span>LINKGROUP 2023 ©</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="build/scripts/vendors/lozad.min.js"></script>
+    <script src="build/scripts/vendors/swiper-bundle.min.js"></script>
+    <script src="build/scripts/vendors/nice-select2.min.js"></script>
+    <script src="build/scripts/vendors/nouislider.min.js"></script>
+    <script src="build/scripts/vendors/fancybox.umd.min.js"></script>
+    <script src="build/scripts/general.min.js"></script>
+    <script src="build/scripts/catalog.min.js"></script>
+</body>
+</html>
