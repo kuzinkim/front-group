@@ -6,8 +6,7 @@ const bindCardSlider = (sliderNode) => {
     if (!!Swiper) {
         return new Swiper(sliderNode, {
             pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
+                el: ".swiper-pagination", clickable: true,
             },
         })
     }
@@ -102,11 +101,11 @@ const bindCartBtn = (btnNode, id, name) => {
         e.preventDefault();
 
         if (e.target.classList.contains('item-card__cart_in-cart')) {
-            //todo: здесь вставить запрос на удаление из корзины
-            fetch('/somepath/' + id)
+
+            fetch(`/ajax/basket.php?id=${id}&delete=Y`)
                 .then((resp) => resp.json())
                 .then((resp) => {
-                    if (resp.status === 'success') {
+                    if (resp.success) {
                         e.target.classList.remove('item-card__cart_in-cart')
                     } else {
                         throw new Error('Серверная ошибка удаления товара из корзины')
@@ -116,27 +115,21 @@ const bindCartBtn = (btnNode, id, name) => {
                     console.log(err)
                 })
         } else {
-            //todo: здесь вставить запрос на добавление в корзину
 
-            // todo перенести код фэнсибокс
-            Fancybox.show([
-                {
-                    src: `<div class="modal-cart-confirmation">
+            fetch(`/ajax/basket.php?id=${id}&count=1&json=1`)
+                .then((resp) => resp.json())
+                .then((resp) => {
+                    if (resp.success) {
+                        e.target.classList.add('item-card__cart_in-cart');
+                        Fancybox.show([{
+                            src: `<div class="modal-cart-confirmation">
 <div>Товар <b>"${name}"</b> добавлен в корзину.</div>
 <div class="modal-cart-confirmation__buttons">
 <a href="/cart/">Перейти в корзину</a>
 <div class="is-close-btn" onclick="Fancybox.close()">Продолжить покупки</div>
 </div>
-</div>`,
-                    type: "html",
-                },
-            ]);
-            fetch('/somepath/' + id)
-                .then((resp) => resp.json())
-                .then((resp) => {
-                    if (resp.status === 'success') {
-                        e.target.classList.add('item-card__cart_in-cart')
-                        //todo перенести код фэнсибокс сюда
+</div>`, type: "html",
+                        },]);
                     } else {
                         throw new Error('Серверная ошибка добавления товара в корзину')
                     }
@@ -176,31 +169,22 @@ const itemsSlider = (sliderNode) => {
 
     if (!!Swiper) {
         return new Swiper(sliderNode.querySelector('.swiper'), {
-            slidesPerView: 8,
-            spaceBetween: 20,
-            breakpoints: {
+            slidesPerView: 8, spaceBetween: 20, breakpoints: {
                 1730: {
                     slidesPerView: 8,
-                },
-                1560: {
+                }, 1560: {
                     slidesPerView: 7,
-                },
-                1360: {
+                }, 1360: {
                     slidesPerView: 6,
-                },
-                1100: {
+                }, 1100: {
                     slidesPerView: 5,
-                },
-                851: {
+                }, 851: {
                     slidesPerView: 4,
-                },
-                641: {
+                }, 641: {
                     slidesPerView: 3,
-                },
-                351: {
+                }, 351: {
                     slidesPerView: 2,
-                },
-                0: {
+                }, 0: {
                     slidesPerView: 1,
                 }
 

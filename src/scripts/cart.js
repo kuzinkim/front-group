@@ -197,8 +197,8 @@ const bindDeleteItem = (itemNode) => {
 
         fetch(`/ajax/basket.php?id=${itemId}&delete=Y`, {})
             .then((resp) => resp.json())
-            .then(({status}) => {
-                if (status === 'success') {
+            .then(({success}) => {
+                if (success) {
                     itemNode.remove();
                     calcOverall();
                     checkEmpty();
