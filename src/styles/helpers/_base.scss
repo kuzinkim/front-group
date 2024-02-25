@@ -232,6 +232,14 @@ ul,li{
       display: none;
     }
   }
+
+  &_mb-0 {
+    margin-bottom: 0;
+
+    @media screen and (max-width: 1199px) {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .fancybox__container {

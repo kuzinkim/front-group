@@ -37,6 +37,18 @@ const bindItemCounter = (itemNode) => {
         return false;
     }
 
+    const itemId = itemNode.getAttribute('data-item-id');
+
+    const sendItemCount = (itemId, count) => {
+        if (!itemId || !count) {
+            return false;
+        }
+
+        const searchStr = `/ajax/basket.php?id=${itemId}&count=${count}&json=1`;
+
+        fetch(searchStr, {})
+    }
+
     incBtn.addEventListener('click', (e) => {
         e.preventDefault();
 
@@ -48,6 +60,8 @@ const bindItemCounter = (itemNode) => {
         }
 
         input.value = String(value + 1);
+
+        sendItemCount(itemId, input.value);
 
         countItemSumPrice(itemNode)
     })
@@ -63,6 +77,8 @@ const bindItemCounter = (itemNode) => {
         }
 
         input.value = String(value - 1);
+
+        sendItemCount(itemId, input.value);
 
         countItemSumPrice(itemNode)
     })
@@ -179,12 +195,8 @@ const bindDeleteItem = (itemNode) => {
     btnDel.addEventListener('click', (e) => {
         e.preventDefault();
 
-        fetch('path/to/delete/item', {
-            method: 'POST',
-            body: JSON.stringify({
-                itemId: itemId
-            })
-        }).then((resp) => resp.json())
+        fetch(`/ajax/basket.php?id=${itemId}&delete=Y`, {})
+            .then((resp) => resp.json())
             .then(({status}) => {
                 if (status === 'success') {
                     itemNode.remove();
@@ -208,11 +220,6 @@ const bindDeleteItem = (itemNode) => {
                 }])
 
         })
-
-        // todo удалить, когда заработает бэк
-        itemNode.remove();
-        calcOverall();
-        checkEmpty();
     })
 }
 

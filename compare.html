@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сравнение</title>
+    <link rel="stylesheet" href="build/styles/vendors/normalize.css">
+    <link rel="stylesheet" href="build/styles/vendors/swiper-bundle.min.css">
+    <link rel="stylesheet" href="build/styles/vendors/fancybox.css">
+    <link rel="stylesheet" href="build/styles/general.css">
+    <link rel="stylesheet" href="build/styles/compare.css">
+</head>
+<body>
+    <div class="page">
+        <header class="header">
+            <div class="container">
+                <div class="header__row">
+                    <a href="#" class="header__logo"><img src="assets/svg/logo.svg" alt=""></a>
+                    <ul class="header__nav nav">
+                        <li class="nav__item"><a href="#">О нас</a></li>
+                        <li class="nav__item"><a href="#">Производство</a></li>
+                        <li class="nav__item"><a href="#">Контакты</a></li>
+                    </ul>
+                    <div class="header__search">
+                        <form action="#" class="searchForm">
+                            <input type="text" class="searchForm__input" placeholder="Поиск лучших товаров ...">
+                            <button class="searchForm__submit" type="submit"><img src="assets/svg/search.svg" alt=""></button>
+                        </form>
+                        <div class="header__search-close"></div>
+                    </div>
+                    <a href="#" class="header__button button button_brown">Продукция</a>
+                    <div class="header__actions headerActions">
+                        <div class="headerActions__btn headerActions__btn_search">
+                            <img src="assets/svg/search.svg" alt="">
+                        </div>
+                        <div class="headerActions__btn headerActions__btn_favorites" data-count="2">
+                            <img src="assets/svg/icon/Heart.svg" alt="">
+                            <span>Избранное</span>
+                        </div>
+                        <div class="headerActions__btn headerActions__btn_compare" data-count="2">
+                            <img src="assets/svg/icon/Slider.svg" alt="">
+                            <span>Сравнение</span>
+                        </div>
+                        <div class="headerActions__btn headerActions__btn_basket" data-count="2">
+                            <img src="assets/svg/icon/Shop.svg" alt="">
+                            <span>Корзина</span>
+                        </div>
+                    </div>
+                    <div class="header__burger js-burger">
+                        <img src="assets/svg/burger.svg" alt="">
+                    </div>
+                </div>
+                <div class="header__menu menu js-header-menu">
+                    <ul class="menu__nav menuNav">
+                        <li class="menuNav__item"><a href="#">Каталог</a></li>
+                        <li class="menuNav__item"><a href="#">Производство</a></li>
+                        <li class="menuNav__item"><a href="#">Где купить</a></li>
+                        <li class="menuNav__item"><a href="#">Новости</a></li>
+                        <li class="menuNav__item"><a href="#">Партнёрам</a></li>
+                        <li class="menuNav__item"><a href="#">Транснациональная<br> корпорация</a></li>
+                        <li class="menuNav__item"><a href="#">Поставки на территории РФ</a></li>
+                        <li class="menuNav__item"><a href="#">Поставки на экспорт</a></li>
+                        <li class="menuNav__item"><a href="#">Контакты</a></li>
+                    </ul>
+                    <ul class="menu__contacts menuContacts">
+                        <li class="menuContacts__item menuContacts__item_phone">
+                            <div class="menuContacts__icon">
+                                <svg width="17" height="19">
+                                    <use xlink:href="assets/svg/sprite.svg#phone" />
+                                </svg>
+                            </div>
+                            <a href="tel:+74959882028">+7(495) 988-20-28</a></li>
+                        <li class="menuContacts__item menuContacts__item_phone">
+                            <div class="menuContacts__icon">
+                                <svg width="17" height="19">
+                                    <use xlink:href="assets/svg/sprite.svg#phone" />
+                                </svg>
+                            </div>
+                            <a href="tel:88007000264">8(800) 700-02-64</a></li>
+                        <li class="menuContacts__item menuContacts__item_mail">
+                            <div class="menuContacts__icon">
+                                <svg width="17" height="16">
+                                    <use xlink:href="assets/svg/sprite.svg#mail" />
+                                </svg>
+                            </div>
+                            <a href="mailto:info@linkgroup.ru">info@linkgroup.ru</a>
+                        </li>
+                        <li class="menuContacts__item menuContacts__item_text">
+                            <div class="menuContacts__icon">
+                                <svg width="19" height="23">
+                                    <use xlink:href="assets/svg/sprite.svg#pin" />
+                                </svg>
+                            </div>
+                            <span>Офис: г. Москва, ул. Нижняя, д. 14, стр. 7</span>
+                        </li>
+                        <li class="menuContacts__item menuContacts__item_text">
+                            <div class="menuContacts__icon">
+                                <svg width="19" height="23">
+                                    <use xlink:href="assets/svg/sprite.svg#pin" />
+                                </svg>
+                            </div>
+                            <span>Склад: г. Домодедово, мкр. Востряково, ул.&nbsp;Рябиновая, д. 14, стр. 1</span>
+                        </li>
+                        <li class="menuContacts__item menuContacts__item_text">
+                            <div class="menuContacts__icon">
+                                <svg width="19" height="19">
+                                    <use xlink:href="assets/svg/sprite.svg#time" />
+                                </svg>
+                            </div>
+                            <span>Режим работы: 08:00-19:00</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header__bg"></div>
+            </div>
+        </header>
+        <main class="main">
+            <!--breadcrumbs-->
+            <div class="container">
+                <div class="breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item"><a href="/">Главная</a></li>
+                        <li class="breadcrumbs__item"><span>Сравнение товаров</span></li>
+                    </ul>
+                </div>
+            </div>
+            <!--page title-->
+            <div class="container">
+                <div class="page-title page-title_mb-0 page-title_inner page-title_left">
+                    <h1>Сравнение товаров</h1>
+                </div>
+            </div>
+
+            <!--compare-->
+            <div class="container">
+                <div class="compare">
+                    <button class="compare__clear" type="button">
+                        <span>Очистить сравнение</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.875 6.875C7.04076 6.875 7.19973 6.94085 7.31694 7.05806C7.43415 7.17527 7.5 7.33424 7.5 7.5V15C7.5 15.1658 7.43415 15.3247 7.31694 15.4419C7.19973 15.5592 7.04076 15.625 6.875 15.625C6.70924 15.625 6.55027 15.5592 6.43306 15.4419C6.31585 15.3247 6.25 15.1658 6.25 15V7.5C6.25 7.33424 6.31585 7.17527 6.43306 7.05806C6.55027 6.94085 6.70924 6.875 6.875 6.875ZM10 6.875C10.1658 6.875 10.3247 6.94085 10.4419 7.05806C10.5592 7.17527 10.625 7.33424 10.625 7.5V15C10.625 15.1658 10.5592 15.3247 10.4419 15.4419C10.3247 15.5592 10.1658 15.625 10 15.625C9.83424 15.625 9.67527 15.5592 9.55806 15.4419C9.44085 15.3247 9.375 15.1658 9.375 15V7.5C9.375 7.33424 9.44085 7.17527 9.55806 7.05806C9.67527 6.94085 9.83424 6.875 10 6.875ZM13.75 7.5C13.75 7.33424 13.6842 7.17527 13.5669 7.05806C13.4497 6.94085 13.2908 6.875 13.125 6.875C12.9592 6.875 12.8003 6.94085 12.6831 7.05806C12.5658 7.17527 12.5 7.33424 12.5 7.5V15C12.5 15.1658 12.5658 15.3247 12.6831 15.4419C12.8003 15.5592 12.9592 15.625 13.125 15.625C13.2908 15.625 13.4497 15.5592 13.5669 15.4419C13.6842 15.3247 13.75 15.1658 13.75 15V7.5Z" fill="#F58220"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M18.125 3.75C18.125 4.08152 17.9933 4.39946 17.7589 4.63388C17.5245 4.8683 17.2065 5 16.875 5H16.25V16.25C16.25 16.913 15.9866 17.5489 15.5178 18.0178C15.0489 18.4866 14.413 18.75 13.75 18.75H6.25C5.58696 18.75 4.95107 18.4866 4.48223 18.0178C4.01339 17.5489 3.75 16.913 3.75 16.25V5H3.125C2.79348 5 2.47554 4.8683 2.24112 4.63388C2.0067 4.39946 1.875 4.08152 1.875 3.75V2.5C1.875 2.16848 2.0067 1.85054 2.24112 1.61612C2.47554 1.3817 2.79348 1.25 3.125 1.25H7.5C7.5 0.918479 7.6317 0.600537 7.86612 0.366117C8.10054 0.131696 8.41848 0 8.75 0L11.25 0C11.5815 0 11.8995 0.131696 12.1339 0.366117C12.3683 0.600537 12.5 0.918479 12.5 1.25H16.875C17.2065 1.25 17.5245 1.3817 17.7589 1.61612C17.9933 1.85054 18.125 2.16848 18.125 2.5V3.75ZM5.1475 5L5 5.07375V16.25C5 16.5815 5.1317 16.8995 5.36612 17.1339C5.60054 17.3683 5.91848 17.5 6.25 17.5H13.75C14.0815 17.5 14.3995 17.3683 14.6339 17.1339C14.8683 16.8995 15 16.5815 15 16.25V5.07375L14.8525 5H5.1475ZM3.125 3.75V2.5H16.875V3.75H3.125Z" fill="#F58220"/>
+                        </svg>
+                    </button>
+
+                    <div class="compare__toggles">
+                        <a href="#section1" class="compare__tab-button compare__tab-button_active">Веники</a>
+                        <a href="#section2" class="compare__tab-button">Тапочки для бани</a>
+                        <a href="#section3" class="compare__tab-button">Мыло для бани</a>
+                    </div>
+
+                    <div class="compare__wrapper">
+                        <div class="compare__section compare-section" id="section1" data-categoryId="001">
+                            <div class="compare-section__title-column compare-title-column">
+                                <div class="compare-title-column__row compare-title-column__row_1">
+                                    <button type="button" class="compare-section__remove-section">
+                                    <span>Очистить категорию</span>
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.875 6.875C7.04076 6.875 7.19973 6.94085 7.31694 7.05806C7.43415 7.17527 7.5 7.33424 7.5 7.5V15C7.5 15.1658 7.43415 15.3247 7.31694 15.4419C7.19973 15.5592 7.04076 15.625 6.875 15.625C6.70924 15.625 6.55027 15.5592 6.43306 15.4419C6.31585 15.3247 6.25 15.1658 6.25 15V7.5C6.25 7.33424 6.31585 7.17527 6.43306 7.05806C6.55027 6.94085 6.70924 6.875 6.875 6.875ZM10 6.875C10.1658 6.875 10.3247 6.94085 10.4419 7.05806C10.5592 7.17527 10.625 7.33424 10.625 7.5V15C10.625 15.1658 10.5592 15.3247 10.4419 15.4419C10.3247 15.5592 10.1658 15.625 10 15.625C9.83424 15.625 9.67527 15.5592 9.55806 15.4419C9.44085 15.3247 9.375 15.1658 9.375 15V7.5C9.375 7.33424 9.44085 7.17527 9.55806 7.05806C9.67527 6.94085 9.83424 6.875 10 6.875ZM13.75 7.5C13.75 7.33424 13.6842 7.17527 13.5669 7.05806C13.4497 6.94085 13.2908 6.875 13.125 6.875C12.9592 6.875 12.8003 6.94085 12.6831 7.05806C12.5658 7.17527 12.5 7.33424 12.5 7.5V15C12.5 15.1658 12.5658 15.3247 12.6831 15.4419C12.8003 15.5592 12.9592 15.625 13.125 15.625C13.2908 15.625 13.4497 15.5592 13.5669 15.4419C13.6842 15.3247 13.75 15.1658 13.75 15V7.5Z" fill="#F58220"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M18.125 3.75C18.125 4.08152 17.9933 4.39946 17.7589 4.63388C17.5245 4.8683 17.2065 5 16.875 5H16.25V16.25C16.25 16.913 15.9866 17.5489 15.5178 18.0178C15.0489 18.4866 14.413 18.75 13.75 18.75H6.25C5.58696 18.75 4.95107 18.4866 4.48223 18.0178C4.01339 17.5489 3.75 16.913 3.75 16.25V5H3.125C2.79348 5 2.47554 4.8683 2.24112 4.63388C2.0067 4.39946 1.875 4.08152 1.875 3.75V2.5C1.875 2.16848 2.0067 1.85054 2.24112 1.61612C2.47554 1.3817 2.79348 1.25 3.125 1.25H7.5C7.5 0.918479 7.6317 0.600537 7.86612 0.366117C8.10054 0.131696 8.41848 0 8.75 0L11.25 0C11.5815 0 11.8995 0.131696 12.1339 0.366117C12.3683 0.600537 12.5 0.918479 12.5 1.25H16.875C17.2065 1.25 17.5245 1.3817 17.7589 1.61612C17.9933 1.85054 18.125 2.16848 18.125 2.5V3.75ZM5.1475 5L5 5.07375V16.25C5 16.5815 5.1317 16.8995 5.36612 17.1339C5.60054 17.3683 5.91848 17.5 6.25 17.5H13.75C14.0815 17.5 14.3995 17.3683 14.6339 17.1339C14.8683 16.8995 15 16.5815 15 16.25V5.07375L14.8525 5H5.1475ZM3.125 3.75V2.5H16.875V3.75H3.125Z" fill="#F58220"/>
+                                    </svg>
+                                </button>
+                                </div>
+                                <div class="compare-title-column__row compare-title-column__row_char">
+                                    Цена, руб.
+                                </div>
+                                <div class="compare-title-column__row compare-title-column__row_char">
+                                    Состав
+                                </div>
+                                <div class="compare-title-column__row compare-title-column__row_char">
+                                    Бренд
+                                </div>
+                                <div class="compare-title-column__row compare-title-column__row_char">
+                                    Страна производства
+                                </div>
+                                <div class="compare-title-column__row compare-title-column__row_char">
+                                    Срок годности
+                                </div>
+                            </div>
+
+                            <div class="compare-section__items-slider">
+                                <div class="swiper">
+                                    <div class="swiper-wrapper">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="compare__section" id="section2">
+
+                        </div>
+                        <div class="compare__section" id="section3">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__grid">
+                    <div class="footer__left">
+                        <a href="#" class="footer__logo">
+                            <img src="assets/svg/logo_footer.svg" alt="">
+                        </a>
+                        <button class="footer__callback button button_orange">Заказать звонок</button>
+                    </div>
+
+                    <div class="footer__wrap">
+                        <div class="footer__menu footerMenu">
+                            <div class="footer__control footerMenu__title">О компании</div>
+                            <ul class="footerMenu__list">
+                                <li class="footerMenu__item"><a href="#">О нас</a></li>
+                                <li class="footerMenu__item"><a href="#">Где купить</a></li>
+                                <li class="footerMenu__item"><a href="#">Транснациональная корпорация</a></li>
+                                <li class="footerMenu__item"><a href="#">Производство</a></li>
+                                <li class="footerMenu__item"><a href="#">Новости</a></li>
+                                <li class="footerMenu__item"><a href="#">Поставки на территорию РФ</a></li>
+                                <li class="footerMenu__item"><a href="#">Контакты</a></li>
+                                <li class="footerMenu__item"><a href="#">Партнерам</a></li>
+                                <li class="footerMenu__item"><a href="#">Поставки на экспорт</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__category footerCategory">
+                            <div class="footer__control footerCategory__title">Каталог</div>
+                            <ul class="footerCategory__list">
+                                <li class="footerCategory__item"><a href="#">Баня и сауна</a></li>
+                                <li class="footerCategory__item"><a href="#">Интерьер</a></li>
+                                <li class="footerCategory__item"><a href="#">От насекомых и вредителей</a></li>
+                                <li class="footerCategory__item"><a href="#">Коврики</a></li>
+                                <li class="footerCategory__item"><a href="#">Пикник</a></li>
+                                <li class="footerCategory__item"><a href="#">Туризм и отдых</a></li>
+                                <li class="footerCategory__item"><a href="#">Кухня</a></li>
+                                <li class="footerCategory__item"><a href="#">Сад и огород</a></li>
+                                <li class="footerCategory__item"><a href="#">Красота и здоровье</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__contact">
+                            <div class="footer__control footer__contact-title">Контакты</div>
+                            <ul class="menuContacts">
+                                <li class="menuContacts__item menuContacts__item_phone">
+                                    <div class="menuContacts__icon">
+                                        <svg width="17" height="19">
+                                            <use xlink:href="assets/svg/sprite.svg#phone"></use>
+                                        </svg>
+                                    </div>
+                                    <a href="tel:+74959882028">+7(495) 988-20-28</a>
+                                </li>
+                                <li class="menuContacts__item menuContacts__item_phone">
+                                    <div class="menuContacts__icon">
+                                        <svg width="17" height="19">
+                                            <use xlink:href="assets/svg/sprite.svg#phone"></use>
+                                        </svg>
+                                    </div>
+                                    <a href="tel:88007000264">8(800) 700-02-64</a>
+                                </li>
+                                <li class="menuContacts__item menuContacts__item_mail">
+                                    <div class="menuContacts__icon">
+                                        <svg width="17" height="16">
+                                            <use xlink:href="assets/svg/sprite.svg#mail"></use>
+                                        </svg>
+                                    </div>
+                                    <a href="mailto:info@linkgroup.ru">info@linkgroup.ru</a>
+                                </li>
+                                <li class="menuContacts__item menuContacts__item_text">
+                                    <div class="menuContacts__icon">
+                                        <svg width="19" height="23">
+                                            <use xlink:href="assets/svg/sprite.svg#pin"></use>
+                                        </svg>
+                                    </div>
+                                    <span>Офис: г. Москва, ул. Нижняя д.&nbsp;14,&nbsp;стр.&nbsp;7 </span>
+                                </li>
+                                <li class="menuContacts__item menuContacts__item_text">
+                                    <div class="menuContacts__icon">
+                                        <svg width="19" height="23">
+                                            <use xlink:href="assets/svg/sprite.svg#pin"></use>
+                                        </svg>
+                                    </div>
+                                    <span>Склад: г. Домодедово мкр.&nbsp;Востряково, ул.&nbsp;Рябиновая,&nbsp;д.&nbsp;14,&nbsp;стр. 1</span>
+                                </li>
+                                <li class="menuContacts__item menuContacts__item_text">
+                                    <div class="menuContacts__icon">
+                                        <svg width="19" height="19">
+                                            <use xlink:href="assets/svg/sprite.svg#time"></use>
+                                        </svg>
+                                    </div>
+                                    <span>Режим работы: 08:00-19:00</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__reviews">
+                            <img src="assets/img/footer_reviews.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__bottom footerBottom">
+                    <ul class="footerBottom__doc">
+                        <li><a href="#">Пользовательское соглашение</a></li>
+                        <li><a href="#">Политика конфиденциальности данных</a></li>
+                    </ul>
+                    <span>LINKGROUP 2023 ©</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
+    <script src="build/scripts/vendors/lozad.min.js"></script>
+    <script src="build/scripts/vendors/fancybox.umd.min.js"></script>
+    <script src="build/scripts/general.min.js"></script>
+    <script src="build/scripts/compare.min.js"></script>
+</body>
+</html>
