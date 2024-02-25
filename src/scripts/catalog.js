@@ -125,7 +125,7 @@ const bindCartBtn = (btnNode, id, name) => {
                             src: `<div class="modal-cart-confirmation">
 <div>Товар <b>"${name}"</b> добавлен в корзину.</div>
 <div class="modal-cart-confirmation__buttons">
-<a href="/cart/">Перейти в корзину</a>
+<a href="/basket/">Перейти в корзину</a>
 <div class="is-close-btn" onclick="Fancybox.close()">Продолжить покупки</div>
 </div>
 </div>`, type: "html",

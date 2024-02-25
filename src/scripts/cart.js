@@ -306,7 +306,7 @@ const bindCartForm = (formNode) => {
 
         console.log(collectData(formNode))
 
-        fetch('path', {
+        fetch(formNode.getAttribute('action'), {
             method: "POST",
             cache: "no-cache",
             headers: {
@@ -315,8 +315,8 @@ const bindCartForm = (formNode) => {
             body: JSON.stringify(collectData(formNode))
         })
             .then((resp) => resp.json())
-            .then(({status, number, mail}) => {
-                if (status === 'success') {
+            .then(({success, number, mail}) => {
+                if (success) {
                     Fancybox.show([
                         {
                             src: `<div class="modal-cart-confirmation">
