@@ -56,9 +56,25 @@ const bindCompareItemsSlider = (swiperNode) => {
         })
     }
 
+    window.COMPARE_ADAPTIVE = false;
+
     if (window.matchMedia('(max-width: 1000px)').matches) {
         cloneSwiper(swiperNode.parentElement)
     }
+
+    window.addEventListener('resize', () => {
+        if (!window.COMPARE_ADAPTIVE && window.matchMedia('(max-width: 1000px)').matches) {
+            cloneSwiper(swiperNode.parentElement);
+            window.COMPARE_ADAPTIVE = true;
+        }
+
+        if (window.COMPARE_ADAPTIVE && window.matchMedia('(min-width: 1001px)').matches) {
+            document.querySelector('.compare-section__items-slider_clone')
+            && document.querySelector('.compare-section__items-slider_clone').remove();
+            window.COMPARE_ADAPTIVE = false;
+        }
+
+    })
 }
 
 const bindCompareTabs = (node) => {
