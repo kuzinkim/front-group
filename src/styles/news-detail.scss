@@ -16,6 +16,22 @@
             .swiper-slide{
                 a{
                     display: block;
+                    position: relative;
+                    overflow: hidden;
+
+                    &::after{
+                        content: '';
+                        padding-top: 66%;
+                        display: block;
+                    }
+    
+                    img{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        max-width: 100%;
+                    }
 
                     &:nth-child(1){
                         margin-bottom: 20px;
@@ -30,13 +46,45 @@
 
         &_vertical{
             margin-top: 40px;
+        }
 
-            .swiper{
-                height: 600px;
+        &-inner{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -10px;
+
+            @media screen and (max-width:499px){
+                margin: 0 -5px;
             }
-            .swiper-slide{
-                display: flex;
-                gap: 20px;
+
+            a{
+                width: calc(25% - 20px);
+                margin: 0 10px 20px;
+                position: relative;
+                overflow: hidden;
+
+                @media screen and (max-width:999px){
+                    width: calc(33.33% - 20px);
+                }
+
+                @media screen and (max-width:499px){
+                    width: calc(50% - 10px);
+                    margin: 0 5px 10px;
+                }
+
+                &::after{
+                    content: '';
+                    padding-top: 66%;
+                    display: block;
+                }
+
+                img{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    max-width: 100%;
+                }
             }
         }
     }

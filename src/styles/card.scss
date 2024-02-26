@@ -438,32 +438,21 @@
     }
 
     &__item{
-        margin: 0 4px;
-        padding: 9px 20px;
-        color: #fff;
+        margin: 0 10px;
         font-size: 14px;
         font-weight: 600;
-        border-radius: 8px;
 
         @media screen and (max-width:767px){
-            background-color: transparent;
             padding: 0;
             margin: 0 15px;
+            
         }
 
         &_hit{
-            background: #F58220;
-
-            @media screen and (max-width:767px){
-                color: #F58220;
-            }
+            color: #F58220;
         }
         &_new{
-            background-color: #56B347;
-
-            @media screen and (max-width:767px){
-                color: #75262F;
-            }
+            color: #75262F;
         }
     }
 }

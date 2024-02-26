@@ -5,7 +5,20 @@ function showMobileMenu () {
     if (!burg) return false
 
     burg.addEventListener('click', function(){
-        menu.classList.add('show');
+
+        if(burg.classList.contains('is-open')){
+            burg.classList.remove('is-open');
+
+            page.classList.remove('is-bg');
+            body.classList.remove('is-hidden');
+            menu.classList.remove('show');
+        }else{
+            burg.classList.add('is-open');
+            menu.classList.add('show');
+
+            page.classList.add('is-bg');
+            body.classList.add('is-hidden')
+        }
     })
 }
 
@@ -19,6 +32,10 @@ document.addEventListener('click', (e) => {
     
         if (!withinBoundaries && !withinBurg) {
             menu.classList.remove('show');
+
+            page.classList.remove('is-bg');
+            body.classList.remove('is-hidden');
+            burg.classList.remove('is-open');
         }
     }
 
