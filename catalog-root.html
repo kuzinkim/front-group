@@ -27,7 +27,23 @@
                         </form>
                         <div class="header__search-close"></div>
                     </div>
-                    <a href="#" class="header__button button button_brown">Продукция</a>
+                    <div class="header__product">
+                        <button class="header__button button button_brown">Продукция</button>
+
+                        <div class="header__product-list">
+                            <ul>
+                                <li><a href="#">Баня и сауна</a></li>
+                                <li><a href="#">Коврики</a></li>
+                                <li><a href="#">Кухня</a></li>
+                                <li><a href="#">Интерьер</a></li>
+                                <li><a href="#">Пикник</a></li>
+                                <li><a href="#">Сад и огород</a></li>
+                                <li><a href="#">От насекомых и вредителей</a></li>
+                                <li><a href="#">Туризм и отдых</a></li>
+                                <li><a href="#">Красота и здоровье</a></li>
+                            </ul>
+                        </div>
+                    </div>
                     <div class="header__actions headerActions">
                         <div class="headerActions__btn headerActions__btn_search">
                             <img src="assets/svg/search.svg" alt="">
@@ -90,7 +106,7 @@
                                     <use xlink:href="assets/svg/sprite.svg#pin" />
                                 </svg>
                             </div>
-                            <span>Офис: г. Москва, ул. Нижняя, д. 14, стр. 7</span>
+                            <span>Офис: г. Москва, ул. Нижняя, д.&nbsp;14, стр.&nbsp;7</span>
                         </li>
                         <li class="menuContacts__item menuContacts__item_text">
                             <div class="menuContacts__icon">
@@ -98,7 +114,7 @@
                                     <use xlink:href="assets/svg/sprite.svg#pin" />
                                 </svg>
                             </div>
-                            <span>Склад: г. Домодедово, мкр. Востряково, ул.&nbsp;Рябиновая, д. 14, стр. 1</span>
+                            <span>Склад: г. Домодедово, мкр. Востряково, ул.&nbsp;Рябиновая, д.&nbsp;14, стр.&nbsp;1</span>
                         </li>
                         <li class="menuContacts__item menuContacts__item_text">
                             <div class="menuContacts__icon">
@@ -165,7 +181,330 @@
 
             <!--full sections-->
             <div class="container">
-
+                <section class="brands-sections-list">
+                    <!--todo: Дим, тут очень неудобно по макету делать этот список не колонками. Если совсем неприятно в привязке - напиши, поправим-->
+                    <!--todo: порядок разделов важен, даже с колонками пришлось накостылить через js-->
+                    <div class="brands-sections-list__column brands-sections-list__column_1">
+                        <div class="brands-sections-list__item brands-sections-item">
+                            <div class="brands-sections-item__top">
+                                <div class="brands-sections-item__img">
+                                    <img src="assets/svg/bannye.svg" alt="Банные штучки" width="148">
+                                </div>
+                                <div class="brands-sections-item__desc">
+                                    для бани и сауны
+                                </div>
+                            </div>
+                            <div class="brands-sections-item__list">
+                                <ul>
+                                    <li><a href="#">Веники</a></li>
+                                    <li><a href="#">Запарки для бани и сауны</a></li>
+                                    <li><a href="#">Ароматизаторы для бани и сауны</a></li>
+                                    <li><a href="#">Эфирные масла и полочки под масла</a></li>
+                                    <li><a href="#">Испарители и аромалампы для бани и сауны</a></li>
+                                    <li><a href="#">Соляные брикеты и плитки</a></li>
+                                    <li><a href="#">Коллекция Подарочных наборов и Символы года</a></li>
+                                    <li><a href="#">Шапки из натуральной овчины</a></li>
+                                    <li><a href="#">Коллекция изделий из войлока премиального качества</a></li>
+                                    <li><a href="#">Войлок шапки</a></li>
+                                    <li><a href="#">Войлок шапки модельные</a></li>
+                                    <li><a href="#">Войлок рукавицы</a></li>
+                                    <li><a href="#">Коврики для бани и сауны</a></li>
+                                    <li><a href="#">Тапочки для бани и сауны</a></li>
+                                    <li><a href="#">Накидки, комплекты, полотенца</a></li>
+                                    <li><a href="#">Лыковые изделия</a></li>
+                                    <li><a href="#">Premium мочалки и щётки</a></li>
+                                    <li><a href="#">Мочалки натуральные</a></li>
+                                    <li><a href="#">Мочалки синтетические</a></li>
+                                    <li><a href="#">Щётки</a></li>
+                                    <li><a href="#">Массажеры</a></li>
+                                    <li><a href="#">Пемзы и пилки</a></li>
+                                    <li><a href="#">Расчески</a></li>
+                                    <li><a href="#">Косметика для бани и сауны</a></li>
+                                    <li><a href="#">Изделия из дерева "Искусственно состаренные"</a></li>
+                                    <li><a href="#">Изделия из дерева "Обожжённые"</a></li>
+                                    <li><a href="#">Изделия из дерева "Русские узоры"</a></li>
+                                    <li><a href="#">Изделия из дерева "Контраст"</a></li>
+                                    <li><a href="#">Изделия из дерева "Дуб"</a></li>
+                                    <li><a href="#">Изделия из дерева "Термообработанные с латуннымиободами"</a></li>
+                                    <li><a href="#">Бондарные изделия "Традиционные" без вставки</a></li>
+                                    <li><a href="#">Бондарные изделия "Традиционные" с пластиковой вставкой</a></li>
+                                    <li><a href="#">Бондарные изделия "Традиционные" с нержавеющейвставкой</a></li>
+                                    <li><a href="#">Ковши, кружки</a></li>
+                                    <li><a href="#">Изделия из металла: бадьи, ковши, ведра</a></li>
+                                    <li><a href="#">Термометры и гигрометры</a></li>
+                                    <li><a href="#">Часы</a></li>
+                                    <li><a href="#">Подголовники, подушки, коврики-сидушки</a></li>
+                                    <li><a href="#">Мебель из липы</a></li>
+                                    <li><a href="#">Мебель из сосны</a></li>
+                                    <li><a href="#">Вешалки, полки, решетки</a></li>
+                                    <li><a href="#">Таблички</a></li>
+                                    <li><a href="#">Сувенирная продукция</a></li>
+                                    <li><a href="#">Дезинфицирующие, чистящие средства</a></li>
+                                    <li><a href="#">Светильники и абажуры</a></li>
+                                    <li><a href="#">Двери, ручки</a></li>
+                                    <li><a href="#">Форточки для бани и сауны</a></li>
+                                    <li><a href="#">Вентиляционные задвижки</a></li>
+                                    <li><a href="#">Камни для печей</a></li>
+                                    <li><a href="#">Термоизоляторы: алюминиевая фольга, алюминиевая клейкаялента</a></li>
+                                    <li><a href="#">Лыковыеизделия (старые)</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="brands-sections-list__column brands-sections-list__column_2">
+                        <div class="brands-sections-list__item brands-sections-item">
+                            <div class="brands-sections-item__top">
+                                <div class="brands-sections-item__img">
+                                    <img src="assets/svg/vortex.svg" alt="vortex" width="250">
+                                </div>
+                                <div class="brands-sections-item__desc">
+                                    напольные покрытия
+                                </div>
+                            </div>
+                            <div class="brands-sections-item__list">
+                                <ul>
+                                    <li><a href="#">Покрытия для сада и огорода</a></li>
+                                    <li><a href="#">Коврики грязесборные</a></li>
+                                    <li><a href="#">Коврики влаговпитывающие "Профи"</a></li>
+                                    <li><a href="#">Коврики влаговпитывающие "TRIP"</a></li>
+                                    <li><a href="#">Коврики влаговпитывающие, ребристые</a></li>
+                                    <li><a href="#">Коврики влаговпитывающие двухцветные</a></li>
+                                    <li><a href="#">Коврики влаговпитывающие Velur, фотопечать</a></li>
+                                    <li><a href="#">Коврики влаговпитывающие Samba, фотопечать</a></li>
+                                    <li><a href="#">Коврики влаговпитывающие "COMFORT", рельефные</a></li>
+                                    <li><a href="#">Коврики универсальные, интерьерные</a></li>
+                                    <li><a href="#">Коврики хлопковые</a></li>
+                                    <li><a href="#">Коврики кокосовые</a></li>
+                                    <li><a href="#">Циновки</a></li>
+                                    <li><a href="#">Коврики пористые</a></li>
+                                    <li><a href="#">Коврики резиновые</a></li>
+                                    <li><a href="#">Коврики резиновые окрашенные</a></li>
+                                    <li><a href="#">Коврики специальные</a></li>
+                                    <li><a href="#">Коврики на ступеньку</a></li>
+                                    <li><a href="#">Ковровые покрытия в рулонах</a></li>
+                                    <li><a href="#">Щетинистые покрытия на противоскользящей основе Россия</a></li>
+                                    <li><a href="#">Щетинистые покрытия типа "Травка"</a></li>
+                                    <li><a href="#">Протекторы под мебель, противоскользящие ленты, стопоры</a></li>
+                                    <li><a href="#">Коврики для ванной</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="brands-sections-list__item brands-sections-item">
+                            <div class="brands-sections-item__top">
+                                <div class="brands-sections-item__img">
+                                    <img src="assets/svg/marmiton.svg" alt="Marmiton" width="208">
+                                </div>
+                                <div class="brands-sections-item__desc">
+                                    товары для кухни
+                                </div>
+                            </div>
+                            <div class="brands-sections-item__list">
+                                <ul>
+                                    <li><a href="#">Basic</a></li>
+                                    <li><a href="#">EAT&FIT</a></li>
+                                    <li><a href="#">Товары для праздников</a></li>
+                                    <li><a href="#">Приготовление в печи и духовке</a></li>
+                                    <li><a href="#">Кондитерский инвентарь</a></li>
+                                    <li><a href="#">Поварской инвентарь, навеска</a></li>
+                                    <li><a href="#">Разделка и измельчение продуктов</a></li>
+                                    <li><a href="#">Для горячих и холодных напитков</a></li>
+                                    <li><a href="#">Текстиль для Кухни</a></li>
+                                    <li><a href="#">Хранение, защита и декор</a></li>
+                                    <li><a href="#">Салфетки и подставки</a></li>
+                                    <li><a href="#">Организация пространства на кухне</a></li>
+                                    <li><a href="#">Мытье и сушка посуды</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="brands-sections-list__item brands-sections-item">
+                            <div class="brands-sections-item__top">
+                                <div class="brands-sections-item__img">
+                                    <img src="assets/svg/vegas.svg" alt="Vegas" width="230">
+                                </div>
+                                <div class="brands-sections-item__desc">
+                                    декоративный cвет
+                                </div>
+                            </div>
+                            <div class="brands-sections-item__list">
+                                <ul>
+                                    <li><a href="#">Электрогирлянды для использования внутри дома</a></li>
+                                    <li><a href="#">Электрогирлянды универсальные (для дома и улицы)</a></li>
+                                    <li><a href="#">Электрогирлянды для улицы и дома в комплекте с блоком питания</a></li>
+                                    <li><a href="#">Световой декор</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="brands-sections-list__column brands-sections-list__column_3">
+                        <div class="brands-sections-list__item brands-sections-item">
+                            <div class="brands-sections-item__top">
+                                <div class="brands-sections-item__img">
+                                    <img src="assets/svg/boyscout2.svg" alt="boyScout" width="235">
+                                </div>
+                                <div class="brands-sections-item__desc">
+                                    для отдыха и пикника
+                                </div>
+                            </div>
+                            <div class="brands-sections-item__list">
+                                <ul>
+                                    <li><a href="#">Аксессуары для пикника</a></li>
+                                    <li><a href="#">Посуда и наборы для пикника и отдыха</a></li>
+                                    <li><a href="#">Термосы, термокружки, термосумки</a></li>
+                                    <li><a href="#">Фонари, лампы, факелы, топливо</a></li>
+                                    <li><a href="#">Игры</a></li>
+                                    <li><a href="#">Дождевики и накомарники</a></li>
+                                    <li><a href="#">Казаны и посуда из чугуна</a></li>
+                                    <li><a href="#">Мангалы дачные стационарные</a></li>
+                                    <li><a href="#">Мангалы сборные, переносные</a></li>
+                                    <li><a href="#">Коптильни, щепа для копчения</a></li>
+                                    <li><a href="#">Решетки для барбекю</a></li>
+                                    <li><a href="#">Шампуры, наборы шампуров</a></li>
+                                    <li><a href="#">Жидкость, гель для розжига</a></li>
+                                    <li><a href="#">Принадлежности для розжига, сухой розжиг</a></li>
+                                    <li><a href="#">Мебель для отдыха</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="brands-sections-list__item brands-sections-item">
+                            <div class="brands-sections-item__top">
+                                <div class="brands-sections-item__img">
+                                    <img src="assets/svg/qwerty2.svg" alt="qwerty" width="244">
+                                </div>
+                                <div class="brands-sections-item__desc">
+                                    стильные решения
+                                </div>
+                            </div>
+                            <div class="brands-sections-item__list">
+                                <ul>
+                                    <li><a href="#">Световой декор</a></li>
+                                    <li><a href="#">Вазы декоративные</a></li>
+                                    <li><a href="#">Зеркала декоративные</a></li>
+                                    <li><a href="#">Пакеты для цветов</a></li>
+                                    <li><a href="#">Пледы</a></li>
+                                    <li><a href="#">Полки</a></li>
+                                    <li><a href="#">Фоторамки</a></li>
+                                    <li><a href="#">Хранение</a></li>
+                                    <li><a href="#">Чехлы на стулья</a></li>
+                                    <li><a href="#">Посуда термостекло</a></li>
+                                    <li><a href="#">Полихрусталь</a></li>
+                                    <li><a href="#">Солонки, перечницы и штопор на батарейках</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="brands-sections-list__item brands-sections-item">
+                            <div class="brands-sections-item__top">
+                                <div class="brands-sections-item__img">
+                                    <img src="assets/svg/aroma2.svg" alt="Aroma republic" width="75">
+                                </div>
+                                <div class="brands-sections-item__desc">
+                                    парфюм для дома
+                                </div>
+                            </div>
+                            <div class="brands-sections-item__list">
+                                <ul>
+                                    <li><a href="#">Коллекция ароматов Selective edition</a></li>
+                                    <li><a href="#">Коллекция ароматов Black edition</a></li>
+                                    <li><a href="#">Коллекция ароматов White edition</a></li>
+                                    <li><a href="#">Коллекция ароматов Countries</a></li>
+                                    <li><a href="#">Подарочные наборы</a></li>
+                                    <li><a href="#">Средства для устранения запаха</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="brands-sections-list__item brands-sections-item">
+                            <div class="brands-sections-item__top">
+                                <div class="brands-sections-item__img">
+                                    <img src="assets/svg/pechnyie.svg" alt="Печные штучки" width="116">
+                                </div>
+                                <div class="brands-sections-item__desc">
+                                    для печей и каминов
+                                </div>
+                            </div>
+                            <div class="brands-sections-item__list">
+                                <ul>
+                                    <li><a href="#">Каминные аксессуары для печей и каминов</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="brands-sections-list__column brands-sections-list__column_4">
+                        <div class="brands-sections-list__item brands-sections-item">
+                            <div class="brands-sections-item__top">
+                                <div class="brands-sections-item__img">
+                                    <img src="assets/svg/help2.svg" alt="Help boyscout" width="178">
+                                </div>
+                                <div class="brands-sections-item__desc">
+                                    от вредителей
+                                </div>
+                            </div>
+                            <div class="brands-sections-item__list">
+                                <ul>
+                                    <li><a href="#">Средства от клещей</a></li>
+                                    <li><a href="#">Средства от комаров и мошек</a></li>
+                                    <li><a href="#">Детская серия от комаров</a></li>
+                                    <li><a href="#">Электронные средства борьбы с насекомыми</a></li>
+                                    <li><a href="#">Москитные сетки</a></li>
+                                    <li><a href="#">Средства от мух и ос</a></li>
+                                    <li><a href="#">Средства от моли</a></li>
+                                    <li><a href="#">Средства от тараканов, муравьев, клопов и блох</a></li>
+                                    <li><a href="#">Средства от грызунов (мышей и крыс)</a></li>
+                                    <li><a href="#">Средства борьбы с садовыми вредителям</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="brands-sections-list__item brands-sections-item">
+                            <div class="brands-sections-item__top">
+                                <div class="brands-sections-item__img">
+                                    <img src="assets/svg/hotpot2.svg" alt="Hot Pot" width="232">
+                                </div>
+                                <div class="brands-sections-item__desc">
+                                    лучшая цена
+                                </div>
+                            </div>
+                            <div class="brands-sections-item__list">
+                                <ul>
+                                    <li><a href="#">Средства защиты во время карантина</a></li>
+                                    <li><a href="#">Веники</a></li>
+                                    <li><a href="#">Эфирные масла</a></li>
+                                    <li><a href="#">Наборы из войлока</a></li>
+                                    <li><a href="#">Войлок шапки модельные</a></li>
+                                    <li><a href="#">Войлок шапки</a></li>
+                                    <li><a href="#">Войлок рукавицы и коврики</a></li>
+                                    <li><a href="#">Бондарные изделия Hot Pot</a></li>
+                                    <li><a href="#">Подголовники, подушки, коврики-сидушки</a></li>
+                                    <li><a href="#">Аксессуары для пикника</a></li>
+                                    <li><a href="#">Мангалы сборные, переносные</a></li>
+                                    <li><a href="#">Коптильни, щепа для копчения</a></li>
+                                    <li><a href="#">Решетки для барбекю HotPot</a></li>
+                                    <li><a href="#">Шампуры, наборы шампуров</a></li>
+                                    <li><a href="#">Жидкость, гель для розжига</a></li>
+                                    <li><a href="#">Светильники и абажуры</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="brands-sections-list__item brands-sections-item">
+                            <div class="brands-sections-item__top">
+                                <div class="brands-sections-item__img">
+                                    <img src="assets/svg/blumen.svg" alt="Blumen Haus" width="164">
+                                </div>
+                                <div class="brands-sections-item__desc">
+                                    для дома и сада
+                                </div>
+                            </div>
+                            <div class="brands-sections-item__list">
+                                <ul>
+                                    <li><a href="#">Вазы декоративные</a></li>
+                                    <li><a href="#">Вертикальные грядки (Плантеры) и аксессуары для сада</a></li>
+                                    <li><a href="#">Декоративные ручки для мебели</a></li>
+                                    <li><a href="#">Крючки и вешалки декоративные</a></li>
+                                    <li><a href="#">Ручки стучалки</a></li>
+                                    <li><a href="#">Скворечники и кормушки</a></li>
+                                    <li><a href="#">Укрытия для растений и садовой мебели</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
 
         </main>
@@ -181,7 +520,7 @@
 
                     <div class="footer__wrap">
                         <div class="footer__menu footerMenu">
-                            <div class="footer__control footerMenu__title">О компании</div>
+                            <div class="footer__control footerMenu__title" data-title>О компании</div>
                             <ul class="footerMenu__list">
                                 <li class="footerMenu__item"><a href="#">О нас</a></li>
                                 <li class="footerMenu__item"><a href="#">Где купить</a></li>
@@ -195,7 +534,7 @@
                             </ul>
                         </div>
                         <div class="footer__category footerCategory">
-                            <div class="footer__control footerCategory__title">Каталог</div>
+                            <div class="footer__control footerCategory__title" data-title>Каталог</div>
                             <ul class="footerCategory__list">
                                 <li class="footerCategory__item"><a href="#">Баня и сауна</a></li>
                                 <li class="footerCategory__item"><a href="#">Интерьер</a></li>
@@ -209,7 +548,7 @@
                             </ul>
                         </div>
                         <div class="footer__contact">
-                            <div class="footer__control footer__contact-title">Контакты</div>
+                            <div class="footer__control footer__contact-title" data-title>Контакты</div>
                             <ul class="menuContacts">
                                 <li class="menuContacts__item menuContacts__item_phone">
                                     <div class="menuContacts__icon">
@@ -278,11 +617,8 @@
     </div>
 
     <script src="build/scripts/vendors/lozad.min.js"></script>
-    <script src="build/scripts/vendors/swiper-bundle.min.js"></script>
-    <script src="build/scripts/vendors/nice-select2.min.js"></script>
-    <script src="build/scripts/vendors/nouislider.min.js"></script>
     <script src="build/scripts/vendors/fancybox.umd.min.js"></script>
     <script src="build/scripts/general.min.js"></script>
-    <script src="build/scripts/catalog.min.js"></script>
+    <script src="build/scripts/catalog-root.min.js"></script>
 </body>
 </html>
