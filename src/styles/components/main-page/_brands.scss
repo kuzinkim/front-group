@@ -268,7 +268,7 @@
         background-color: #fff;
         max-width: calc(100% - 150px);
         max-height: calc(100% - 150px);
-        border-radius: 10px;
+        border-radius: 20px;
         margin: auto;
         padding: 20px;
         z-index: 7;
@@ -295,17 +295,27 @@
         padding-bottom: 17px;
         max-width: calc(100% - 10px);
         max-height: calc(100% - 10px);
-        padding-top: 10px;
-        padding-bottom: 10px;
     }
 
     &__head{
         margin-bottom: 20px;
         display: flex;
         order: -2;
+        align-items: center;
 
         @media screen and (min-width:1200px){
             display: none;
+        }
+    }
+
+    &__title{
+        font-weight: 400;
+        font-size: 18px;
+
+        @media screen and (max-width:495px){
+            margin-left: 30px;
+            font-size: 12px;
+            max-width: 100px;
         }
     }
 
@@ -316,6 +326,10 @@
         @media screen and (max-width:767px){
             margin-right: 0;
             max-width: 140px;
+        }
+
+        @media screen and (max-width:495px){
+            max-width: 115px;
         }
     }
 

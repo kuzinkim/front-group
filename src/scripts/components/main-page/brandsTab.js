@@ -32,11 +32,15 @@ window.addEventListener('load', function(){
                         content.classList.add('is-active');
 
                         if(window.matchMedia("(max-width: 495px)").matches){
-                            collapseChildItems('[data-brand-content].is-active', {
-                                targetHeight: 200,
-                                buttonMore: 'Развернуть',
-                                buttonLess: 'Свернуть'
-                            });
+                            let contentBody = content.querySelector('[data-brand-wrap]')
+
+                            if(contentBody.offsetHeight > 124){
+                                collapseChildItems('[data-brand-wrap]', {
+                                    targetHeight: 124,
+                                    buttonMore: 'Развернуть',
+                                    buttonLess: 'Свернуть'
+                                });
+                            }
                         }
                     }
                 })
@@ -60,13 +64,4 @@ window.addEventListener('load', function(){
         brandBg.classList.remove('is-open')
         brandContentWrap.classList.remove('is-open')
     })
-
-    if(window.matchMedia("(max-width: 495px)").matches){
-        collapseChildItems('[data-brand-content]', {
-            targetHeight: 200,
-            buttonMore: 'Развернуть',
-            buttonLess: 'Свернуть'
-        });
-        
-    }
 })
