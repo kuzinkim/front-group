@@ -36,7 +36,7 @@
         .slideContols{
             display: flex;
             align-items: center;
-            margin-top: 63px;
+            margin-top: 93px;
 
             @media screen and (max-width:495px){
                 margin-top: 22px;
@@ -81,11 +81,7 @@
     pointer-events: none;
 
     &__logo{
-        max-width: 269px;
-
-        @media screen and (max-width:1199px){
-            max-width: 230px;
-        }
+        max-width: 201px;
 
         @media screen and (max-width:495px){
             max-width: 168px;
@@ -94,7 +90,7 @@
 
     &__inner{
         margin-left: 303px;
-        margin-top: 47px;
+        margin-top: 31px;
         max-width: 631px;
         pointer-events: all;
 
@@ -109,11 +105,11 @@
     }
 
     &__title{
-        font-size: 69px;
+        font-size: 60px;
         margin: 0;
-        font-weight: 700;
+        font-weight: 600;
         color: #510017;
-        margin-top: 20px;
+        margin-top: 27px;
         line-height: 1;
 
         @media screen and (max-width:1199px){
@@ -131,7 +127,7 @@
         font-size: 29px;
         color: #132F1D;
         font-weight: 600;
-        margin-top: 30px;
+        margin-top: 0;
 
         @media screen and (max-width:1199px){
             font-size: 24px;
@@ -147,7 +143,7 @@
 
     &__button{
         max-width: 239px;
-        margin-top: 27px;
+        margin-top: 46px;
 
         @media screen and (max-width:495px){
             max-width: 115px;
