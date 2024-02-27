@@ -29,7 +29,15 @@ window.addEventListener('load', function(){
                     let dataContent = content.getAttribute('data-brand-content')
 
                     if(dataTab == dataContent){
-                        content.classList.add('is-active')
+                        content.classList.add('is-active');
+
+                        if(window.matchMedia("(max-width: 495px)").matches){
+                            collapseChildItems('[data-brand-content].is-active', {
+                                targetHeight: 200,
+                                buttonMore: 'Развернуть',
+                                buttonLess: 'Свернуть'
+                            });
+                        }
                     }
                 })
 
@@ -52,4 +60,13 @@ window.addEventListener('load', function(){
         brandBg.classList.remove('is-open')
         brandContentWrap.classList.remove('is-open')
     })
+
+    if(window.matchMedia("(max-width: 495px)").matches){
+        collapseChildItems('[data-brand-content]', {
+            targetHeight: 200,
+            buttonMore: 'Развернуть',
+            buttonLess: 'Свернуть'
+        });
+        
+    }
 })
