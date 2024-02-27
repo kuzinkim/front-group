@@ -324,12 +324,12 @@
         margin-right: 40px;
 
         @media screen and (max-width:767px){
-            margin-right: 0;
             max-width: 140px;
         }
 
         @media screen and (max-width:495px){
             max-width: 115px;
+            margin-right: 0;
         }
     }
 
