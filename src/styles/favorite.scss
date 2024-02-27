@@ -160,3 +160,18 @@
     }
   }
 }
+
+.favorite-empty-message {
+  font-size: 18px;
+  line-height: 1.45;
+  margin-top: 36px;
+
+  a {
+    text-decoration: underline;
+    color: var(--color-accent);
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
