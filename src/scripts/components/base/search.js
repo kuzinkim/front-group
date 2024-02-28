@@ -6,6 +6,12 @@ let body = document.querySelector('body');
 
 window.addEventListener('load', function () {
     searchBtn.addEventListener('click', function(){
+
+        if(menu.classList.contains('show')){
+            menu.classList.remove('show');
+            burg.classList.remove('is-open');
+        }
+
         headerSearch.classList.add('is-open');
         page.classList.add('is-bg');
         body.classList.add('is-hidden')

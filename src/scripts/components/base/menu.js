@@ -31,10 +31,13 @@ document.addEventListener('click', (e) => {
         const withinBoundaries = e.composedPath().includes(menu);
         const withinBurg = e.composedPath().includes(burg);
         const withinSearch = e.composedPath().includes(searchButton);
-        
-        if (!withinBoundaries && !withinBurg && withinSearch) {
+
+        if (!withinBoundaries && !withinBurg && !withinSearch) {
             menu.classList.remove('show');
             burg.classList.remove('is-open');
+
+            page.classList.remove('is-bg');
+            body.classList.remove('is-hidden');
         }
     }
 
