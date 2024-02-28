@@ -1,0 +1,140 @@
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  &__block {
+    width: calc(100% / 3 - 40px / 3);
+
+    &_full {
+      width: 100%;
+    }
+  }
+}
+
+.about-block {
+  border: 1px solid rgba(#000000, .25);
+  border-radius: 25px;
+  padding: 20px;
+
+  &__head {
+    display: flex;
+    align-items: center;
+    margin-bottom: 26px;
+  }
+
+  &__title {
+    font-size: 38px;
+    color: var(--color-title);
+    font-weight: 700;
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    margin-left: auto;
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      max-height: 95px;
+    }
+  }
+
+  &__list {
+    color: #404043;
+    font-size: 29px;
+    font-weight: 400;
+
+    li {
+      position: relative;
+      padding-left: 32px;
+      margin-bottom: .4em;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: var(--color-accent);
+        position: absolute;
+        left: 0;
+        top: 9px;
+      }
+
+      &:first-child {
+        font-weight: 600;
+        margin-bottom: 18px;
+
+        &::before {
+          border-radius: 0;
+          height: 100%;
+          top: 0;
+          width: 8px;
+          left: 2px;
+        }
+      }
+    }
+  }
+}
+
+.about-countries {
+  border: 1px solid rgba(#000000, .25);
+  border-radius: 25px;
+  padding: 20px 20px 50px;
+
+  &__title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 38px;
+    color: var(--color-title);
+    margin-bottom: 26px;
+  }
+  
+  &__subtitle {
+    font-size: 29px;
+    color: #404043;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  &__list {
+    ul {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 80px;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      width: 20%;
+      flex-shrink: 0;
+      padding-right: 10px;
+    }
+
+    img {
+      height: 70px;
+      width: auto;
+      margin-right: 15px;
+      flex-shrink: 0;
+    }
+
+    span {
+      color: #404040;
+      font-size: 28px;
+      font-weight: 600;
+    }
+    i {
+      font-style: normal;
+      font-size: 26px;
+    }
+  }
+}
