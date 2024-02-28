@@ -1,5 +1,6 @@
 let burg = document.querySelector('.js-burger');
 let menu = document.querySelector('.js-header-menu');
+let searchButton = document.querySelector('.headerActions__btn_search');
 
 function showMobileMenu () {
     if (!burg) return false
@@ -29,12 +30,10 @@ document.addEventListener('click', (e) => {
     if(menu.classList.contains('show')){
         const withinBoundaries = e.composedPath().includes(menu);
         const withinBurg = e.composedPath().includes(burg);
-    
-        if (!withinBoundaries && !withinBurg) {
+        const withinSearch = e.composedPath().includes(searchButton);
+        
+        if (!withinBoundaries && !withinBurg && withinSearch) {
             menu.classList.remove('show');
-
-            page.classList.remove('is-bg');
-            body.classList.remove('is-hidden');
             burg.classList.remove('is-open');
         }
     }
