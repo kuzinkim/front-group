@@ -140,9 +140,12 @@
                 </div>
             </div>
             <!--page title-->
+            <!--убрать обычный заголовок с этой страницы-->
+
             <div class="container">
-                <div class="page-title page-title_inner">
-                    <h1>Наши категории</h1>
+                <div class="catalog-title">
+                    <h1 class="catalog-title__main">Наши категории</h1>
+                    <div class="catalog-title__subtitle">оптовые поставки по России и&nbsp;на&nbsp;экспорт</div>
                 </div>
             </div>
 
@@ -181,10 +184,11 @@
 
             <!--full sections-->
             <div class="container">
+                <div class="catalog-title">
+                    <h1 class="catalog-title__main">Бренды</h1>
+                    <div class="catalog-title__subtitle">которые мы создаем</div>
+                </div>
                 <section class="brands-sections-list">
-                    <!--todo: Дим, тут очень неудобно по макету делать этот список не колонками. Если совсем неприятно в привязке - напиши, поправим-->
-                    <!--todo: порядок разделов важен, даже с колонками пришлось накостылить через js-->
-                    <div class="brands-sections-list__column brands-sections-list__column_1">
                         <div class="brands-sections-list__item brands-sections-item">
                             <div class="brands-sections-item__top">
                                 <div class="brands-sections-item__img">
@@ -195,6 +199,8 @@
                                 </div>
                             </div>
                             <div class="brands-sections-item__list">
+                                <div class="brands-sections-item__list-wrapper">
+                                    <button class="brands-sections-item__list-close" type="button"></button>
                                 <ul>
                                     <li><a href="#">Веники</a></li>
                                     <li><a href="#">Запарки для бани и сауны</a></li>
@@ -248,10 +254,9 @@
                                     <li><a href="#">Термоизоляторы: алюминиевая фольга, алюминиевая клейкаялента</a></li>
                                     <li><a href="#">Лыковыеизделия (старые)</a></li>
                                 </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="brands-sections-list__column brands-sections-list__column_2">
                         <div class="brands-sections-list__item brands-sections-item">
                             <div class="brands-sections-item__top">
                                 <div class="brands-sections-item__img">
@@ -262,6 +267,8 @@
                                 </div>
                             </div>
                             <div class="brands-sections-item__list">
+                                <div class="brands-sections-item__list-wrapper">
+                                    <button class="brands-sections-item__list-close" type="button"></button>
                                 <ul>
                                     <li><a href="#">Покрытия для сада и огорода</a></li>
                                     <li><a href="#">Коврики грязесборные</a></li>
@@ -287,6 +294,7 @@
                                     <li><a href="#">Протекторы под мебель, противоскользящие ленты, стопоры</a></li>
                                     <li><a href="#">Коврики для ванной</a></li>
                                 </ul>
+                                </div>
                             </div>
                         </div>
                         <div class="brands-sections-list__item brands-sections-item">
@@ -299,6 +307,8 @@
                                 </div>
                             </div>
                             <div class="brands-sections-item__list">
+                                <div class="brands-sections-item__list-wrapper">
+                                    <button class="brands-sections-item__list-close" type="button"></button>
                                 <ul>
                                     <li><a href="#">Basic</a></li>
                                     <li><a href="#">EAT&FIT</a></li>
@@ -314,6 +324,7 @@
                                     <li><a href="#">Организация пространства на кухне</a></li>
                                     <li><a href="#">Мытье и сушка посуды</a></li>
                                 </ul>
+                                </div>
                             </div>
                         </div>
                         <div class="brands-sections-list__item brands-sections-item">
@@ -326,16 +337,17 @@
                                 </div>
                             </div>
                             <div class="brands-sections-item__list">
+                                <div class="brands-sections-item__list-wrapper">
+                                    <button class="brands-sections-item__list-close" type="button"></button>
                                 <ul>
                                     <li><a href="#">Электрогирлянды для использования внутри дома</a></li>
                                     <li><a href="#">Электрогирлянды универсальные (для дома и улицы)</a></li>
                                     <li><a href="#">Электрогирлянды для улицы и дома в комплекте с блоком питания</a></li>
                                     <li><a href="#">Световой декор</a></li>
                                 </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="brands-sections-list__column brands-sections-list__column_3">
                         <div class="brands-sections-list__item brands-sections-item">
                             <div class="brands-sections-item__top">
                                 <div class="brands-sections-item__img">
@@ -346,6 +358,8 @@
                                 </div>
                             </div>
                             <div class="brands-sections-item__list">
+                                <div class="brands-sections-item__list-wrapper">
+                                    <button class="brands-sections-item__list-close" type="button"></button>
                                 <ul>
                                     <li><a href="#">Аксессуары для пикника</a></li>
                                     <li><a href="#">Посуда и наборы для пикника и отдыха</a></li>
@@ -363,6 +377,7 @@
                                     <li><a href="#">Принадлежности для розжига, сухой розжиг</a></li>
                                     <li><a href="#">Мебель для отдыха</a></li>
                                 </ul>
+                                </div>
                             </div>
                         </div>
                         <div class="brands-sections-list__item brands-sections-item">
@@ -375,6 +390,8 @@
                                 </div>
                             </div>
                             <div class="brands-sections-item__list">
+                                <div class="brands-sections-item__list-wrapper">
+                                    <button class="brands-sections-item__list-close" type="button"></button>
                                 <ul>
                                     <li><a href="#">Световой декор</a></li>
                                     <li><a href="#">Вазы декоративные</a></li>
@@ -389,6 +406,7 @@
                                     <li><a href="#">Полихрусталь</a></li>
                                     <li><a href="#">Солонки, перечницы и штопор на батарейках</a></li>
                                 </ul>
+                                </div>
                             </div>
                         </div>
                         <div class="brands-sections-list__item brands-sections-item">
@@ -401,6 +419,8 @@
                                 </div>
                             </div>
                             <div class="brands-sections-item__list">
+                                <div class="brands-sections-item__list-wrapper">
+                                    <button class="brands-sections-item__list-close" type="button"></button>
                                 <ul>
                                     <li><a href="#">Коллекция ароматов Selective edition</a></li>
                                     <li><a href="#">Коллекция ароматов Black edition</a></li>
@@ -409,6 +429,7 @@
                                     <li><a href="#">Подарочные наборы</a></li>
                                     <li><a href="#">Средства для устранения запаха</a></li>
                                 </ul>
+                                </div>
                             </div>
                         </div>
                         <div class="brands-sections-list__item brands-sections-item">
@@ -421,13 +442,14 @@
                                 </div>
                             </div>
                             <div class="brands-sections-item__list">
+                                <div class="brands-sections-item__list-wrapper">
+                                    <button class="brands-sections-item__list-close" type="button"></button>
                                 <ul>
                                     <li><a href="#">Каминные аксессуары для печей и каминов</a></li>
                                 </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="brands-sections-list__column brands-sections-list__column_4">
                         <div class="brands-sections-list__item brands-sections-item">
                             <div class="brands-sections-item__top">
                                 <div class="brands-sections-item__img">
@@ -438,6 +460,7 @@
                                 </div>
                             </div>
                             <div class="brands-sections-item__list">
+                                <div class="brands-sections-item__list-wrapper">
                                 <ul>
                                     <li><a href="#">Средства от клещей</a></li>
                                     <li><a href="#">Средства от комаров и мошек</a></li>
@@ -450,6 +473,7 @@
                                     <li><a href="#">Средства от грызунов (мышей и крыс)</a></li>
                                     <li><a href="#">Средства борьбы с садовыми вредителям</a></li>
                                 </ul>
+                                </div>
                             </div>
                         </div>
                         <div class="brands-sections-list__item brands-sections-item">
@@ -462,6 +486,8 @@
                                 </div>
                             </div>
                             <div class="brands-sections-item__list">
+                                <div class="brands-sections-item__list-wrapper">
+                                    <button class="brands-sections-item__list-close" type="button"></button>
                                 <ul>
                                     <li><a href="#">Средства защиты во время карантина</a></li>
                                     <li><a href="#">Веники</a></li>
@@ -480,6 +506,7 @@
                                     <li><a href="#">Жидкость, гель для розжига</a></li>
                                     <li><a href="#">Светильники и абажуры</a></li>
                                 </ul>
+                                </div>
                             </div>
                         </div>
                         <div class="brands-sections-list__item brands-sections-item">
@@ -492,6 +519,8 @@
                                 </div>
                             </div>
                             <div class="brands-sections-item__list">
+                                <div class="brands-sections-item__list-wrapper">
+                                    <button class="brands-sections-item__list-close" type="button"></button>
                                 <ul>
                                     <li><a href="#">Вазы декоративные</a></li>
                                     <li><a href="#">Вертикальные грядки (Плантеры) и аксессуары для сада</a></li>
@@ -501,9 +530,9 @@
                                     <li><a href="#">Скворечники и кормушки</a></li>
                                     <li><a href="#">Укрытия для растений и садовой мебели</a></li>
                                 </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
                 </section>
             </div>
 
