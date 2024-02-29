@@ -88,6 +88,13 @@
         }
 
         .menuContacts{
+
+            &__item{
+                a,span{
+                    color: #510017;
+                }
+            }
+
             @media screen and (max-width:767px){
                 margin-top: 5px;
                 margin-bottom: 15px;
@@ -306,6 +313,12 @@
             font-size: 16px;
             font-weight: 600;
             margin: 0 22px;
+
+            transition: color .2s ease;
+
+            &:hover{
+                color: #F58220;
+            }
 
             @media screen and (max-width:999px){
                 display: block;

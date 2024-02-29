@@ -333,15 +333,19 @@
         }
     }
 
+    @media screen and (max-width:1199px){
+        padding-top: 45px;
+    }
+
     @media screen and (max-width:900px){
         max-width: calc(100% - 60px);
         max-height: calc(100% - 60px);
     }
 
     @media screen and (max-width:500px){
-        padding-left: 19px;
-        padding-right: 31px;
-        padding-top: 18px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 45px;
         padding-bottom: 8px;
         max-width: calc(100% - 20px);
         max-height: calc(100% - 20px);
@@ -349,6 +353,8 @@
 
     &__item{
         margin-bottom: 20px;
+        position: relative;
+        padding-right: 10px;
         a{
             text-decoration: none;
             vertical-align: middle;
@@ -357,8 +363,6 @@
             font-weight: 600;
             line-height: calc(22/18);
             transition: color .2s ease;
-            position: relative;
-            padding-right: 22px;
 
             @media screen and (max-width:500px){
                 font-size: 16px;
@@ -368,17 +372,19 @@
             &::after{
                 content: '';
                 background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAoCAYAAACFFRgXAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHcSURBVHgB7ZdNTsJAFMffVD623MDeQBpgDzuXegKBhgRhIZxAOAGsgIQP6wnEna7QNaZwA3sEJKyknfpehYS40swMcTG/RTvTxfSXl3/fTAE0Go1Go/kDDAS4tu13WoDH44XBYODBETBAhDCkq2lst7NqtWrCERASDjkvoPQSdtKVSiUNihESHjiOl0BprPMUp2ac8xnG5AIUIpThQ2q23cXbDY3DMGz2J5MuKOAEJDFfLJ5ymQwVIM8YO89ZFj17BclIEybmrvuylwbG8iqkpQoTJJ21rA+qMklnM5nUm+s+gySkZfgn9PHh4nc4TNFHmQyCUtdxViCIMmGC2lwsCB6w2ia1P55IXIpuMEqFiWqxaDLDmEXSAJ7orii20/0C6tWY5eZuahq+fwYCKBfGCud3WQbKcsL3hbqG0kjUbfsKJR0a4/2+Px4XQRBlFa6Vy7d7WYxEW4ZstBQogGRRsvX9BtbujUYtkIR04Xq53AkZa0QTwyj1hkMHJCJNuNFopD7X6w5WtIg9d4XSJYzBFCQjRTiS3WxmKJom2S0eOYeOswQFCAvTnwbDwzsuRLuZx1E26r2KEBI+tiwh1NYOZJf452GpliViIADKPmKvPU1yLuUkptFoNJr/zxfzyMkheDguwQAAAABJRU5ErkJggg==');
-                width: 22px;
+                width: 10px;
                 height: 20px;
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-position: center center;
-                display: inline-block;
-                vertical-align: middle;
                 transition: all .2s ease;
                 position: absolute;
-                right: 0;
-                bottom: 1px;
+                right: -10px;
+                top: 2px;
+
+                @media screen and (max-width:1199px){
+                    right: -6px;
+                }
             }
 
             &:hover{
