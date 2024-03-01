@@ -852,6 +852,11 @@
 }
 
 .block {
+  margin-bottom: 40px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
   &__title {
     font-size: 30px;
     text-align: center;
@@ -1096,6 +1101,45 @@
       &::before,
       &::after {
         content: none;
+      }
+    }
+  }
+}
+
+.catalog-seo-text {
+  font-size: 16px;
+  line-height: 1.35;
+
+  @media screen and (max-width: 450px) {
+    font-size: 14px;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 1.5em;
+
+    &:first-letter {
+      margin-left: 1.25em;
+    }
+  }
+
+  ul {
+    margin: 0 0 1.5em 0;
+    li {
+      margin-bottom: .5em;
+      position: relative;
+      padding-left: 20px;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: var(--color-accent);
+        position: absolute;
+        left: 0;
+        top: 6px;
       }
     }
   }
