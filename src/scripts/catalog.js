@@ -1,3 +1,4 @@
+//=require helpers/collapseText.js
 const bindCardSlider = (sliderNode) => {
     if (!sliderNode || !sliderNode.classList.contains('swiper')) {
         return false;
@@ -477,6 +478,12 @@ window.addEventListener('DOMContentLoaded', () => {
     bindFiltersAdaptive();
 
     bindFilterChange(document.querySelector('.filters'));
+
+    collapseChildItems('.js-collapsible-text', {
+        targetHeight: 150,
+        buttonMore: 'Развернуть',
+        buttonLess: 'Свернуть'
+    });
 })
 
 window.addEventListener('resize', () => {

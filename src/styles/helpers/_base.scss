@@ -296,3 +296,85 @@ ul,li{
     }
   }
 }
+
+.collapseElement{
+
+  &__button{
+    margin-top: 10px;
+    margin-left: auto;
+    display: block;
+    margin-right: auto;
+    background-color: transparent;
+    color: #F58220;
+    opacity: 0.8;
+    position: relative;
+    font-size: 16px;
+    border: 0;
+    padding: 0;
+    outline: 0;
+    cursor: pointer;
+
+    &::after{
+      content: "";
+      position: absolute;
+      left: calc(100% + 5px);
+      top: 50%;
+      transform: translateY(-50%);
+      background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAQCAYAAADj5tSrAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGbSURBVHgBvZTrUcJAFIXP7g8dXjPYwZaAHWAHUAHYgRQg2WABYAVCBdABdqAlbAdmhtfoOFnvDdm4ZMBkxPH8SXL33vPt3UeAf5B406p1KREIgUXl3szwR9po1RESvc8YM7EeqRcBtBIiMKgOzQRnaqVVW0os089ISovIDVpgvHtQPZwhXhnqYO6FIvlu0SX3VxeJLSZrSsQvRAB1QQBakWYaMjLGjeC3HQ3G+/aUo3/EuL7SxqCkUoDvkQAq5CH5K3mhAA+kCU0u4MKSgKYPoGWPbIxuJZ2kdIkeyO2RKgNKAOKgAzCgrk22BdIvYJDNgwTmbHQKQhMZ07HM9pC6uG1o8+znyHwRz4BAgyxABpfi4LRk2o7UmB59fBPC+tBM83nyWDGBpjSjDGQF2puRevJz6DugnDsfUAuMPuZ3FJKA6FLScQ69UH9Hxg5AD535WzyeArAECrQKlZYCgVewoA46HmBWD0z/Jw+JAjVohmyUmXoAvsQ16y3ZCRV24rQN1ZL3xguZKl1YoU1UVFvYiVPu97P/XZQAsL4AT96s6FPdgtAAAAAASUVORK5CYII=");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      width: 10px;
+      height: 6px;
+    }
+
+    @media screen and (max-width:500px){
+      font-size: 12px;
+    }
+
+
+
+    span:nth-child(1){
+      display: none;
+    }
+    span:nth-child(2){
+      display: block;
+    }
+  }
+
+  &__content{
+    display: flex;
+    flex-direction: column;
+  }
+
+  &_hide{
+    .collapseElement__wrap{
+      overflow: hidden;
+      position: relative;
+
+      &::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100px;
+        background: linear-gradient(0deg, #fff, rgba(255, 255, 255, 0));
+      }
+    }
+
+    .collapseElement__button span:nth-child(1){
+      display: block;
+    }
+
+    .collapseElement__button span:nth-child(2){
+      display: none;
+    }
+  }
+
+  &:not(.collapseElement_hide){
+    .collapseElement__button::after{
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+}
