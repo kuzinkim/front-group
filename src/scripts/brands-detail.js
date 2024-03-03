@@ -1,5 +1,3 @@
-//=require helpers/collapseText.js
-
 let navButton = document.querySelector('.brand-detail__button')
 let brandNav = document.querySelector('.brand-nav')
 let brandBg = document.querySelector('.brand-detail__bg')
