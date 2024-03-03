@@ -6,6 +6,7 @@
     <title>Главная</title>
     <link rel="stylesheet" href="build/styles/vendors/normalize.css">
     <link rel="stylesheet" href="build/styles/vendors/swiper-bundle.min.css">
+    <link rel="stylesheet" href="build/styles/vendors/fancybox.css">
     <link rel="stylesheet" href="build/styles/general.css">
     <link rel="stylesheet" href="build/styles/main-page.css">
 </head>
@@ -25,6 +26,82 @@
                             <button class="searchForm__submit" type="submit"><img src="assets/svg/search.svg" alt=""></button>
                         </form>
                         <div class="header__search-close"></div>
+                        <div class="searchResult">
+                            <div class="searchResult__wrap">
+                                <div class="searchResult__block">
+                                    <div class="searchResult__head searchResult__head_product">
+                                        <div class="searchResult__title">Товары</div>
+                                        <a href="#" class="searchResult__all">Все товары <span>78</span></a>
+                                    </div>
+                                    <div class="searchResult__list">
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    <div class="searchResult__preview">
+                                                        <img src="assets/img/search-reulut-img.png" alt="">
+                                                    </div>
+                                                    <span>Шапка с узором и логотипом "Банные штучки"</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <div class="searchResult__preview">
+                                                        <img src="assets/img/search-reulut-img.png" alt="">
+                                                    </div>
+                                                    <span>Шапка с узором и логотипом "Банные штучки"</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <div class="searchResult__preview">
+                                                        <img src="assets/img/search-reulut-img.png" alt="">
+                                                    </div>
+                                                    <span>Шапка с узором и логотипом "Банные штучки"</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <div class="searchResult__preview">
+                                                        <img src="assets/img/search-reulut-img.png" alt="">
+                                                    </div>
+                                                    <span>Шапка с узором и логотипом "Банные штучки"</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="searchResult__block">
+                                    <div class="searchResult__head">
+                                        <div class="searchResult__title">Категории товаров</div>
+                                        <a href="#" class="searchResult__all">Все категории <span>5</span></a>
+                                    </div>
+                                    <div class="searchResult__list searchResult__list_category">
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    Баня и сауна
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    Красота и здоровье
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    Для сада
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    От насекомых и вредителей
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="header__product">
                         <button class="header__button button button_brown">Продукция</button>
@@ -814,6 +891,38 @@
                     </div>
                 </div>
             </section>
+
+            <div id="callbackForm" class="modal modal_white" style="display: none;">
+                <div class="modal__title">Заказать звонок</div>
+                <div class="modal__body">
+                    <form action="#" class="form form_callcback">
+                        <div class="form__item">
+                            <label>Имя*</label>
+                            <input type="text" name="name" placeholder="Введите ваше имя" required>
+                        </div>
+                        <div class="form__item">
+                            <label>Телефон*</label>
+                            <input type="text" name="phone" placeholder="+ 7 ( ___ ) ____ - ___ - ___" required>
+                        </div>
+                        <div class="form__item">
+                            <label>Регион*</label>
+                            <input type="text" name="region" placeholder="Введите ваш регион" required>
+                        </div>
+                        <div class="form__item">
+                            <label>Комментарий</label>
+                            <textarea type="text" name="comment" placeholder="Ваше сообщение"></textarea>
+                        </div>
+                        <div class="form__actions">
+                            <div class="form__text">
+                                <p>Нажимая кнопку отправить, я даю согласие на обработку <a href="#">персональных данных</a>.</p>
+                            </div>
+                            <button type="submit">
+                                Отправить
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </main>
         <footer class="footer">
             <div class="container">
@@ -822,7 +931,7 @@
                         <a href="#" class="footer__logo">
                             <img src="assets/svg/logo_footer.svg" alt="">
                         </a>
-                        <button class="footer__callback button button_orange">Заказать звонок</button>
+                        <a type="button" href="#callbackForm" class="footer__callback button button_orange" data-fancybox="callbackForm">Заказать звонок</a>
                     </div>
                     
                     <div class="footer__wrap">
@@ -923,6 +1032,7 @@
 
     <script src="build\scripts\vendors\lozad.min.js"></script>
     <script src="build\scripts\vendors\swiper-bundle.min.js"></script>
+    <script src="build/scripts/vendors/fancybox.umd.min.js"></script>
     <script src="build\scripts\general.min.js"></script>
     <script src="build\scripts\main-page.min.js"></script>
 </body>

@@ -1,3 +1,5 @@
-window.addEventListener('DOMContentLoaded', () => {
-    Fancybox.bind('[data-fancybox]', {});
-})
+// Перенес инициализацию в general.js
+
+// window.addEventListener('DOMContentLoaded', () => {
+//     Fancybox.bind('[data-fancybox]', {});
+// })

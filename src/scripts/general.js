@@ -12,7 +12,6 @@ const projectOptions = {
 
 
 //=require components/base/menu.js
-//=require components/base/adapt.js
 //=require components/base/search.js
 //=require components/base/headerFixed.js
 //=require components/base/breadcrumbs.js
@@ -33,8 +32,9 @@ const pageReady = function(e) {
   initLazyLoadBlock(e);
   initDefaultElements(e);
   showMobileMenu();
-  useDynamicAdapt();
   breadcrumbs();
+
+  Fancybox.bind('[data-fancybox]', {});
 }
 
 document.addEventListener("DOMContentLoaded", pageReady);
