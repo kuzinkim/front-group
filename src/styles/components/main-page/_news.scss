@@ -115,6 +115,26 @@
         margin-left: -25px;
         margin-right: -25px;
 
+        a{
+            position: relative;
+            overflow: hidden;
+            border-radius: 19px;
+            display: block;
+
+            &::after{
+                content: '';
+                padding-top: 50%;
+                display: block;
+            }
+
+            img{
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
         @media screen and (max-width:500px){
             margin-left: -12px;
             margin-right: -12px;

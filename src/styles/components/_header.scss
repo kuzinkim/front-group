@@ -434,6 +434,7 @@
         margin-right: 50px;
         cursor: pointer;
         position: relative;
+        color: #510017;
         transition: transform .2s ease .1s;
 
         &[data-count]::after{
