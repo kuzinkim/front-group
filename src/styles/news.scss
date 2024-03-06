@@ -1,26 +1,104 @@
 @import 'components/main-page/news';
 
 .news-page{
-    height: 1620px;
-
-    @media screen and (max-width:1699px){
-        height: auto;
-    }
 
     &__block{
         display: flex;
         margin: 0 -10px;
+        flex-wrap: wrap;
 
-        @media screen and (max-width:1699px){
-            overflow: auto;
+        @media screen and (max-width:500px){
+            margin: 0;
+        }
+    }
 
-            &::-webkit-scrollbar{
-                display: none;
-            }
+    .news__item{
+        flex: none;
+        width: calc(25% - 20px);
+        margin-bottom: 20px;
+        align-self: auto;
+
+        @media screen and (max-width:1460px){
+            width: calc(33.33% - 20px);
         }
 
-        &_md{
-            margin-bottom: 38px;
+        @media screen and (max-width:1199px){
+            width: calc(50% - 20px);
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media screen and (min-width:501px) and (max-width:767px){
+            padding-top: 22px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        @media screen and (max-width:500px){
+            width: 100%;
+            margin-bottom: 10px;
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
+    .news__description{
+        @media screen and (min-width:501px) and (max-width:767px){
+            display: none;
+        } 
+    }
+
+    .news__img{
+        @media screen and (min-width:501px) and (max-width:767px){
+            margin-left: -20px;
+            margin-right: -20px;
+        }
+    }
+
+    .news__bottom{
+        @media screen and (max-width:1199px){
+            margin-top: auto;
+        }
+    }
+
+    .news__preview{
+        @media screen and (max-width:1199px){
+            display: none;
+        }
+    }
+
+    .news__title{
+        text-decoration: none;
+        display: block;
+
+        @media screen and (min-width:501px) and (max-width:767px){
+            margin-bottom: 70px;
+            font-size: 18px;
+        }
+    }
+
+    .news__data{
+        @media screen and (min-width:501px) and (max-width:767px){
+            margin-bottom: 40px;
+            font-size: 18px;
+        }
+    }
+
+    .news__day{
+        @media screen and (min-width:501px) and (max-width:767px){
+            font-size: 76px;
+        }
+    }
+
+    &__wrapper{
+        margin-top: 80px;
+
+        @media screen and (max-width:1199px){
+            margin-top: 20px;
+        }
+
+        .pagination{
+            justify-content: center;
         }
     }
 }
