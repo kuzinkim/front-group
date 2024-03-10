@@ -494,6 +494,10 @@
     margin-right: auto;
     transition: opacity .25s;
 
+    &_in-cart {
+      background-color: rgba(#75262f, .7);
+    }
+
     &:hover {
       opacity: .65;
     }

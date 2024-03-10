@@ -31,9 +31,13 @@ const bindCompareItemsSlider = (swiperNode, index) => {
         }
     })
 
+    bindButtons(swiperNode)
+
     const cloneSwiper = (node) => {
         const clone = node.cloneNode(true);
         clone.classList.add('compare-section__items-slider_clone');
+
+        bindButtons(clone);
 
         node.after(clone);
 
@@ -165,11 +169,17 @@ const createAdaptiveStickyHeader = (root, swiperInitial, clonedSwiper) => {
             const slideNode = document.createElement('div');
             slideNode.classList.add('swiper-slide');
             slideNode.append(slide.querySelector('.compare-item__name').cloneNode(true));
+            slideNode.setAttribute('data-item-id', slide.querySelector('.compare-item').getAttribute('data-item-id'))
 
             const btn = document.createElement('button');
             btn.classList.add('compare-item__to-cart');
             btn.setAttribute('type', 'button');
             btn.innerText = 'В корзину';
+
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                addToCart(btn);
+            })
 
             slideNode.append(btn);
 
@@ -222,6 +232,150 @@ const createAdaptiveStickyHeader = (root, swiperInitial, clonedSwiper) => {
     })
 }
 
+const clearSection = (btn) => {
+
+    if (!btn) {
+        return false;
+    }
+
+    const id = btn.closest('.compare-section') && btn.closest('.compare-section').getAttribute('data-category-id');
+
+    if (!id) {
+        return false;
+    }
+
+    fetch(`/ajax/compare.php?section=${id}`)
+        .then((resp) => resp.json())
+        .then(({success}) => {
+            if (success) {
+                window.location.reload();
+            } else {
+                throw new Error('Серверная ошибка удаления.')
+            }
+        }).catch((e) => {
+        console.warn(e.message)
+    })
+}
+
+const clearAll = () => {
+    fetch(`/ajax/compare.php?clear=Y`)
+        .then((resp) => resp.json())
+        .then(({success}) => {
+            if (success) {
+                window.location.reload();
+            } else {
+                throw new Error('Серверная ошибка очистки.')
+            }
+        }).catch((err) => {
+        console.warn(err)
+    })
+}
+
+const deleteCompareItem = (btn) => {
+    if (!btn) {
+        return false;
+    }
+
+    const id = btn.closest('.compare-item') && btn.closest('.compare-item').getAttribute('data-item-id');
+
+    if (!id) {
+        return false;
+    }
+
+    fetch(`/ajax/compare.php?id=${id}&delete=Y`)
+        .then((resp) => resp.json())
+        .then((resp) => {
+            if (resp.success) {
+                window.location.reload()
+            } else {
+                throw new Error('Серверная ошибка удаления товара из сравнения')
+            }
+        })
+        .catch((err) => {
+            console.log(err)
+        })
+}
+
+const addToCart = (btn) => {
+    if (!btn) {
+        return false;
+    }
+
+    const id = btn.closest('.compare-item') && btn.closest('.compare-item').getAttribute('data-item-id')
+    || btn.closest('.swiper-slide') && btn.closest('.swiper-slide').getAttribute('data-item-id');
+
+    if (!id) {
+        return false;
+    }
+
+    const headerBasketBtn = document.querySelector('.headerActions__btn_basket');
+
+    if (btn.classList.contains('compare-item__to-cart_in-cart')) {
+        fetch(`/ajax/basket.php?id=${id}&delete=Y`)
+            .then((resp) => resp.json())
+            .then((resp) => {
+                if (resp.success) {
+                    btn.classList.remove('compare-item__to-cart_in-cart');
+                    if (resp.count !== undefined && headerBasketBtn) {
+                        if (!isNaN(resp.count)) {
+                            headerBasketBtn.setAttribute('data-count', String(resp.count))
+                        }
+                    }
+                    btn.innerText('В корзину')
+                } else {
+                    throw new Error('Серверная ошибка удаления товара из корзины')
+                }
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+    } else {
+        fetch(`/ajax/basket.php?id=${id}&count=1&json=1`)
+            .then((resp) => resp.json())
+            .then((resp) => {
+                if (resp.success) {
+                    btn.classList.add('compare-item__to-cart_in-cart');
+                    Fancybox.show([{
+                        src: `<div class="modal-cart-confirmation">
+<div>Товар добавлен в корзину.</div>
+<div class="modal-cart-confirmation__buttons">
+<a href="/basket/">Перейти в корзину</a>
+<div class="is-close-btn" onclick="Fancybox.close()">Продолжить</div>
+</div>
+</div>`, type: "html",
+                    },]);
+                    btn.innerText('В корзине');
+                    if (resp.count !== undefined && headerBasketBtn) {
+                        if (!isNaN(resp.count)) {
+                            headerBasketBtn.setAttribute('data-count', String(resp.count))
+                        }
+                    }
+                } else {
+                    throw new Error('Серверная ошибка добавления товара в корзину')
+                }
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+    }
+}
+
+const bindButtons = (root) => {
+    for (const addToCartBtn of root.querySelectorAll('.compare-item__to-cart')) {
+        addToCartBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            addToCart(addToCartBtn);
+        })
+    }
+
+    for (const deleteItemBtn of root.querySelectorAll('.compare-item__del')) {
+        deleteItemBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            deleteCompareItem(deleteItemBtn)
+        })
+    }
+}
+
 window.addEventListener('DOMContentLoaded', () => {
     const swiperNodes = [...document.querySelectorAll('.compare-section__items-slider .swiper')];
     if (swiperNodes.length) {
@@ -231,4 +385,32 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     bindCompareTabs(document.querySelector('.compare__toggles'));
+
+    for (const clearSectionBtn of document.querySelectorAll('.compare-section__remove-section')) {
+        clearSectionBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            clearSection(clearSectionBtn)
+        })
+    }
+
+    for (const clearAllBtn of document.querySelectorAll('.compare__clear')) {
+        clearAllBtn.addEventListener('click', (e) => {
+            e.preventDefault()
+            clearAll();
+        })
+    }
+
+    /*for (const deleteItemBtn of document.querySelectorAll('.compare-item__del')) {
+        deleteItemBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            deleteCompareItem(deleteItemBtn)
+        })
+    }
+
+    for (const addToCartBtn of document.querySelectorAll('.compare-section__items-slider:not(.compare-section__items-slider_clone) .compare-item__to-cart')) {
+        addToCartBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            addToCart(addToCartBtn);
+        })
+    }*/
 })

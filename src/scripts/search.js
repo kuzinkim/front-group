@@ -1,3 +1,4 @@
+//=require components/base/item-card.js
 const bindSearchTabs = (node) => {
     if (!node) {
         return false;
@@ -23,5 +24,9 @@ const bindSearchTabs = (node) => {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-    bindSearchTabs(document.querySelector('.search-page'))
+    bindSearchTabs(document.querySelector('.search-page'));
+
+    for (const cardItemNode of document.querySelectorAll('.item-card')) {
+        bindItemCard(cardItemNode)
+    }
 })

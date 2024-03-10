@@ -40,14 +40,65 @@ const bindContactsTabs = (node) => {
     })
 }
 
+const bindFeedbackForm = (formNode) => {
+    if (!formNode) {
+        return false;
+    }
+
+    for (const phoneInput of formNode.querySelectorAll('input[type="tel"]')) {
+        if (!!Inputmask) {
+            Inputmask({"mask": ['+7 999 999-99-99', '8 999 999-99-99'], showMaskOnHover: true,}).mask(phoneInput);
+        }
+    }
+
+    const messageNode = formNode.querySelector('.form__item_text');
+    const initialMessage = messageNode.innerHTML;
+
+    formNode.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        fetch(formNode.getAttribute('action'), {
+            method: "POST",
+            body: new FormData(formNode),
+        }).then((resp) => resp.json())
+            .then(({success}) => {
+                if (success) {
+
+                    messageNode.innerHTML = 'Спасибо за ваш отзыв!';
+                    formNode.querySelector('[type="submit"]').setAttribute('disabled', 'disabled')
+
+                    setTimeout(() => {
+                        messageNode.innerHTML = initialMessage;
+                        Fancybox.close(true);
+                        formNode.querySelector('[type="submit"]').removeAttribute('disabled')
+                    }, 10000)
+
+                    formNode.reset();
+                } else {
+                    messageNode.innerHTML = 'Не удалось отправить отзыв. Пожалуйста, попробуйте ещё раз.';
+
+                    setTimeout(() => {
+                        messageNode.innerHTML = initialMessage;
+                    }, 15000)
+                }
+            }).catch(() => {
+            messageNode.innerHTML = 'Не удалось отправить отзыв. Пожалуйста, попробуйте ещё раз.';
+
+            setTimeout(() => {
+                messageNode.innerHTML = initialMessage;
+            }, 15000)
+        })
+    })
+
+
+}
+
 window.addEventListener('DOMContentLoaded', () => {
     bindContactsTabs(document.querySelector('.contacts-page'));
 
     Fancybox.bind('[data-fancybox]', {});
 
-    for (const phoneInput of document.querySelectorAll('input[type="tel"]')) {
-        if (!!Inputmask) {
-            Inputmask({"mask": ['+7 999 999-99-99', '8 999 999-99-99'], showMaskOnHover: true,}).mask(phoneInput);
-        }
+    for (const formNode of document.querySelectorAll('.form_feedback')) {
+        bindFeedbackForm(formNode)
     }
 })

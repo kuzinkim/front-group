@@ -317,6 +317,7 @@ const bindCartForm = (formNode) => {
             .then((resp) => resp.json())
             .then(({success, number, mail}) => {
                 if (success) {
+                    formNode.querySelector('[type="submit"]').setAttribute('disabled', 'disabled')
                     Fancybox.show([
                         {
                             src: `<div class="modal-cart-confirmation">
@@ -329,6 +330,10 @@ const bindCartForm = (formNode) => {
                         }]);
                     formNode.reset();
                     clearCart();
+
+                    setTimeout(() => {
+                        formNode.querySelector('[type="submit"]').removeAttribute('disabled')
+                    }, 15000)
 
                 } else {
                     throw new Error()

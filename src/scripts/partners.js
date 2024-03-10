@@ -20,11 +20,13 @@ const bindPartnersForm = (formNode) => {
         }).then((resp) => resp.json())
             .then(({success}) => {
                 if (success) {
+                    formNode.querySelector('[type="submit"]').setAttribute('disabled', 'disabled')
 
                     messageNode.innerHTML = 'Ваша заявка успешно отправлена. Мы свяжемся с вами в ближайшее время.';
 
                     setTimeout(() => {
                         messageNode.innerHTML = initialMessage;
+                        formNode.querySelector('[type="submit"]').removeAttribute('disabled')
                     }, 10000)
 
                     formNode.reset();
