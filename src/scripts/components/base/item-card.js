@@ -33,6 +33,17 @@ const bindLikeBtn = (btnNode, id) => {
                                 favHeaderBtn.setAttribute('data-count', String(resp.count))
                             }
                         }
+
+                        const isFav = document.querySelector('.catalog_favorites')
+
+                        if (isFav) {
+                            const currentItem = e.target.closest('.catalog__item');
+
+                            if (currentItem) {
+                                currentItem.remove()
+                            }
+                        }
+
                     } else {
                         throw new Error('Серверная ошибка удаления товара из понравившихся')
                     }
