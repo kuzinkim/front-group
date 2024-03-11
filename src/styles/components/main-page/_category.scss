@@ -248,4 +248,37 @@
             }
         }
     }
+
+    &__more{
+        display: flex;
+        flex-wrap: wrap;
+        grid-column: 1/13;
+        margin: 0 -10px;
+
+        @media screen and (max-width:495px){
+            margin: 0 -7.5px;
+        }
+
+        .category__item{
+            min-height: 336px;
+            margin: 0 10px;
+            width: calc(25% - 20px);
+            margin-bottom: 17px;
+
+            @media screen and (max-width:1199px){
+                width: calc(33.33% - 20px);
+            }
+
+            @media screen and (max-width:767px){
+                min-height: 130px;
+            }
+
+            @media screen and (max-width:495px){
+                width: calc(33.33% - 15px);
+                min-height: 53px;
+                margin: 0 7.5px;
+                margin-bottom: 15px;
+            }
+        }
+    }
 }
