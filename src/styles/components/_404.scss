@@ -1,0 +1,51 @@
+.errorBlock{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 80px;
+    padding-top: 80px;
+    text-align: center;
+
+    &__main{
+        width: 460px;
+        max-width: 100%;
+        border: 1px solid rgba(0,0,0,.27);
+        border-radius: 5px;
+        padding: 40px;
+
+        @media screen and (max-width:599px){
+            border: 0;
+            padding: 0;
+            width: 420px;
+        }
+    }
+
+    &__title{
+        line-height: 1;
+        font-weight: 700;
+        font-size: 120px;
+        color: #510017;
+    }
+
+    &__subtitle{
+        margin: 20px 0 0;
+        color: #000;
+        font-weight: 700;
+
+        @media screen and (max-width:767px){
+            font-size: 22px;
+        }
+    }
+
+    &__text{
+        margin: 20px 0 0;
+        color: #000;
+    }
+
+    &__link{
+        width: 100%;
+        font-size: 18px;
+        padding: 16px 32px;
+        margin: 40px 0 20px;
+    }
+}
