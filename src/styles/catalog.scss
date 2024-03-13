@@ -895,6 +895,8 @@
   }
 
   &__actions {
+    text-align: center;
+
     &_mobile {
       display: none;
 
@@ -928,6 +930,21 @@
 
       &:active {
         opacity: .8;
+      }
+    }
+
+    #del_filter {
+      border: 0;
+      background-color: transparent;
+      text-decoration: underline;
+      color: var(--color-accent);
+      padding: 0;
+      margin-top: 16px;
+      font-size: 14px;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: none;
       }
     }
   }

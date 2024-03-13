@@ -164,7 +164,7 @@ const bindCatalogBrandsAdaptive = (node) => {
     }
 
     if (!window.BRANDS_ADAPTIVE_3_COLUMNS
-        && window.matchMedia('(min-width: 1001px) and (max-width: 1350px)').matches) {
+        && window.matchMedia('(min-width: 1200px) and (max-width: 1350px)').matches) {
         console.log(1200)
         createDesktopColumns3();
 
@@ -175,14 +175,14 @@ const bindCatalogBrandsAdaptive = (node) => {
     }
 
     if (!window.BRANDS_ADAPTIVE_LISTENERS_BINDED
-        && window.matchMedia('(max-width: 1000px)').matches) {
+        && window.matchMedia('(max-width: 1199px)').matches) {
         bindTitlesAdaptive();
 
         console.log('listeners bound')
     }
 
     if ((window.BRANDS_ADAPTIVE_4_COLUMNS || window.BRANDS_ADAPTIVE_3_COLUMNS)
-        && window.matchMedia('(max-width: 1000px)').matches) {
+        && window.matchMedia('(max-width: 1199px)').matches) {
 
         console.log(900)
 
