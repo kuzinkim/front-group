@@ -106,7 +106,13 @@
     &__reviews{
         grid-row: 2/3;
         grid-column: 1/4;
-        max-width: 284px;
+        max-width: 150px;
+
+        iframe{
+            width: 100%;
+            display: block;
+            max-height: 50px;
+        }
 
         @media screen and (max-width:1570px){
             margin-top: 40px;
@@ -123,7 +129,6 @@
         border: 0;
         cursor: pointer;
         margin-top: auto;
-        margin-bottom: 12px;
 
         @media screen and (max-width:999px){
             max-width: 100%;
