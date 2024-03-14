@@ -895,24 +895,24 @@
             </section>
 
             <div id="callbackForm" class="modal modal_white" style="display: none;">
-                <div class="modal__title">Заказать звонок</div>
                 <div class="modal__body">
-                    <form action="#" class="form form_callcback">
+                    <form action="ajax/callback.php" class="form form_callcback">
+                        <div class="form__title">Заказать звонок</div>
                         <div class="form__item">
                             <label>Имя*</label>
-                            <input type="text" name="name" placeholder="Введите ваше имя" required>
+                            <input type="text" name="NAME" placeholder="Введите ваше имя" required>
                         </div>
                         <div class="form__item">
                             <label>Телефон*</label>
-                            <input type="text" name="phone" placeholder="+ 7 ( ___ ) ____ - ___ - ___" required>
+                            <input type="tel" name="PHONE" placeholder="+ 7 ( ___ ) ____ - ___ - ___" required inputmode="text">
                         </div>
                         <div class="form__item">
                             <label>Регион*</label>
-                            <input type="text" name="region" placeholder="Введите ваш регион" required>
+                            <input type="text" name="REGION" placeholder="Введите ваш регион" required>
                         </div>
                         <div class="form__item">
                             <label>Комментарий</label>
-                            <textarea type="text" name="comment" placeholder="Ваше сообщение"></textarea>
+                            <textarea type="text" name="MESSAGES" placeholder="Ваше сообщение"></textarea>
                         </div>
                         <div class="form__actions">
                             <div class="form__text">
@@ -923,6 +923,11 @@
                             </button>
                         </div>
                     </form>
+                    <div class="modal__success">
+                        <div class="modal__success-title">Спасибо</div>
+                        <div class="modal__success-text">В ближайшее время с Вами свяжется менеджер для уточнения всех деталей.</div>
+                        <a class="modal__success-btn" href="#">В каталог</a>
+                    </div>
                 </div>
             </div>
         </main>
@@ -1035,6 +1040,7 @@
     <script src="build\scripts\vendors\lozad.min.js"></script>
     <script src="build\scripts\vendors\swiper-bundle.min.js"></script>
     <script src="build/scripts/vendors/fancybox.umd.min.js"></script>
+    <script src="build/scripts/vendors/inputmask.min.js"></script>
     <script src="build\scripts\general.min.js"></script>
     <script src="build\scripts\main-page.min.js"></script>
 </body>

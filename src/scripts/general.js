@@ -15,6 +15,7 @@ const projectOptions = {
 //=require components/base/search.js
 //=require components/base/headerFixed.js
 //=require components/base/breadcrumbs.js
+//=require components/base/form.js
 //=require components/base/footer.js
 //=require helpers/trottle.js
 //=require helpers/toggle-visibility.js
