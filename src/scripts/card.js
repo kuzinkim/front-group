@@ -29,4 +29,8 @@ const bindProductGallery = (node) => {
 
 document.addEventListener('DOMContentLoaded', function () {
     bindProductGallery(document.querySelector('.card__slider'), false);
+
+    for (const cardNode of document.querySelectorAll('.card')) {
+        bindItemCard(cardNode)
+    }
 })

@@ -93,19 +93,19 @@
             opacity: 1;
         }
 
-        &_bannye{
+        &_bannye_shtuchki{
             .brands-main__text::after{
                 background-color: #00652E;
             }
         }
 
-        &_pechnyie{
+        &_pechnye_shtuchki{
             .brands-main__text::after{
                 background-color: #C92434;
             }
         }
 
-        &_blumen{
+        &_blumenhaus{
             .brands-main__text::after{
                 background-color: #3DAE2B;
             }
@@ -123,7 +123,7 @@
             }
         }
 
-        &_aroma{
+        &_aroma_republic{
             .brands-main__text::after{
                 background-color: #1FA44A;
             }
@@ -135,7 +135,7 @@
             }
         }
 
-        &_hotpot{
+        &_hot_pot{
             .brands-main__text::after{
                 background-color: #8DC63F;
             }

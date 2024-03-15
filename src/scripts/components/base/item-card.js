@@ -194,7 +194,13 @@ const bindItemCard = (itemCardNode) => {
 
     bindCompareBtn(itemCardNode.querySelector('.js-item-card-compare'), itemId);
 
-    const name = itemCardNode.querySelector('.item-card__name').innerText;
+    let name
+
+    if(!itemCardNode.classList.contains('card')){
+        name = itemCardNode.querySelector('.item-card__name').innerText;
+    }else{
+        name = document.querySelector('.page-title_card h1').innerText;
+    }
 
     for (const cartBtn of itemCardNode.querySelectorAll('.js-item-card-cart')) {
         bindCartBtn(cartBtn, itemId, name)

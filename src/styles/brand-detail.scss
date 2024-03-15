@@ -6,6 +6,9 @@
         border-radius: 20px;
         border: 2px solid rgba(0, 0, 0, 0.27);
         padding-right: 44px;
+        padding-top: 71px;
+        padding-bottom: 71px;
+        align-items: center;
 
         @media screen and (max-width:1570px){
             flex-direction: column;
@@ -44,8 +47,6 @@
 
     &__text{
         flex: 1;
-        padding-top: 71px;
-        padding-bottom: 71px;
         column-count: 2;
         column-gap: 95px;
         margin-left: 40px;
