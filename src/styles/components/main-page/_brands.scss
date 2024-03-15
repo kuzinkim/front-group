@@ -220,6 +220,8 @@
         font-size: 16px;
         position: relative;
         text-align: center;
+        width: 100%;
+        max-width: 200px;
 
         @media screen and (max-width:1199px){
             margin-top: 12px;
@@ -235,8 +237,8 @@
             position: absolute;
             bottom: calc(100% + 6px);
             height: 7px;
-            left: -10px;
-            right: -10px;
+            left: 0;
+            right: 0;
             opacity: 0;
             visibility: hidden;
 
