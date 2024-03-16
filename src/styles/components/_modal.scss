@@ -192,6 +192,117 @@
             text-align: center;
         }
     }
+
+    &_card{
+        max-width: 1800px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        padding-left: 53px;
+        padding-right: 53px;
+    }
+
+    &-card{
+
+        &__title{
+            font-size: 30px;
+            line-height: calc(36/30);
+            color: #510017;
+            margin-bottom: 23px;
+        }
+
+        &__inner{
+            display: flex;
+            align-items: center;
+        }
+
+        &__img{
+            margin-right: 43px;
+            flex-shrink: 0;
+            img{
+                display: block;
+                height: 118px;
+                width: auto;
+                max-width: 100%;
+                object-fit: contain;
+            }
+        }
+
+        &__name{
+            text-decoration: none;
+            color: #510017;
+            font-size: 24px;
+            line-height: calc(28/24);
+            display: block;
+            margin-right: 20px;
+            max-width: 581px;
+        }
+
+        &__prices{
+            display: flex;
+            margin-right: 59px;
+            column-gap: 97px;
+            margin-left: auto;
+        }
+
+        &__price{
+            font-size: 24px;
+            line-height: calc(28/24);
+            color: #510017;
+
+            &_old{
+                color: #8D7D77;
+                text-decoration: line-through;
+            }
+        }
+
+        &__wrapper{
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+        }
+
+        &__actions{
+            display: flex;
+            column-gap: 32px;
+            margin-left: auto;
+            width: 510px;
+        }
+
+        &__btn{
+            width: 100%;
+            max-width: 239px;
+            text-align: center;
+            font-size: 18px;
+            line-height: calc(23/18);
+            color: #fff;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            display: block;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color .2s ease;
+
+            &_cart{
+                background-color: #F58220;
+                text-decoration: none;
+                
+                &:hover{
+                    background-color: rgba(#F58220, .7); 
+                }
+            }
+
+            &_close{
+                background-color: #510017;
+                border: 0;
+
+                &:hover{
+                    background-color: rgba(#510017, .7); 
+                }
+            }
+        }
+    }
 }
 
 .form {
