@@ -243,7 +243,7 @@
       width: 100%;
       overflow: hidden;
       text-overflow: ellipsis;
-      height: 38px;
+      min-height: 38px;
 
       @media screen and (max-width: 720px) {
         height: 18px;
@@ -441,10 +441,7 @@
     width: 100%;
     padding: 10px 15px;
     border-bottom: 1px solid #e5e5e5;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    height: 38px;
+    min-height: 38px;
     text-align: center;
     font-size: 14px;
     color: #000000;

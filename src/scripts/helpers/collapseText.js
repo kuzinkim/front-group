@@ -1,5 +1,12 @@
 const collapseChildItems = function (selector, setOptions) {
+    if (!selector) {
+        return false;
+    }
+
     const blocks = document.querySelectorAll(selector + ':not(.collapseElement)');
+
+    console.log(blocks)
+
     const options = {
         children: setOptions.children || '*',                   // html selector (string)
         targetHeight: setOptions.targetHeight || null,          // height block (number)

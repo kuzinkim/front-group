@@ -99,6 +99,54 @@ const bindCompareItemsSlider = (swiperNode, index) => {
     })
 }
 
+const updateSizes = () => {
+    const compareItems = [...document.querySelectorAll('.compare__section_active .compare-item')];
+    const compareTitles = [...document.querySelectorAll('.compare__section_active .compare-title-column__row_char')];
+
+    const rowSizes = [];
+
+    compareItems.map((item) => {
+        const rows = [...item.querySelectorAll('.compare-item__char')];
+        rows.map((row, index) => {
+            if (!rowSizes[index]) {
+                rowSizes.push(Math.ceil(row.scrollHeight));
+                return false;
+            }
+            if (rowSizes[index] < row.offsetHeight) {
+                rowSizes[index] = Math.ceil(row.scrollHeight);
+                return false;
+            }
+            return false;
+        })
+    })
+
+    console.log(rowSizes)
+
+    compareTitles.map((title, index) => {
+        title.style.height = rowSizes[index] + 'px';
+    })
+    compareItems.map((item) => {
+        const rows = [...item.querySelectorAll('.compare-item__char')];
+        rows.map((row, index) => {
+            row.style.height = rowSizes[index] + 'px';
+        })
+    })
+
+    if (window.matchMedia('(max-width: 720px)').matches) {
+        const activeTabBody = document.querySelector('.compare__section_active');
+        const activeTabBodyTop = activeTabBody.getBoundingClientRect().top + window.scrollY;
+
+        const firstItem = document.querySelector('.compare__section_active .compare-item');
+        const rows = [...firstItem.querySelectorAll('.compare-item__char')];
+
+        rows.map((row, index) => {
+            const coord = row.getBoundingClientRect().top + window.scrollY - activeTabBodyTop;
+
+            compareTitles[index].style.top = `${coord - 20}px`;
+        })
+    }
+}
+
 const bindCompareTabs = (node) => {
     if (!node) {
         return false;
@@ -133,6 +181,8 @@ const bindCompareTabs = (node) => {
             toggle.classList.add('compare__tab-button_active');
             toggle.scrollIntoView({behavior: "smooth"});
             target.classList.add('compare__section_active');
+
+            setTimeout(() => {updateSizes();}, 100)
         })
     })
 }
@@ -413,4 +463,8 @@ window.addEventListener('DOMContentLoaded', () => {
             addToCart(addToCartBtn);
         })
     }*/
+
+    updateSizes();
 })
+
+window.addEventListener('resize', updateSizes);
