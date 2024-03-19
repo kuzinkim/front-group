@@ -9,7 +9,6 @@ const bindCallbackForm  = (formNode) => {
     }
   
     const messageNode = formNode.querySelector('.form__text');
-    const modalTitle = formNode.querySelector('.modal__title');
     const initialMessage = messageNode.innerHTML;
   
     formNode.addEventListener('submit', (e) => {
@@ -21,14 +20,14 @@ const bindCallbackForm  = (formNode) => {
       }).then((resp) => resp.json())
           .then(({success}) => {
             if (success) {
-              console.log('success')
               formNode.querySelector('[type="submit"]').setAttribute('disabled', 'disabled')
-            
-              modalTitle.innerHTML = 'Спасибо'
+
               formNode.classList.add('sent')
   
               setTimeout(() => {
-                formNode.querySelector('[type="submit"]').removeAttribute('disabled')
+                formNode.querySelector('[type="submit"]').removeAttribute('disabled');
+                Fancybox.close(true);
+                formNode.classList.remove('sent')
               }, 10000)
   
               formNode.reset();
