@@ -2,6 +2,9 @@ function headerFixed() {
   let body = document.querySelector('body')
   let header = document.querySelector('header');
   let firstScreen = document.querySelector('.js-first-screen')
+  let comaprePage = document.querySelector('.compare')
+
+  if(comaprePage) return false
 
   let headerHeight = header.offsetHeight;
 

@@ -403,7 +403,10 @@
         color: #6A6363;
         font-weight: 700;
         margin-left: 34px;
-        text-decoration: none;
+
+        &:hover{
+            text-decoration: none;
+        }
         
         @media screen and (max-width:500px){
             margin-left: 11px;

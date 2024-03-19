@@ -360,6 +360,9 @@ const addToCart = (btn) => {
 
     const headerBasketBtn = document.querySelector('.headerActions__btn_basket');
 
+    let name = btn.getAttribute('data-name')
+    let srcImg = btn.getAttribute('data-img')
+
     if (btn.classList.contains('compare-item__to-cart_in-cart')) {
         fetch(`/ajax/basket.php?id=${id}&delete=Y`)
             .then((resp) => resp.json())
@@ -386,13 +389,23 @@ const addToCart = (btn) => {
                 if (resp.success) {
                     btn.classList.add('compare-item__to-cart_in-cart');
                     Fancybox.show([{
-                        src: `<div class="modal-cart-confirmation">
-<div>Товар добавлен в корзину.</div>
-<div class="modal-cart-confirmation__buttons">
-<a href="/basket/">Перейти в корзину</a>
-<div class="is-close-btn" onclick="Fancybox.close()">Продолжить</div>
-</div>
-</div>`, type: "html",
+                        src: `<div class="modal modal_white modal_card">
+                        <div class="modal__body modal-card">
+                            <div class="modal-card__title">Товар добавлен в корзину</div>
+                            <div class="modal-card__inner">
+                                <span class="modal-card__img">
+                                    <img src="${srcImg}" alt="">
+                                </span>
+                                <span class="modal-card__name">"${name}"</span>
+                                <div class="modal-card__wrapper">
+                                    <div class="modal-card__actions">
+                                        <a href="/cart" class="modal-card__btn modal-card__btn_cart">В корзину</a>
+                                        <button type="button" class="modal-card__btn modal-card__btn_close" onclick="Fancybox.close()">В каталог</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>`, type: "html",
                     },]);
                     btn.innerText('В корзине');
                     if (resp.count !== undefined && headerBasketBtn) {
