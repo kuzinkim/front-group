@@ -3,20 +3,27 @@ function headerFixed() {
   let header = document.querySelector('header');
   let firstScreen = document.querySelector('.js-first-screen')
 
-  if (!firstScreen) return false
-
-  let firstScreenHeight = firstScreen.offsetHeight;
-
   let headerHeight = header.offsetHeight;
 
-  let sumOffset = headerHeight + firstScreenHeight
+  if (firstScreen){
+    let firstScreenHeight = firstScreen.offsetHeight;
+    let sumOffset = headerHeight + firstScreenHeight
 
-  if (window.pageYOffset > sumOffset) {
-    header.classList.add("fixed");
-    body.style.paddingTop = headerHeight + 'px'
-  } else {
-    header.classList.remove("fixed");
-    body.style.paddingTop = ''
+    if (window.pageYOffset > sumOffset) {
+      header.classList.add("fixed");
+      body.style.paddingTop = headerHeight + 'px'
+    } else {
+      header.classList.remove("fixed");
+      body.style.paddingTop = ''
+    }
+  }else{
+    if (window.pageYOffset > headerHeight) {
+      header.classList.add("fixed");
+      body.style.paddingTop = headerHeight + 'px'
+    } else {
+      header.classList.remove("fixed");
+      body.style.paddingTop = ''
+    }
   }
 }
 
