@@ -478,8 +478,10 @@
 }
 
 .fancybox__backdrop {
-    background-color: rgba(0, 0, 0, 0.5);
-}
+    background-color: #ffffff;
+    opacity: .5;
+    filter: blur(10px);
+  }
 
 .fancybox__content>.f-button.is-close-btn {
     top: 28px;
