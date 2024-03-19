@@ -21,6 +21,7 @@ const bindCallbackForm  = (formNode) => {
       }).then((resp) => resp.json())
           .then(({success}) => {
             if (success) {
+              console.log('success')
               formNode.querySelector('[type="submit"]').setAttribute('disabled', 'disabled')
             
               modalTitle.innerHTML = 'Спасибо'
