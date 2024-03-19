@@ -1016,6 +1016,7 @@
 
       &.disabled {
         cursor: default;
+        pointer-events: none;
         span, i {
           color: #cccccc;
         }
