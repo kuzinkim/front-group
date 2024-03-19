@@ -130,6 +130,11 @@ const bindCartBtn = (btnNode, id, name) => {
     btnNode.addEventListener('click', (e) => {
         e.preventDefault();
 
+        let name = btnNode.getAttribute('data-name');
+        let srcImg = btnNode.getAttribute('data-img');
+
+        console.log(name, srcImg)
+
         if (e.target.classList.contains('item-card__cart_in-cart')) {
 
             fetch(`/ajax/basket.php?id=${id}&delete=Y`)
@@ -157,13 +162,28 @@ const bindCartBtn = (btnNode, id, name) => {
                     if (resp.success) {
                         e.target.classList.add('item-card__cart_in-cart');
                         Fancybox.show([{
-                            src: `<div class="modal-cart-confirmation">
-<div>Товар <b>"${name}"</b> добавлен в корзину.</div>
-<div class="modal-cart-confirmation__buttons">
-<a href="/basket/">Перейти в корзину</a>
-<div class="is-close-btn" onclick="Fancybox.close()">Продолжить покупки</div>
-</div>
-</div>`, type: "html",
+                            src: `<div class="modal modal_white modal_card">
+                                    <div class="modal__body modal-card">
+                                        <div class="modal-card__title">Товар добавлен в корзину</div>
+                                        <div class="modal-card__inner">
+                                            <span class="modal-card__img">
+                                                <img src="${srcImg}" alt="">
+                                            </span>
+                                            <span class="modal-card__name">"${name}"</span>
+                                            <div class="modal-card__wrapper">
+                                                <div class="modal-card__prices">
+                                                    <div class="modal-card__price">4&nbsp;596&nbsp;₽</div>
+                                                    <div class="modal-card__price modal-card__price_old">4&nbsp;596&nbsp;₽</div>
+                                                </div>
+                                                <div class="modal-card__actions">
+                                                    <a href="/cart" class="modal-card__btn modal-card__btn_cart">В корзину</a>
+                                                    <button type="button" class="modal-card__btn modal-card__btn_close" onclick="Fancybox.close()">В каталог</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>`, 
+                            type: "html",
                         },]);
                         if (resp.count !== undefined && headerBasketBtn) {
                             if (!isNaN(resp.count)) {
