@@ -1013,6 +1013,19 @@
       &:hover::before {
         border-color: var(--color-accent);
       }
+
+      &.disabled {
+        cursor: default;
+        span, i {
+          color: #cccccc;
+        }
+        &:hover {
+          &::before {
+            border-color: #8d7d77;
+          }
+        }
+      }
+
     }
 
     input:checked + label::before {
