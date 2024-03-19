@@ -176,6 +176,10 @@ const checkEmpty = () => {
 
     if (!items.length) {
         wrapper.querySelector('.cart-table').style.display = 'none';
+        const form = document.querySelector('.cart__form');
+        if (form) {
+            form.style.display = 'none';
+        }
         const emptyNode = document.createElement('div');
         emptyNode.classList.add('cart__empty');
         emptyNode.innerHTML = 'В корзине пусто. <a href="/catalog/">Перейти в каталог</a>.';
