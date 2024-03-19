@@ -3,3 +3,5 @@ package-lock.json
 
 .idea/
 .vscode/
+build/styles/search-header.css
+src/styles/search-header.scss
