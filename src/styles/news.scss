@@ -43,9 +43,11 @@
     }
 
     .news__description{
-        @media screen and (min-width:501px) and (max-width:767px){
-            display: none;
-        } 
+        display: none;
+    }
+
+    .news__wrap{
+        max-height: none;
     }
 
     .news__img{
@@ -70,10 +72,16 @@
     .news__title{
         text-decoration: none;
         display: block;
+        min-height: 120px;
+        margin-bottom: 30px;
 
         @media screen and (min-width:501px) and (max-width:767px){
-            margin-bottom: 70px;
             font-size: 18px;
+            min-height: auto;
+        }
+
+        @media screen and (max-width:500px){
+            min-height: auto;
         }
     }
 
