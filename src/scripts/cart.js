@@ -307,9 +307,6 @@ const bindCartForm = (formNode) => {
     formNode.addEventListener('submit', (e) => {
         e.preventDefault();
 
-
-        console.log(collectData(formNode))
-
         fetch(formNode.getAttribute('action'), {
             method: "POST",
             cache: "no-cache",
@@ -322,16 +319,7 @@ const bindCartForm = (formNode) => {
             .then(({success, number, mail}) => {
                 if (success) {
                     formNode.querySelector('[type="submit"]').setAttribute('disabled', 'disabled')
-                    Fancybox.show([
-                        {
-                            src: `<div class="modal-cart-confirmation">
-<div class="modal-cart-confirmation__text">Оформлен заказ №${number}. Детали заказа отправлены на электронную почту ${mail}. В ближайшее время наш менеджер свяжется с Вами.</div>
-<div class="modal-cart-confirmation__buttons">
-<a href="/catalog/">Перейти в каталог</a>
-</div>
-</div>`,
-                            type: "html",
-                        }]);
+                    showMessageModal('В ближайшее время с Вами свяжется менеджер для уточнения всех деталей.', 'Спасибо за заказ!', '/catalog/', 'В каталог', number ? `Ваш заказ № ${number}` : undefined);
                     formNode.reset();
                     clearCart();
 
@@ -343,17 +331,7 @@ const bindCartForm = (formNode) => {
                     throw new Error()
                 }
             }).catch(() => {
-            Fancybox.show([
-                {
-                    src: `<div class="modal-cart-confirmation">
-<div class="modal-cart-confirmation__text">Произошла ошибка при оформлении заказа.<br>Попробуйте еще раз, или свяжитесь с нами по телефону <a href="tel:+74959882028">+7(495) 988-20-28</a></div>
-<div class="modal-cart-confirmation__buttons">
-<a onclick="window.location.reload()">Обновить страницу</a>
-<div class="is-close-btn" onclick="Fancybox.close()">Продолжить</div>
-</div>
-</div>`,
-                    type: "html",
-                }])
+            showMessageModal('Попробуйте обновить страницу и повторить заказ.', 'Ошибка', '/basket/', 'Обновить страницу');
         })
     })
 }

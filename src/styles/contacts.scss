@@ -322,7 +322,7 @@
   box-shadow: 0 0 5px rgba(#000000, .2);
   border-radius: 30px;
   padding: 50px 40px 30px;
-  background-color: #f5f5f5;
+  background-color: #ffffff;
   width: 100%;
   max-width: 420px;
 
@@ -358,7 +358,7 @@
           height: 50px;
           font-size: 14px;
           padding: 18px 12px 15px;
-          border: 0;
+          border: 1px rgba(#000000, .25) solid;
 
           &::placeholder {
             color: #c2c2c2;
@@ -369,11 +369,11 @@
           background-color: #ffffff;
           font-size: 14px;
           padding: 18px 12px 15px;
-          border: 0;
           width: 100%;
           display: block;
           height: 116px;
           border-radius: 15px;
+          border: 1px rgba(#000000, .25) solid;
           &::placeholder {
             color: #c2c2c2;
           }
@@ -419,10 +419,4 @@
       }
     }
   }
-}
-
-.fancybox__backdrop {
-  background-color: #ffffff;
-  opacity: .5;
-  filter: blur(10px);
 }

@@ -51,11 +51,13 @@ const bindFeedbackForm = (formNode) => {
         }
     }
 
+
     const messageNode = formNode.querySelector('.form__item_text');
     const initialMessage = messageNode.innerHTML;
 
     formNode.addEventListener('submit', (e) => {
         e.preventDefault();
+        formNode.querySelector('[type="submit"]').setAttribute('disabled', 'disabled')
 
         fetch(formNode.getAttribute('action'), {
             method: "POST",
@@ -63,17 +65,11 @@ const bindFeedbackForm = (formNode) => {
         }).then((resp) => resp.json())
             .then(({success}) => {
                 if (success) {
-
-                    messageNode.innerHTML = 'Спасибо за ваш отзыв!';
-                    formNode.querySelector('[type="submit"]').setAttribute('disabled', 'disabled')
-
+                    showMessageModal('за ваш отзыв. Это помогает делать наш сервис лучше.');
+                    formNode.reset();
                     setTimeout(() => {
-                        messageNode.innerHTML = initialMessage;
-                        Fancybox.close(true);
                         formNode.querySelector('[type="submit"]').removeAttribute('disabled')
                     }, 10000)
-
-                    formNode.reset();
                 } else {
                     messageNode.innerHTML = 'Не удалось отправить отзыв. Пожалуйста, попробуйте ещё раз.';
 

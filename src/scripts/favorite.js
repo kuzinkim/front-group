@@ -2,7 +2,7 @@
 
 const clearFavs = () => {
     fetch(`/ajax/favorites.php?clear=Y`)
-        .then((resp) => {resp.json()})
+        .then((resp) => resp.json())
         .then((resp) => {
             if (resp.success) {
                 window.location.reload();
@@ -19,8 +19,11 @@ const bindEmailForm = (formNode) => {
     const messageNode = formNode.querySelector('.form__text');
     const initialMessage = messageNode.innerHTML;
 
+    showMessageModal('Список избранного отправлен на указанный Email.', '')
+
     formNode.addEventListener('submit', (e) => {
         e.preventDefault();
+        formNode.querySelector('[type="submit"]').setAttribute('disabled', 'disabled')
 
         fetch(formNode.getAttribute('action'), {
             method: "POST",
@@ -29,18 +32,13 @@ const bindEmailForm = (formNode) => {
             .then(({success}) => {
                 if (success) {
 
-                    messageNode.innerHTML = 'Список избранного отправлен.';
-                    formNode.querySelector('[type="submit"]').setAttribute('disabled', 'disabled')
+                    formNode.reset();
+
 
                     setTimeout(() => {
-                        messageNode.innerHTML = initialMessage;
-                        if (!!Fancybox) {
-                            Fancybox.close(true)
-                        }
                         formNode.querySelector('[type="submit"]').removeAttribute('disabled')
                     }, 10000)
 
-                    formNode.reset();
                 } else {
                     messageNode.innerHTML = 'Не удалось отправить список избранного, попробуйте ещё раз.';
 
