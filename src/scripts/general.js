@@ -48,6 +48,7 @@ ${subtitle ? `<div class="modal-thank__subtitle">${subtitle}</div>` : ``}
 <a class="modal-thank__link" href="${link}">${linkText}</a>
 </div>`,
       type: "html",
+      closeExisting: true,
     }])
 }
 
@@ -78,6 +79,7 @@ const showAddItemModal = (title, itemData, link, linkText) => {
       </div>
       `,
       type: "html",
+      closeExisting: true,
     }])
 }
 
