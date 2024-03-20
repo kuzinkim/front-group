@@ -19,8 +19,6 @@ const bindEmailForm = (formNode) => {
     const messageNode = formNode.querySelector('.form__text');
     const initialMessage = messageNode.innerHTML;
 
-    showMessageModal('Список избранного отправлен на указанный Email.', '')
-
     formNode.addEventListener('submit', (e) => {
         e.preventDefault();
         formNode.querySelector('[type="submit"]').setAttribute('disabled', 'disabled')
@@ -32,8 +30,8 @@ const bindEmailForm = (formNode) => {
             .then(({success}) => {
                 if (success) {
 
+                    showMessageModal('Список избранного отправлен на указанный Email.', '')
                     formNode.reset();
-
 
                     setTimeout(() => {
                         formNode.querySelector('[type="submit"]').removeAttribute('disabled')

@@ -51,6 +51,36 @@ ${subtitle ? `<div class="modal-thank__subtitle">${subtitle}</div>` : ``}
     }])
 }
 
+const showAddItemModal = (title, itemData, link, linkText) => {
+  Fancybox.show([
+    {
+      src: `
+      <div class="modal modal_white modal_card">
+          <div class="modal__body modal-card">
+              <div class="modal-card__title">${title}</div>
+              <div class="modal-card__inner">
+                  <span class="modal-card__img">
+                      <img src="${itemData.img ? itemData.img : '/local/templates/main/assets/svg/logo_small.svg'}" alt="">
+                  </span>
+                  ${itemData.link ? `<a href="${itemData.link}" class="modal-card__name">${itemData.name}</a>` : `<span class="modal-card__name">${itemData.name}</span>`}
+                  <div class="modal-card__wrapper">
+                      <div class="modal-card__prices">
+                          <div class="modal-card__price"></div>
+                          <div class="modal-card__price modal-card__price_old"></div>
+                      </div>
+                      <div class="modal-card__actions">
+                          <a href="${link}" class="modal-card__btn modal-card__btn_cart">${linkText}</a>
+                          <button type="button" class="modal-card__btn modal-card__btn_close" onclick="Fancybox.close()">В каталог</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      `,
+      type: "html",
+    }])
+}
+
 document.addEventListener("DOMContentLoaded", pageReady);
 
 

@@ -378,3 +378,14 @@ ul,li{
     }
   }
 }
+
+.article {
+  a {
+    color: var(--color-accent);
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

@@ -17,7 +17,10 @@ const bindLikeBtn = (btnNode, id) => {
         return false;
     }
 
-    const favHeaderBtn = document.querySelector('.headerActions__btn_favorites')
+    const favHeaderBtn = document.querySelector('.headerActions__btn_favorites');
+    const itemInfoNode = btnNode.closest('.item-card') && btnNode.closest('.item-card').querySelector('.js-item-card-cart');
+    const name = itemInfoNode && itemInfoNode.getAttribute('data-name') ? itemInfoNode.getAttribute('data-name') : '';
+    const srcImg = itemInfoNode && itemInfoNode.getAttribute('data-img') ? itemInfoNode.getAttribute('data-img') : '';
 
     btnNode.addEventListener('click', (e) => {
         e.preventDefault();
@@ -57,6 +60,15 @@ const bindLikeBtn = (btnNode, id) => {
                 .then((resp) => {
                     if (resp.success) {
                         e.target.classList.add('item-card__like_liked');
+                        showAddItemModal(
+                            'Товар добавлен в избранное',
+                            {
+                                name: name,
+                                img: srcImg
+                            },
+                            '/favorites/',
+                            'В избранное'
+                        );
                         if (resp.count !== undefined && favHeaderBtn) {
                             if (!isNaN(resp.count)) {
                                 favHeaderBtn.setAttribute('data-count', String(resp.count))
@@ -79,6 +91,9 @@ const bindCompareBtn = (btnNode, id) => {
     }
 
     const headerCompareBtn = document.querySelector('.headerActions__btn_compare');
+    const itemInfoNode = btnNode.closest('.item-card') && btnNode.closest('.item-card').querySelector('.js-item-card-cart');
+    const name = itemInfoNode && itemInfoNode.getAttribute('data-name') ? itemInfoNode.getAttribute('data-name') : '';
+    const srcImg = itemInfoNode && itemInfoNode.getAttribute('data-img') ? itemInfoNode.getAttribute('data-img') : '';
 
     btnNode.addEventListener('click', (e) => {
         e.preventDefault();
@@ -100,12 +115,20 @@ const bindCompareBtn = (btnNode, id) => {
                     console.log(err)
                 })
         } else {
-            //todo: здесь вставить запрос на добавление в сравнение
             fetch(`/ajax/compare.php?id=${id}`)
                 .then((resp) => resp.json())
                 .then((resp) => {
                     if (resp.success) {
-                        e.target.classList.add('item-card__compare_compared')
+                        e.target.classList.add('item-card__compare_compared');
+                        showAddItemModal(
+                            'Товар добавлен в сравнение',
+                            {
+                                name: name,
+                                img: srcImg
+                            },
+                            '/compare/',
+                            'В сравнение'
+                        );
                         if (resp.count !== undefined && headerCompareBtn && !isNaN(resp.count)) {
                             headerCompareBtn.setAttribute('data-count', String(resp.count))
                         }
@@ -133,8 +156,6 @@ const bindCartBtn = (btnNode, id, name) => {
         let name = btnNode.getAttribute('data-name');
         let srcImg = btnNode.getAttribute('data-img');
 
-        console.log(name, srcImg)
-
         if (e.target.classList.contains('item-card__cart_in-cart')) {
 
             fetch(`/ajax/basket.php?id=${id}&delete=Y`)
@@ -161,30 +182,16 @@ const bindCartBtn = (btnNode, id, name) => {
                 .then((resp) => {
                     if (resp.success) {
                         e.target.classList.add('item-card__cart_in-cart');
-                        Fancybox.show([{
-                            src: `<div class="modal modal_white modal_card">
-                                    <div class="modal__body modal-card">
-                                        <div class="modal-card__title">Товар добавлен в корзину</div>
-                                        <div class="modal-card__inner">
-                                            <span class="modal-card__img">
-                                                <img src="${srcImg}" alt="">
-                                            </span>
-                                            <span class="modal-card__name">"${name}"</span>
-                                            <div class="modal-card__wrapper">
-                                                <div class="modal-card__prices">
-                                                    <div class="modal-card__price">4&nbsp;596&nbsp;₽</div>
-                                                    <div class="modal-card__price modal-card__price_old">4&nbsp;596&nbsp;₽</div>
-                                                </div>
-                                                <div class="modal-card__actions">
-                                                    <a href="/cart" class="modal-card__btn modal-card__btn_cart">В корзину</a>
-                                                    <button type="button" class="modal-card__btn modal-card__btn_close" onclick="Fancybox.close()">В каталог</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>`, 
-                            type: "html",
-                        },]);
+                        showAddItemModal(
+                            'Товар добавлен в корзину',
+                            {
+                                name: name,
+                                img: srcImg
+                            },
+                            '/basket/',
+                            'В корзину'
+                            );
+
                         if (resp.count !== undefined && headerBasketBtn) {
                             if (!isNaN(resp.count)) {
                                 headerBasketBtn.setAttribute('data-count', String(resp.count))
