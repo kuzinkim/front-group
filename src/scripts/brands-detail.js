@@ -2,6 +2,7 @@ let navButton = document.querySelector('.brand-detail__button')
 let brandNav = document.querySelector('.brand-nav')
 let brandBg = document.querySelector('.brand-detail__bg')
 let brandClose = document.querySelector('.brand-detail__close')
+let categoryBtn = document.querySelector('.brand-detail__button')
 
 const bindBrandsSlider = (node) => {
     if (!node) {
@@ -58,4 +59,9 @@ window.addEventListener('DOMContentLoaded', () => {
         brandBg.classList.remove('is-open')
     })
 
+    let category = categoryBtn.getAttribute('data-category');
+
+    if(category){
+        categoryBtn.textContent = category
+    }
 })
